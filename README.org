@@ -1,12 +1,18 @@
 #+TITLE: Eziam Theme
 
+*Eziam is not yet usable.  Don't use it*
+
 Eziam is a theme for Emacs.  It is a fork of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with a touch of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, it tries to keep some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.
 
 It colorizes:
 
  - org/markdown headings, in a a fashion that should be reminiscent of Leuven.
- - Fly[check|spell] indicators and faces.
+ - Flycheck/Flyspell indicators and faces.
  - Class/function names at declaration/definition to make code structure easier to scan.
+
+** Screenshots
+
+soon!
 
 ** Installation
 
