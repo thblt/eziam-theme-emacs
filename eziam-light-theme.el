@@ -1,16 +1,14 @@
-;;; tao-yang-theme.el --- A light golden mean grayscale color theme for Emacs.
+;;; eziam-light-theme.el --- The light Eziam theme for Emacs
 
-;; Copyright (C) 2014 Peter  <11111000000 at email.com>
-;; Author: Peter <11111000000@email.com>
-;; Contributors: Jasonm23 <jasonm23@gmail.com>
-;; Package-Requires:            ((cl-lib "0.5"))
-;;
+;; Copyright (C) 2016 Thibault Polge <thibault@thb.lt>
+;; Heavily based on Tao Theme (C) 2014 Peter  <11111000000 at email.com>,
+;; with contributions from Jasonm23 <jasonm23@gmail.com>
 ;; Original faces taken from Zenburn theme port (c) by Bozhidar Batsov
 ;;
-;; Color palette generated automatically from golden mean
+;; Package-Requires:            ((cl-lib "0.5"))
 ;;
-;; URL: http://github.com/11111000000/tao-theme-emacs
-;; Version: 1.0
+;; URL: http://github.com/thblt/eziam-theme-emacs
+;; Version: 0.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -28,13 +26,13 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'tao-yinyang-common)
+(require 'eziam-common)
 
-(deftheme tao-yang "The Tao color theme light")
+(deftheme eziam-light "The light Eziam color theme")
 
-(tao-with-color-variables
-  tao-theme-golden-grayscale-yang-palette
-  (tao-apply-custom-theme 'tao-yang))
+(eziam-with-color-variables
+  eziam-theme-golden-grayscale-light-palette
+  (eziam-apply-custom-theme 'eziam-light))
 
 ;;; Footer
 
@@ -45,7 +43,7 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'tao-yang)
+(provide-theme 'eziam-light)
 
 ;;;###autoload
 
@@ -53,4 +51,4 @@
 ;; no-byte-compile: t
 ;; indent-tabs-mode: nil
 ;; End:
-;;; tao-yang-theme.el ends here
+;;; eziam-light-theme.el ends here

@@ -1,21 +1,24 @@
-;; Common tools and face assignment table for Tao Yin & Yang
+;;; eziam-common --- Common tools and face assignment table for Eziam
+
+;;; Commentary:
+;;; Code:
 
 (require 'cl-lib)
 
-(defgroup tao-theme nil
-  "tao-theme customization options")
+(defgroup eziam-theme nil
+  "eziam-theme customization options")
 
-(defcustom tao-theme-use-height t
-  "Non-nil means tao-theme is allowed to customize height"
+(defcustom eziam-theme-use-height t
+  "Non-nil means eziam-theme is allowed to customize height."
   :type 'boolean
-  :group 'tao-theme)
+  :group 'eziam-theme)
 
-(defun tao-theme-height (height)
-  (if tao-theme-use-height
+(defun eziam-theme-height (height)
+  (if eziam-theme-use-height
       height
     1.0))
 
-(defun tao-theme-golden-grayscale ()
+(defun eziam-theme-golden-grayscale ()
   "Generate a golden mean based greyscale gradient."
   (let (zeta
         (phi (/ (+ 1 (sqrt 5)) 2)))
@@ -27,30 +30,30 @@
              ))
     zeta))
 
-(defun tao-theme-golden-grayscale-yang-palette ()
+(defun eziam-theme-golden-grayscale-light-palette ()
   "Generate a light version of the golden gradient alist."
   (cl-loop for value in '(8 10 9 11 8 7 6 5 4 3 2 1 1 1)
            count value into index
            collect (cons (concat "color-" (format "%d" index))
-                         (nth value (tao-theme-golden-grayscale)))))
+                         (nth value (eziam-theme-golden-grayscale)))))
 
-(defun tao-theme-golden-grayscale-yin-palette ()
+(defun eziam-theme-golden-grayscale-dark-palette ()
   "Generate a dark version of the golden gradient alist."
-  (cl-loop for value in (tao-theme-golden-grayscale)
+  (cl-loop for value in (eziam-theme-golden-grayscale)
            count value into index
            collect (cons (concat "color-" (format "%d" index)) value)))
 
-(defmacro tao-with-color-variables (tao-colors &rest body)
-  "`let' bind all colors defined in TAO-COLORS around BODY.
+(defmacro eziam-with-color-variables (eziam-colors &rest body)
+  "`let' bind all colors defined in EZIAM-COLORS around BODY.
 Also bind `class' to ((class color) (min-colors 89))."
   (declare (indent 0))
   `(let ((class '((class color) (min-colors 89)))
          ,@(mapcar (lambda (c)
                      (list (intern (car c)) (cdr c)))
-                   (funcall tao-colors)))
+                   (funcall eziam-colors)))
      ,@body))
 
-(defun tao-apply-custom-theme (theme-name)
+(defun eziam-apply-custom-theme (theme-name)
   (custom-theme-set-faces
    theme-name
    ;; Built-in
@@ -126,7 +129,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(newsticker-date-face                             ((t (:foreground ,color-13))))
    `(newsticker-default-face                          ((t (:foreground ,color-13))))
    `(newsticker-enclosure-face                        ((t (:foreground ,color-12))))
-   `(newsticker-extra-face                            ((t (:foreground ,color-7 :height ,(tao-theme-height 0.8)))))
+   `(newsticker-extra-face                            ((t (:foreground ,color-7 :height ,(eziam-theme-height 0.8)))))
    `(newsticker-feed-face                             ((t (:foreground ,color-13))))
    `(newsticker-immortal-item-face                    ((t (:foreground ,color-9))))
    `(newsticker-new-item-face                         ((t (:foreground ,color-11))))
@@ -456,9 +459,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(jabber-chat-prompt-foreign                       ((t (:foreground ,color-11))))
    `(jabber-activity-face                             ((t (:foreground ,color-11))))
    `(jabber-activity-personal-face                    ((t (:foreground ,color-11))))
-   `(jabber-title-small                               ((t (:height ,(tao-theme-height 1.1) :weight bold))))
-   `(jabber-title-medium                              ((t (:height ,(tao-theme-height 1.2) :weight bold))))
-   `(jabber-title-large                               ((t (:height ,(tao-theme-height 1.3) :weight bold))))
+   `(jabber-title-small                               ((t (:height ,(eziam-theme-height 1.1) :weight bold))))
+   `(jabber-title-medium                              ((t (:height ,(eziam-theme-height 1.2) :weight bold))))
+   `(jabber-title-large                               ((t (:height ,(eziam-theme-height 1.3) :weight bold))))
    ;; ledger-mode
    `(ledger-font-payee-uncleared-face                 ((t (:foreground ,color-9 :weight bold))))
    `(ledger-font-payee-cleared-face                   ((t (:foreground ,color-13 :weight normal))))
@@ -586,15 +589,15 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-formula                                      ((t (:foreground ,color-11))))
    `(org-headline-done                                ((t (:foreground ,color-12))))
    `(org-hide                                         ((t (:foreground ,color-3))))
-   `(org-document-title                               ((t (:foreground ,color-12 :height ,(tao-theme-height 1.9) :bold t))))
-   `(org-level-1                                      ((t (:foreground ,color-14 :height ,(tao-theme-height 1.5)))))
-   `(org-level-2                                      ((t (:foreground ,color-10 :height ,(tao-theme-height 1.2)))))
-   `(org-level-3                                      ((t (:foreground ,color-9 :height ,(tao-theme-height 1.1)))))
-   `(org-level-4                                      ((t (:foreground ,color-9 :height ,(tao-theme-height 1.0)))))
-   `(org-level-5                                      ((t (:foreground ,color-9 :height ,(tao-theme-height 1.0)))))
-   `(org-level-6                                      ((t (:foreground ,color-9 :height ,(tao-theme-height 1.0)))))
-   `(org-level-7                                      ((t (:foreground ,color-9 :height ,(tao-theme-height 1.0)))))
-   `(org-level-8                                      ((t (:foreground ,color-8 :height ,(tao-theme-height 1.0)))))
+   `(org-document-title                               ((t (:foreground ,color-12 :height ,(eziam-theme-height 1.9) :bold t))))
+   `(org-level-1                                      ((t (:foreground ,color-14 :height ,(eziam-theme-height 1.5)))))
+   `(org-level-2                                      ((t (:foreground ,color-10 :height ,(eziam-theme-height 1.2)))))
+   `(org-level-3                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.1)))))
+   `(org-level-4                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.0)))))
+   `(org-level-5                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.0)))))
+   `(org-level-6                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.0)))))
+   `(org-level-7                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.0)))))
+   `(org-level-8                                      ((t (:foreground ,color-8 :height ,(eziam-theme-height 1.0)))))
    `(org-link                                         ((t (:foreground ,color-11 :underline t))))
    `(org-scheduled                                    ((t (:foreground ,color-13))))
    `(org-scheduled-previously                         ((t (:foreground ,color-10))))
@@ -614,9 +617,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-mode-line-clock-overrun                      ((t (:foreground ,color-5 :background ,color-9))))
    `(org-ellipsis                                     ((t (:foreground ,color-12 :underline t))))
    `(org-footnote                                     ((t (:foreground ,color-12 :underline t))))
-   `(org-meta-line                                    ((t (:foreground ,color-8 :height ,(tao-theme-height 1.0)))))
-   `(org-block-background                             ((t (:background ,color-4 :height ,(tao-theme-height 1.0)))))
-   `(org-block                                        ((t (:foreground ,color-7 :height ,(tao-theme-height 1.0)))))
+   `(org-meta-line                                    ((t (:foreground ,color-8 :height ,(eziam-theme-height 1.0)))))
+   `(org-block-background                             ((t (:background ,color-4 :height ,(eziam-theme-height 1.0)))))
+   `(org-block                                        ((t (:foreground ,color-7 :height ,(eziam-theme-height 1.0)))))
 
    ;; outline
    `(outline-1                                        ((t (:foreground ,color-11))))
@@ -849,15 +852,15 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(html-fold-folded-face                            ((t (:foreground ,color-14 :bold t))))
    ;; markdown mode
    `(markdown-header-delimiter-face                   ((t (:weight normal :foreground ,color-6))))
-   `(markdown-header-face-1                           ((t (:inherit markdown-header-face :height ,(tao-theme-height 1.5)))))
-   `(markdown-header-face-2                           ((t (:inherit markdown-header-face :height ,(tao-theme-height 1.3)))))
-   `(markdown-header-face-3                           ((t (:inherit markdown-header-face :underline t :height ,(tao-theme-height 1.2)))))
-   `(markdown-header-face-4                           ((t (:inherit markdown-header-face :underline t :height ,(tao-theme-height 1.1)))))
+   `(markdown-header-face-1                           ((t (:inherit markdown-header-face :height ,(eziam-theme-height 1.5)))))
+   `(markdown-header-face-2                           ((t (:inherit markdown-header-face :height ,(eziam-theme-height 1.3)))))
+   `(markdown-header-face-3                           ((t (:inherit markdown-header-face :underline t :height ,(eziam-theme-height 1.2)))))
+   `(markdown-header-face-4                           ((t (:inherit markdown-header-face :underline t :height ,(eziam-theme-height 1.1)))))
    `(markdown-header-face-5                           ((t (:inherit markdown-header-face :underline t))))
    `(markdown-header-face-6                           ((t (:inherit markdown-header-face :underline t))))
    `(markdown-link-face                               ((t (:underline t :foreground ,color-13))))
    `(markdown-url-face                                ((t (:underline t :foreground ,color-12))))
-   `(markdown-pre-face                                ((t (:foreground ,color-13 :height ,(tao-theme-height .8) ))))
+   `(markdown-pre-face                                ((t (:foreground ,color-13 :height ,(eziam-theme-height .8) ))))
    `(markdown-bold-face                                ((t (:foreground ,color-8 :bold t ))))
    `(markdown-italic-face                                ((t (:foreground ,color-8 :italic t ))))
    `(markdown-list-face                               ((t (:foreground ,color-12))))
@@ -945,4 +948,5 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(vc-annotate-background ,color-3)
    ))
 
-(provide 'tao-yinyang-common)
+(provide 'eziam-common)
+;;; eziam-common ends here
