@@ -111,7 +111,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-comment-delimiter-face                 ((t (:foreground ,color-8))))
    `(font-lock-constant-face                          ((t (:foreground ,color-8 :weight bold))))
    `(font-lock-doc-face                               ((t (:foreground ,color-7))))
-   `(font-lock-function-name-face                     ((t (:foreground ,color-12))))
+   `(font-lock-function-name-face                     ((t (:background ,function-name :box (:color ,function-name-box)))))
    `(font-lock-keyword-face                           ((t (:foreground ,color-13 :weight bold))))
    `(font-lock-negation-char-face                     ((t (:foreground ,color-13 :weight bold))))
    `(font-lock-preprocessor-face                      ((t (:foreground ,color-11))))
@@ -561,6 +561,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(nav-face-file                                    ((t (:foreground ,color-13))))
    `(nav-face-hfile                                   ((t (:foreground ,color-7))))
    ;; mu4e
+   `(mu4e-header-highlight-face                       ((t (:inverse-video t))))
    `(mu4e-cited-1-face                                ((t (:foreground ,color-11    :slant italic))))
    `(mu4e-cited-2-face                                ((t (:foreground ,color-11 :slant italic))))
    `(mu4e-cited-3-face                                ((t (:foreground ,color-9  :slant italic))))
