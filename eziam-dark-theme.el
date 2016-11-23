@@ -27,7 +27,6 @@
 ;;; Code:
 
 (require 'eziam-common)
-
 (deftheme eziam-dark "The dark Eziam color theme")
 
 (eziam-with-color-variables
@@ -56,7 +55,8 @@
        ("heading-6"        . "#ff0000")
        ("heading-7"        . "#ff0000")
        ("heading-8"        . "#ff0000")
-       ("strong-highlight" . "#ffff00")
+       ("function-name"    . "#aaccff")
+       ("strong-highlight" . "#ffe400")
        )
   )
   (eziam-apply-custom-theme 'eziam-dark)
