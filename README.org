@@ -1,8 +1,12 @@
 #+TITLE: Eziam Theme
 
+[[#screenshots][Screenshots]] [[#installation][Installation]] 
+
+------
+
 *Eziam is not yet usable.  Don't use it*
 
-Eziam is a theme for Emacs.  It is a fork of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with a touch of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, it tries to keep some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.
+Eziam is a theme for Emacs.  It is a fork of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with a hint of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, it tries to keep some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.
 
 It colorizes:
 
