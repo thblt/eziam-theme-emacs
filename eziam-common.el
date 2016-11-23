@@ -13,35 +13,32 @@
   :type 'boolean
   :group 'eziam-theme)
 
+(defcustom eziam-theme-colorize-headers t
+  "Non-nil means eziam-themes."
+  :type 'boolean
+  :group 'eziam-theme)
+
+(defcustom eziam-theme-colorize-class-names t
+  "Non-nil means eziam-themes is allowed to colorize class names in declarations and definitions."
+  :type 'boolean
+  :group 'eziam-theme)
+
+(defcustom eziam-theme-colorize-function-names t
+  "Non-nil means eziam-themes is allowed to colorize function names in declarations and definitions."
+  :type 'boolean
+  :group 'eziam-theme)
+
 (defun eziam-theme-height (height)
   (if eziam-theme-use-height
       height
     1.0))
 
-(defun eziam-theme-golden-grayscale ()
-  "Generate a golden mean based greyscale gradient."
-  (let (zeta
-        (phi (/ (+ 1 (sqrt 5)) 2)))
-    (dotimes (n 7)
-      (let* ((delta (/ #xFF (expt phi (+ 2 n))))
-             (gamma (- #xFF delta)))
-             (push (format "#%02X%02X%02X" delta delta delta) zeta)
-             (setq zeta (append zeta (list (format "#%02X%02X%02X" gamma gamma gamma))))
-             ))
-    zeta))
-
-(defun eziam-theme-golden-grayscale-light-palette ()
-  "Generate a light version of the golden gradient alist."
-  (cl-loop for value in '(8 10 9 11 8 7 6 5 4 3 2 1 1 1)
-           count value into index
-           collect (cons (concat "color-" (format "%d" index))
-                         (nth value (eziam-theme-golden-grayscale)))))
-
-(defun eziam-theme-golden-grayscale-dark-palette ()
-  "Generate a dark version of the golden gradient alist."
-  (cl-loop for value in (eziam-theme-golden-grayscale)
-           count value into index
-           collect (cons (concat "color-" (format "%d" index)) value)))
+(defun eziam-light-dark (dark light)
+       (if dark-mode
+           dark
+         light
+         )
+       )
 
 (defmacro eziam-with-color-variables (eziam-colors &rest body)
   "`let' bind all colors defined in EZIAM-COLORS around BODY.
@@ -61,7 +58,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(link                                             ((t (:foreground ,color-13 :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground ,color-11 :underline t :weight normal))))
    `(default                                          ((t (:foreground ,color-9 :background ,color-4))))
-   `(hl-paren-face                                    ((t (:foreground ,color-12 :background ,color-3 :wight bold))))
+   `(hl-paren-face                                    ((t (:foreground ,color-12 :background ,color-3 :weight bold))))
    `(cursor                                           ((t (:foreground ,color-13 :background ,color-14))))
    `(escape-glyph                                     ((t (:foreground ,color-13 :bold t))))
    `(fringe                                           ((t (:foreground ,color-2 :background ,color-4))))
@@ -92,10 +89,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(match                                            ((t (:background ,color-3 :foreground ,color-11 :weight bold))))
    ;; make
    `(makefile-space                                   ((t (:background ,color-4))))
-   `(makefile-targets                                   ((t (:underline t))))
+   `(makefile-targets                                 ((t (:underline t))))
    `(makefile-shell                                   ((t (:slant italic))))
    ;; isearch
-   `(isearch                                          ((t (:foreground ,color-11 :weight bold :background ,color-6))))
+   `(isearch                                          ((t (:background ,strong-highlight :foreground ,(eziam-light-dark color-6 color-12) :weight bold))))
    `(isearch-fail                                     ((t (:foreground ,color-13 :background ,color-7))))
    `(lazy-highlight                                   ((t (:foreground ,color-11 :weight bold :background ,color-5))))
    `(menu                                             ((t (:foreground ,color-13 :background ,color-4))))
@@ -248,7 +245,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ediff-even-diff-B                                ((t (:background ,color-6))))
    `(ediff-even-diff-C                                ((t (:background ,color-6))))
    `(ediff-fine-diff-A                                ((t (:foreground ,color-13 :background ,color-9 :weight bold))))
-   `(ediff-fine-diff-Ancestor                         ((t (:foreground ,color-13 :background ,color-9 weight bold))))
+   `(ediff-fine-diff-Ancestor                         ((t (:foreground ,color-13 :background ,color-9 :weight bold))))
    `(ediff-fine-diff-B                                ((t (:foreground ,color-13 :background ,color-9 :weight bold))))
    `(ediff-fine-diff-C                                ((t (:foreground ,color-13 :background ,color-8 :weight bold ))))
    `(ediff-odd-diff-A                                 ((t (:background ,color-7))))
@@ -466,7 +463,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ledger-font-payee-uncleared-face                 ((t (:foreground ,color-9 :weight bold))))
    `(ledger-font-payee-cleared-face                   ((t (:foreground ,color-13 :weight normal))))
    `(ledger-font-xact-highlight-face                  ((t (:background ,color-6))))
-   `(ledger-font-pending-face                         ((t (:foreground ,color-11 weight: normal))))
+   `(ledger-font-pending-face                         ((t (:foreground ,color-11 :weight normal))))
    `(ledger-font-other-face                           ((t (:foreground ,color-13))))
    `(ledger-font-posting-account-face                 ((t (:foreground ,color-10))))
    `(ledger-font-posting-account-cleared-face         ((t (:foreground ,color-13))))
@@ -493,7 +490,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; magit
    `(magit-section-title                              ((t (:foreground ,color-13 :weight bold))))
    `(magit-branch                                     ((t (:foreground ,color-11 :weight bold))))
-   `(magit-item-highlight                             ((t (:background ,color-6 :bold nil))))
+   `(magit-item-highlight                             ((t (:inverse-video t))))
    ;; egg
    `(egg-text-base                                    ((t (:foreground ,color-13))))
    `(egg-help-header-1                                ((t (:foreground ,color-13))))
@@ -861,8 +858,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(markdown-link-face                               ((t (:underline t :foreground ,color-13))))
    `(markdown-url-face                                ((t (:underline t :foreground ,color-12))))
    `(markdown-pre-face                                ((t (:foreground ,color-13 :height ,(eziam-theme-height .8) ))))
-   `(markdown-bold-face                                ((t (:foreground ,color-8 :bold t ))))
-   `(markdown-italic-face                                ((t (:foreground ,color-8 :italic t ))))
+   `(markdown-bold-face                               ((t (:foreground ,color-8 :bold t ))))
+   `(markdown-italic-face                             ((t (:foreground ,color-8 :italic t ))))
    `(markdown-list-face                               ((t (:foreground ,color-12))))
    `(markdown-markup-face                             ((t (:foreground ,color-6 ))))
    ;; swoop

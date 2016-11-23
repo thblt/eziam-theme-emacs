@@ -31,8 +31,36 @@
 (deftheme eziam-dark "The dark Eziam color theme")
 
 (eziam-with-color-variables
-  eziam-theme-golden-grayscale-dark-palette
-  (eziam-apply-custom-theme 'eziam-dark))
+  (lambda ()
+     '(
+       ("dark-mode"        . t)
+       ("color-1"          . "#050505")
+       ("color-2"          . "#080808")
+       ("color-3"          . "#0e0e0e")
+       ("color-4"          . "#161616")
+       ("color-5"          . "#252525")
+       ("color-6"          . "#3c3c3c")
+       ("color-7"          . "#616161")
+       ("color-8"          . "#9d9d9d")
+       ("color-9"          . "#c2c2c2")
+       ("color-10"         . "#d9d9d9")
+       ("color-11"         . "#e8e8e8")
+       ("color-12"         . "#f0f0f0")
+       ("color-13"         . "#f6f6f6")
+       ("color-14"         . "#f9f9f9")
+       ("heading-1"        . "#ff0000")
+       ("heading-2"        . "#ff0000")
+       ("heading-3"        . "#ff0000")
+       ("heading-4"        . "#ff0000")
+       ("heading-5"        . "#ff0000")
+       ("heading-6"        . "#ff0000")
+       ("heading-7"        . "#ff0000")
+       ("heading-8"        . "#ff0000")
+       ("strong-highlight" . "#ffff00")
+       )
+  )
+  (eziam-apply-custom-theme 'eziam-dark)
+  )
 
 ;;; Footer
 

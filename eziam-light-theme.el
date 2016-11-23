@@ -31,8 +31,26 @@
 (deftheme eziam-light "The light Eziam color theme")
 
 (eziam-with-color-variables
-  eziam-theme-golden-grayscale-light-palette
-  (eziam-apply-custom-theme 'eziam-light))
+  (lambda ()
+    '(
+      ("color-1" . "#C2C2C2")
+      ("color-2" . "#E8E8E8")
+      ("color-3" . "#D9D9D9")
+      ("color-4" . "#F0F0F0")
+      ("color-5" . "#C2C2C2")
+      ("color-6" . "#9D9D9D")
+      ("color-7" . "#616161")
+      ("color-8" . "#3C3C3C")
+      ("color-9" . "#252525")
+      ("color-10" . "#161616")
+      ("color-11" . "#0E0E0E")
+      ("color-12" . "#080808")
+      ("color-13" . "#080808")
+      ("color-14" . "#080808")
+      )
+    )
+    (eziam-apply-custom-theme 'eziam-light)
+  )
 
 ;;; Footer
 
