@@ -56,6 +56,7 @@
        ("heading-7"        . "#ff0000")
        ("heading-8"        . "#ff0000")
        ("function-name"    . "#aaccff")
+       ("function-name-box". "#aaccff")
        ("strong-highlight" . "#ffe400")
        )
   )
