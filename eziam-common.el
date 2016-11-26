@@ -92,7 +92,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(makefile-targets                                 ((t (:underline t))))
    `(makefile-shell                                   ((t (:slant italic))))
    ;; isearch
-   `(isearch                                          ((t (:background ,strong-highlight :foreground ,(eziam-light-dark color-6 color-12) :weight bold))))
+   `(isearch                                          ((t (:background ,strong-highlight :foreground ,(eziam-light-dark color-10 color-2) :weight normal))))
    `(isearch-fail                                     ((t (:foreground ,color-13 :background ,color-7))))
    `(lazy-highlight                                   ((t (:foreground ,color-11 :weight bold :background ,color-5))))
    `(menu                                             ((t (:foreground ,color-13 :background ,color-4))))
@@ -618,6 +618,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-meta-line                                    ((t (:foreground ,color-8 :height ,(eziam-theme-height 1.0)))))
    `(org-block-background                             ((t (:background ,color-4 :height ,(eziam-theme-height 1.0)))))
    `(org-block                                        ((t (:foreground ,color-7 :height ,(eziam-theme-height 1.0)))))
+   `(org-block-begin-line                             ((t (:foreground ,color-6 :height ,(eziam-theme-height .75)))))
+   `(org-block-end-line                               ((t (:inherit org-block-begin-line))))
 
    ;; outline
    `(outline-1                                        ((t (:foreground ,color-11))))
