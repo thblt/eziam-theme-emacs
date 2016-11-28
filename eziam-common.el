@@ -9,7 +9,12 @@
   "eziam-theme customization options")
 
 (defcustom eziam-scale-outline-headlines t
-  "Non-nil means eziam-theme is allowed to customize height."
+  "Non-nil means eziam-theme is allowed to customize the height of outline headlines."
+  :type 'boolean
+  :group 'eziam-theme)
+
+(defcustom eziam-scale-non-headline-faces t
+  "Non-nil means eziam-theme is allowed to customize the height of faces besides outline headlines."
   :type 'boolean
   :group 'eziam-theme)
 
