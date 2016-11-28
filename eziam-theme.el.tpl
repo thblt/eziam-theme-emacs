@@ -1,4 +1,4 @@
-;;; eziam-#VARIANT-theme.el --- The VARIANT Eziam theme for Emacs
+;;; eziam-VARIANT-theme.el --- The VARIANT Eziam theme for Emacs
 
 ;; Copyright (C) 2016 Thibault Polge <thibault@thb.lt>
 ;; Heavily based on Tao Theme (C) 2014 Peter  <11111000000 at email.com>,
@@ -33,15 +33,16 @@
 #define LIGHT_DARK(a,b) a
 #endif
 
+#define OL_HEIGHT(h) ,@(when eziam-scale-outline-headlines (list :height h))
 
 (require 'eziam-common)
 
 (deftheme eziam-VARIANT "The VARIANT Eziam color theme")
 
-  (let ((class '((class color) (min-colors 89)))
+(let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1 '(:height ,(eziam-theme-height 1.3) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
+      (ol1 `(OL_HEIGHT(1.9) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
       (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
       (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
       (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
@@ -49,7 +50,7 @@
       (ol6 '(:height 1.0 :weight bold :slant italic :foreground "#0077CC"))
       (ol7 '(:height 1.0 :weight bold :slant italic :foreground "#2EAE2C"))
       (ol8 '(:height 1.0 :weight bold :slant italic :foreground "#FD8008"))
-  )
+      )
   
   (custom-theme-set-faces
    'eziam-VARIANT
@@ -589,7 +590,7 @@
    `(org-hide                                         ((t (:foreground COLOR_3))))
    `(org-document-title                               ((t (:foreground COLOR_12 :height ,(eziam-theme-height 1.9) :bold t))))
    `(org-level-1 ((,class ,ol1)))   
-;;   `(org-level-1                                      ((t (:foreground COLOR_14 :height ,(eziam-theme-height 1.5)))))
+   ;;   `(org-level-1                                      ((t (:foreground COLOR_14 :height ,(eziam-theme-height 1.5)))))
    `(org-level-2                                      ((t (:foreground COLOR_10 :height ,(eziam-theme-height 1.2)))))
    `(org-level-3                                      ((t (:foreground COLOR_9 :height ,(eziam-theme-height 1.1)))))
    `(org-level-4                                      ((t (:foreground COLOR_9 :height ,(eziam-theme-height 1.0)))))
@@ -912,46 +913,46 @@
    )
   )
 
-  ;; Theme Variables
-  (custom-theme-set-variables
-   'eziam-VARIANT
-   ;; ansi-color
-   `(ansi-color-names-vector [COLOR_5
-                              COLOR_10
-                              COLOR_9
-                              COLOR_13
-                              COLOR_11
-                              COLOR_10
-                              COLOR_12
-                              COLOR_13])
-   ;; fill-column-indicator
-   `(fci-rule-color COLOR_4)
-   ;; vc-annotate
-   `(vc-annotate-color-map
-     '(( 20. . COLOR_7)
-       ( 40. . COLOR_8)
-       ( 60. . COLOR_8)
-       ( 80. . COLOR_9)
-       (100. . COLOR_9)
-       (120. . COLOR_10)
-       (140. . COLOR_10)
-       (160. . COLOR_11)
-       (180. . COLOR_11)
-       (200. . COLOR_11)
-       (220. . COLOR_12)
-       (240. . COLOR_12)
-       (260. . COLOR_12)
-       (280. . COLOR_13)
-       (300. . COLOR_13)
-       (320. . COLOR_13)
-       (340. . COLOR_14)
-       (360. . COLOR_14)))
-   `(vc-annotate-very-old-color COLOR_10)
-   `(vc-annotate-background COLOR_3)
-   ))
+;; Theme Variables
+(custom-theme-set-variables
+ 'eziam-VARIANT
+ ;; ansi-color
+ `(ansi-color-names-vector [COLOR_5
+                            COLOR_10
+                            COLOR_9
+                            COLOR_13
+                            COLOR_11
+                            COLOR_10
+                            COLOR_12
+                            COLOR_13])
+ ;; fill-column-indicator
+ `(fci-rule-color COLOR_4)
+ ;; vc-annotate
+ `(vc-annotate-color-map
+   '(( 20. . COLOR_7)
+     ( 40. . COLOR_8)
+     ( 60. . COLOR_8)
+     ( 80. . COLOR_9)
+     (100. . COLOR_9)
+     (120. . COLOR_10)
+     (140. . COLOR_10)
+     (160. . COLOR_11)
+     (180. . COLOR_11)
+     (200. . COLOR_11)
+     (220. . COLOR_12)
+     (240. . COLOR_12)
+     (260. . COLOR_12)
+     (280. . COLOR_13)
+     (300. . COLOR_13)
+     (320. . COLOR_13)
+     (340. . COLOR_14)
+     (360. . COLOR_14)))
+ `(vc-annotate-very-old-color COLOR_10)
+ `(vc-annotate-background COLOR_3)
+ )
 
 ;;; Footer
-(provide-theme 'eziam-VARIANT')
+(provide-theme 'eziam-VARIANT)
 
 ;;;###autoload
 

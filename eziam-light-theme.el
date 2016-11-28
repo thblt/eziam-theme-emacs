@@ -1,4 +1,4 @@
-;;; eziam-#light-theme.el --- The light Eziam theme for Emacs
+;;; eziam-light-theme.el --- The light Eziam theme for Emacs
 
 ;; Copyright (C) 2016 Thibault Polge <thibault@thb.lt>
 ;; Heavily based on Tao Theme (C) 2014 Peter  <11111000000 at email.com>,
@@ -26,6 +26,9 @@
 ;;; Commentary:
 ;;; Code:
 
+
+
+
 (require 'eziam-common)
 
 (deftheme eziam-light "The VARIANT Eziam color theme")
@@ -33,7 +36,7 @@
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1 '(:height ,(eziam-theme-height 1.3) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
+      (ol1 `(,@(when eziam-scale-outline-headlines (list :height 1.9)) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
       (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
       (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
       (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
@@ -901,7 +904,8 @@
    `(avy-lead-face-1                                  ((t (:background "#161616"  :foreground "#C2C2C2" :bold t))))
    `(avy-lead-face-2                                  ((t (:background "#0E0E0E"  :foreground "#C2C2C2" :bold t))))
    `(avy-background-face                              ((t (:background "#D9D9D9"  :foreground "#616161" :bold t))))
-   ))
+   )
+  )
 
 ;; Theme Variables
 (custom-theme-set-variables
@@ -942,7 +946,7 @@
  )
 
 ;;; Footer
-(provide-theme 'eziam-light')
+(provide-theme 'eziam-light)
 
 ;;;###autoload
 
