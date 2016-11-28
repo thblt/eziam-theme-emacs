@@ -102,8 +102,8 @@
    `(vertical-border                                  ((t (:foreground "#616161" :background "#F0F0F0"))))
    ;; font lock
    `(font-lock-builtin-face                           ((t (:foreground "#080808" :weight bold))))
-   `(font-lock-comment-face                           ((t (:foreground "#616161" :weight bold))))
-   `(font-lock-comment-delimiter-face                 ((t (:foreground "#3C3C3C"))))
+   `(font-lock-comment-face                           ((t (:foreground "#007700"))))
+   `(font-lock-comment-delimiter-face                 ((t (:foreground "#007700"))))
    `(font-lock-constant-face                          ((t (:foreground "#3C3C3C" :weight bold))))
    `(font-lock-doc-face                               ((t (:foreground "#616161"))))
    `(font-lock-function-name-face                     ((t (:background "#BBCCFF" :box (:color "#99AADD")))))

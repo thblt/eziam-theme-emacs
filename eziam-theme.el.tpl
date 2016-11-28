@@ -109,8 +109,8 @@
    `(vertical-border                                  ((t (:foreground COLOR_7 :background COLOR_4))))
    ;; font lock
    `(font-lock-builtin-face                           ((t (:foreground COLOR_13 :weight bold))))
-   `(font-lock-comment-face                           ((t (:foreground COLOR_7 :weight bold))))
-   `(font-lock-comment-delimiter-face                 ((t (:foreground COLOR_8))))
+   `(font-lock-comment-face                           ((t (:foreground COMMENT))))
+   `(font-lock-comment-delimiter-face                 ((t (:foreground COMMENT))))
    `(font-lock-constant-face                          ((t (:foreground COLOR_8 :weight bold))))
    `(font-lock-doc-face                               ((t (:foreground COLOR_7))))
    `(font-lock-function-name-face                     ((t (:background FUNCTION_NAME :box (:color FUNCTION_NAME_BOX)))))

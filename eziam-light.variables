@@ -15,6 +15,7 @@
 #define      COLOR_12          "#080808"
 #define      COLOR_13          "#080808"
 #define      COLOR_14          "#080808"
+#define      COMMENT           "#007700"
 #define      HEADING_1         "#FF0000"
 #define      HEADING_2         "#FF0000"
 #define      HEADING_3         "#FF0000"
