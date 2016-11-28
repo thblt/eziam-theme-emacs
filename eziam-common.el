@@ -51,6 +51,20 @@ Also bind `class' to ((class color) (min-colors 89))."
      ,@body))
 
 (defun eziam-apply-custom-theme (theme-name)
+
+  (let ((class '((class color) (min-colors 89)))
+
+      ;; Eziam generic colors.
+      (ol1 '(:height ,(eziam-theme-height 1.3) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
+      (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
+      (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
+      (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
+      (ol5 '(:height 1.0 :weight bold :slant normal :foreground "#E3258D"))
+      (ol6 '(:height 1.0 :weight bold :slant italic :foreground "#0077CC"))
+      (ol7 '(:height 1.0 :weight bold :slant italic :foreground "#2EAE2C"))
+      (ol8 '(:height 1.0 :weight bold :slant italic :foreground "#FD8008"))
+  ))
+  
   (custom-theme-set-faces
    theme-name
    ;; Built-in
@@ -588,7 +602,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-headline-done                                ((t (:foreground ,color-12))))
    `(org-hide                                         ((t (:foreground ,color-3))))
    `(org-document-title                               ((t (:foreground ,color-12 :height ,(eziam-theme-height 1.9) :bold t))))
-   `(org-level-1                                      ((t (:foreground ,color-14 :height ,(eziam-theme-height 1.5)))))
+   `(org-level-1 ((,class ,ol1)))   
+;;   `(org-level-1                                      ((t (:foreground ,color-14 :height ,(eziam-theme-height 1.5)))))
    `(org-level-2                                      ((t (:foreground ,color-10 :height ,(eziam-theme-height 1.2)))))
    `(org-level-3                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.1)))))
    `(org-level-4                                      ((t (:foreground ,color-9 :height ,(eziam-theme-height 1.0)))))
