@@ -569,7 +569,7 @@
    `(org-deadline-announce                            ((t (:foreground COLOR_9))))
    `(org-formula                                      ((t (:foreground COLOR_11))))
    `(org-headline-done                                ((t (:foreground COLOR_12))))
-   `(org-hide                                         ((t (:foreground COLOR_3))))
+   `(org-hide                                         ((t (:foreground COLOR_1))))
    `(org-document-title                               ((t (:foreground COLOR_12 NOL_HEIGHT(1.9) :bold t))))
    `(org-level-1                                      ((,class ,ol1)))   
    `(org-level-2                                      ((t (:foreground COLOR_10 NOL_HEIGHT(1.2)))))
