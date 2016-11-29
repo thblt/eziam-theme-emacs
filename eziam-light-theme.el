@@ -1,29 +1,10 @@
 ;;; eziam-light-theme.el --- The light Eziam theme for Emacs
-
-;; Copyright (C) 2016 Thibault Polge <thibault@thb.lt>
-;; Heavily based on Tao Theme (C) 2014 Peter  <11111000000 at email.com>,
-;; with contributions from Jasonm23 <jasonm23@gmail.com>
-;; Original faces taken from Zenburn theme port (c) by Bozhidar Batsov
-;;
-;; Package-Requires:            ((cl-lib "0.5"))
-;;
-;; URL: http://github.com/thblt/eziam-theme-emacs
-;; Version: 0.0
-
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 ;;; Commentary:
+;;
+;; This file was automatically generated, you should not edit it.  See
+;; README.org for more information.
+;;
+;; Copyright and licence information in eziam-common.el
 ;;; Code:
 
 
@@ -37,13 +18,13 @@
 
       ;; Eziam generic colors.
       (ol1 `(,@(when eziam-scale-outline-headlines (list :height 1.9)) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
-      (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
-      (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
-      (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
-      (ol5 '(:height 1.0 :weight bold :slant normal :foreground "#E3258D"))
-      (ol6 '(:height 1.0 :weight bold :slant italic :foreground "#0077CC"))
-      (ol7 '(:height 1.0 :weight bold :slant italic :foreground "#2EAE2C"))
-      (ol8 '(:height 1.0 :weight bold :slant italic :foreground "#FD8008"))
+      (ol2 '(,@(when eziam-scale-outline-headlines (list :height 1.6)) :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
+      (ol3 '(,@(when eziam-scale-outline-headlines (list :height 1.3)) :weight bold :foreground "#005522" :background "#EFFFEF"))
+      (ol4 '(:weight bold :slant normal :foreground "#EA6300"))
+      (ol5 '(:weight bold :slant normal :foreground "#E3258D"))
+      (ol6 '(:weight bold :slant italic :foreground "#0077CC"))
+      (ol7 '(:weight bold :slant italic :foreground "#2EAE2C"))
+      (ol8 '(:weight bold :slant italic :foreground "#FD8008"))
       )
   
   (custom-theme-set-faces
@@ -583,8 +564,7 @@
    `(org-headline-done                                ((t (:foreground "#080808"))))
    `(org-hide                                         ((t (:foreground "#D9D9D9"))))
    `(org-document-title                               ((t (:foreground "#080808" ,@(when eziam-scale-non-headline-faces (list :height 1.9)) :bold t))))
-   `(org-level-1 ((,class ,ol1)))   
-   ;;   `(org-level-1                                      ((t (:foreground "#080808" ,@(when eziam-scale-non-headline-faces (list :height 1.5))))))
+   `(org-level-1                                      ((,class ,ol1)))   
    `(org-level-2                                      ((t (:foreground "#161616" ,@(when eziam-scale-non-headline-faces (list :height 1.2))))))
    `(org-level-3                                      ((t (:foreground "#252525" ,@(when eziam-scale-non-headline-faces (list :height 1.1))))))
    `(org-level-4                                      ((t (:foreground "#252525" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
@@ -847,12 +827,12 @@
    `(html-fold-folded-face                            ((t (:foreground "#080808" :bold t))))
    ;; markdown mode
    `(markdown-header-delimiter-face                   ((t (:weight normal :foreground "#9D9D9D"))))
-   `(markdown-header-face-1                           ((t (:inherit markdown-header-face ,@(when eziam-scale-non-headline-faces (list :height 1.5))))))
-   `(markdown-header-face-2                           ((t (:inherit markdown-header-face ,@(when eziam-scale-non-headline-faces (list :height 1.3))))))
-   `(markdown-header-face-3                           ((t (:inherit markdown-header-face :underline t ,@(when eziam-scale-non-headline-faces (list :height 1.2))))))
-   `(markdown-header-face-4                           ((t (:inherit markdown-header-face :underline t ,@(when eziam-scale-non-headline-faces (list :height 1.1))))))
-   `(markdown-header-face-5                           ((t (:inherit markdown-header-face :underline t))))
-   `(markdown-header-face-6                           ((t (:inherit markdown-header-face :underline t))))
+   `(markdown-header-face-1                           ((,class ,ol1)))
+   `(markdown-header-face-2                           ((,class ,ol2)))
+   `(markdown-header-face-3                           ((,class ,ol3)))
+   `(markdown-header-face-4                           ((,class ,ol4)))
+   `(markdown-header-face-5                           ((,class ,ol5)))
+   `(markdown-header-face-6                           ((,class ,ol6)))
    `(markdown-link-face                               ((t (:underline t :foreground "#080808"))))
    `(markdown-url-face                                ((t (:underline t :foreground "#080808"))))
    `(markdown-pre-face                                ((t (:foreground "#080808" ,@(when eziam-scale-non-headline-faces (list :height .8))))))
