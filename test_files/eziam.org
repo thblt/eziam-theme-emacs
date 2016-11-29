@@ -1,0 +1,39 @@
+#+TITLE: Eziam org-mode test-file
+#+AUTHOR: Thibault Polge
+
+* A first level header
+:PROPERTIES:
+:header-args: :cache yes
+:END:
+
+
+** A second level header
+
+#+begin_QUOTE
+   It is a pune, or play on words (Terry Pratchett) 
+#+end_QUOTE
+
+#+CAPTION: An amazing table with numbers in it (borrowed from org-mode documentation)
+|---+---------+--------+--------+--------+-------+------|
+|   | Student | Prob 1 | Prob 2 | Prob 3 | Total | Note |
+|---+---------+--------+--------+--------+-------+------|
+| ! |         |     P1 |     P2 |     P3 |   Tot |      |
+| # | Maximum |     10 |     15 |     25 |    50 | 10.0 |
+| ^ |         |     m1 |     m2 |     m3 |    mt |      |
+|---+---------+--------+--------+--------+-------+------|
+| # | Peter   |     10 |      8 |     23 |    41 |  8.2 |
+| # | Sam     |      2 |      4 |      3 |     9 |  1.8 |
+|---+---------+--------+--------+--------+-------+------|
+|   | Average |        |        |        |  25.0 |      |
+| ^ |         |        |        |        |    at |      |
+| $ | max=50  |        |        |        |       |      |
+|---+---------+--------+--------+--------+-------+------|
+#+TBLFM: $6=vsum($P1..$P3)::$7=10*$Tot/$max;%.1f::$at=vmean(@-II..@-I);%.1f
+
+| First number | Second number | Average |
+|--------------+---------------+---------|
+|           18 |            14 |         |
+|           34 |            19 |         |
+|            9 |            37 |         |
+
+
