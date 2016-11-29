@@ -581,7 +581,7 @@
    `(org-level-7                                      ((,class ,ol7)))
    `(org-level-8                                      ((,class ,ol8)))         
    `(org-link                                         ((t (:foreground COLOR_11 :underline t))))
-   `(org-property-value                               ((t (:foreground COLOR_6))))
+   `(org-property-value                               ((t (:foreground COLOR_6 :slant italic))))
    `(org-scheduled                                    ((t (:foreground COLOR_13))))
    `(org-scheduled-previously                         ((t (:foreground COLOR_10))))
    `(org-scheduled-today                              ((t (:foreground COLOR_11))))
