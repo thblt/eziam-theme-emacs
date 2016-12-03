@@ -33,7 +33,7 @@
       (ol7 '(:weight bold :slant italic :foreground "#2EAE2C"))
       (ol8 '(:weight bold :slant italic :foreground "#FD8008"))
       )
-  
+
   (custom-theme-set-faces
    'eziam-VARIANT
    ;; Built-in
@@ -90,17 +90,17 @@
    `(vertical-border                                  ((t (:foreground COLOR_7 :background COLOR_4))))
    ;; font lock
    `(font-lock-builtin-face                           ((t (:foreground COLOR_13 :weight bold))))
-   `(font-lock-comment-face                           ((t (:foreground COMMENT))))
-   `(font-lock-comment-delimiter-face                 ((t (:foreground COMMENT))))
+   `(font-lock-comment-face                           ((t (:foreground COLOR_8 :slant italic))))
+   `(font-lock-delimiter-face                         ((t (:foreground COLOR_8 :slant italic))))
    `(font-lock-constant-face                          ((t (:foreground COLOR_8 :weight bold))))
    `(font-lock-doc-face                               ((t (:foreground COLOR_7))))
-   `(font-lock-function-name-face                     ((t (:background FUNCTION_NAME :box (:color FUNCTION_NAME_BOX)))))
+   `(font-lock-function-name-face                     ((t (:background COLOR_1 :box (:color COLOR_14)))))
    `(font-lock-keyword-face                           ((t (:foreground COLOR_13 :weight bold))))
    `(font-lock-negation-char-face                     ((t (:foreground COLOR_13 :weight bold))))
    `(font-lock-preprocessor-face                      ((t (:foreground COLOR_11))))
    `(font-lock-regexp-grouping-construct              ((t (:foreground COLOR_13 :weight bold))))
    `(font-lock-regexp-grouping-backslash              ((t (:foreground COLOR_9 :weight bold))))
-   `(font-lock-string-face                            ((t (:foreground COLOR_8 :slant oblique))))
+   `(font-lock-string-face                            ((t (:foreground COLOR_7))))
    `(font-lock-type-face                              ((t (:foreground COLOR_10 :underline t))))
    `(font-lock-variable-name-face                     ((t (:foreground COLOR_14 ))))
    `(font-lock-warning-face                           ((t (:foreground COLOR_11 :weight bold))))
@@ -579,7 +579,7 @@
    `(org-level-5                                      ((,class ,ol5)))
    `(org-level-6                                      ((,class ,ol6)))
    `(org-level-7                                      ((,class ,ol7)))
-   `(org-level-8                                      ((,class ,ol8)))         
+   `(org-level-8                                      ((,class ,ol8)))
    `(org-link                                         ((t (:foreground COLOR_11 :underline t))))
    `(org-property-value                               ((t (:foreground COLOR_6 :slant italic))))
    `(org-scheduled                                    ((t (:foreground COLOR_13))))

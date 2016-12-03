@@ -26,7 +26,7 @@
       (ol7 '(:weight bold :slant italic :foreground "#2EAE2C"))
       (ol8 '(:weight bold :slant italic :foreground "#FD8008"))
       )
-  
+
   (custom-theme-set-faces
    'eziam-light
    ;; Built-in
@@ -83,17 +83,17 @@
    `(vertical-border                                  ((t (:foreground "#616161" :background "#F0F0F0"))))
    ;; font lock
    `(font-lock-builtin-face                           ((t (:foreground "#080808" :weight bold))))
-   `(font-lock-comment-face                           ((t (:foreground "#007700"))))
-   `(font-lock-comment-delimiter-face                 ((t (:foreground "#007700"))))
+   `(font-lock-comment-face                           ((t (:foreground "#3C3C3C" :slant italic))))
+   `(font-lock-delimiter-face                         ((t (:foreground "#3C3C3C" :slant italic))))
    `(font-lock-constant-face                          ((t (:foreground "#3C3C3C" :weight bold))))
    `(font-lock-doc-face                               ((t (:foreground "#616161"))))
-   `(font-lock-function-name-face                     ((t (:background "#BBCCFF" :box (:color "#99AADD")))))
+   `(font-lock-function-name-face                     ((t (:background "#C2C2C2" :box (:color "#080808")))))
    `(font-lock-keyword-face                           ((t (:foreground "#080808" :weight bold))))
    `(font-lock-negation-char-face                     ((t (:foreground "#080808" :weight bold))))
    `(font-lock-preprocessor-face                      ((t (:foreground "#0E0E0E"))))
    `(font-lock-regexp-grouping-construct              ((t (:foreground "#080808" :weight bold))))
    `(font-lock-regexp-grouping-backslash              ((t (:foreground "#252525" :weight bold))))
-   `(font-lock-string-face                            ((t (:foreground "#3C3C3C" :slant oblique))))
+   `(font-lock-string-face                            ((t (:foreground "#616161"))))
    `(font-lock-type-face                              ((t (:foreground "#161616" :underline t))))
    `(font-lock-variable-name-face                     ((t (:foreground "#080808" ))))
    `(font-lock-warning-face                           ((t (:foreground "#0E0E0E" :weight bold))))
@@ -566,13 +566,13 @@
    `(org-document-title                               ((t (:foreground "#080808" ,@(when eziam-scale-non-headline-faces (list :height 1.9)) :bold t))))
    `(org-document-info                                ((t ())))
    `(org-level-1                                      ((,class ,ol1)))
-   `(org-level-2                                      ((,class ,ol2)))
+;;   `(org-level-2                                      ((,class ,ol2)))
    `(org-level-3                                      ((,class ,ol3)))
    `(org-level-4                                      ((,class ,ol4)))
    `(org-level-5                                      ((,class ,ol5)))
    `(org-level-6                                      ((,class ,ol6)))
    `(org-level-7                                      ((,class ,ol7)))
-   `(org-level-8                                      ((,class ,ol8)))         
+   `(org-level-8                                      ((,class ,ol8)))
    `(org-link                                         ((t (:foreground "#0E0E0E" :underline t))))
    `(org-property-value                               ((t (:foreground "#9D9D9D" :slant italic))))
    `(org-scheduled                                    ((t (:foreground "#080808"))))
