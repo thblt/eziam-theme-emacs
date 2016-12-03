@@ -7,6 +7,10 @@ struct course
    char subject[30];
 };
 
+
+/** 
+    Delta 
+*/
 int main()
 {
    struct course *ptr;
@@ -25,7 +29,7 @@ int main()
 
    printf("Displaying Information:\n");
 
-   for(i = 0; i < noOfRecords ; ++i)
+   for(i = 1; i < noOfRecords ; ++i)
        printf("%s\t%d\n", (ptr+i)->subject, (ptr+i)->marks);
 
    return 0;
