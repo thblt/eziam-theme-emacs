@@ -1,5 +1,4 @@
 #define      FILE_VARIABLES    -*- mode: c; -*-
-#define      VARIANT           light
 #define      DARK_MODE         1
 #define      COLOR_1           "#F0F0F0"
 #define      COLOR_2           "#C2C2C2"
