@@ -1,1 +1,8 @@
-gpp +s '"' '"' '\\' --include $1.palette eziam-theme.el.tpl > eziam-$1-theme.el
+#!/bin/sh
+
+palettes=`ls *.palette | sed s/\.palette//`
+
+for p in $palettes; do
+    gpp +s '"' '"' '\\' --include $p.palette eziam-theme.el.tpl > eziam-$p-theme.el
+done
+
