@@ -1,4 +1,5 @@
-                                        ;XXX: ;;; eziam-white-theme.el --- The white Eziam theme for Emacs
+;;; eziam-white-theme.el --- The white Eziam theme for Emacs
+;;;
 ;;; Commentary:
 ;;
 ;; This file was automatically generated, you should not edit it.  See
@@ -10,26 +11,30 @@
 
 
 
+
 (require 'eziam-common)
 
-(deftheme eziam-white "The VARIANT Eziam color theme")
+(deftheme eziam-white "The white Eziam color theme")
 
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1 `(,@(when eziam-scale-outline-headlines (list :height 1.9)) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
-      (ol2 '(,@(when eziam-scale-outline-headlines (list :height 1.6)) :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
-      (ol3 '(,@(when eziam-scale-outline-headlines (list :height 1.3)) :weight bold :foreground "#005522" :background "#EFFFEF"))
-      (ol4 '(:weight bold :slant normal :foreground "#EA6300"))
-      (ol5 '(:weight bold :slant normal :foreground "#E3258D"))
-      (ol6 '(:weight bold :slant italic :foreground "#0077CC"))
-      (ol7 '(:weight bold :slant italic :foreground "#2EAE2C"))
-      (ol8 '(:weight bold :slant italic :foreground "#FD8008"))
+      (ol1 `(,@(when eziam-scale-outline-headlines (list :height 1.9)) :overline t :background "#FF0000" :weight bold ))
+      (ol2 `(,@(when eziam-scale-outline-headlines (list :height 1.6)) :overline t :background "#FF0000"))
+      (ol3 `(,@(when eziam-scale-outline-headlines (list :height 1.3)) :overline t :background "#FF0000"))
+      (ol4 `(,@(when eziam-scale-outline-headlines (list :height 1.1)) :overline t :weight bold :slant normal :foreground "#FF0000"))
+      (ol5 `(:overline t :weight bold :slant normal :foreground "#FF0000"))
+      (ol6 `(:overline t :weight bold :slant italic :foreground "#FF0000"))
+      (ol7 `(:overline t :weight bold :slant italic :foreground "#FF0000"))
+      (ol8 `(:overline t :slant italic :foreground "#FF0000"))
+      (highlight `(:inverse-video t))
+      (transient-highlight `(:background "#ffff00"))      
       )
 
   (custom-theme-set-faces
    'eziam-white
    ;; Built-in
+   `(default                                          ((t (:foreground "#000000" :background "#FFFFFF"))))
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground "#000000" :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground "#000000" :underline t :weight normal))))
@@ -39,7 +44,8 @@
    `(escape-glyph                                     ((t (:foreground "#000000" :bold t))))
    `(fringe                                           ((t (:foreground "#FFFFFF":background "#FFFFFF"))))
    `(header-line                                      ((t (:inherit mode-line))))
-   `(highlight                                        ((t (:background "#FFFFFF"))))
+   `(highlight                                        ((t (:background COLOR_0))))
+   `(region                                           ((t (:background "#AAAAAA" :foreground "#FFFFFF"))))
    `(success                                          ((t (:foreground "#555555" :weight bold))))
    `(warning                                          ((t (:foreground "#000000" :weight bold))))
    ;; compilation
@@ -68,15 +74,14 @@
    `(makefile-targets                                 ((t (:underline t))))
    `(makefile-shell                                   ((t (:slant italic))))
    ;; isearch
-   `(isearch                                          ((t (:background ,"#ffff00" :foreground "#FFFFFF" :weight normal))))
+   `(isearch                                          ((,class ,transient-highlight)))
    `(isearch-fail                                     ((t (:foreground "#000000" :background "#999999"))))
    `(lazy-highlight                                   ((t (:foreground "#000000" :weight bold :background "#CCCCCC"))))
    `(menu                                             ((t (:foreground "#000000" :background "#FFFFFF"))))
    `(minibuffer-prompt                                ((t (:foreground "#000000" :color "#FFFFFF"))))
-   `(mode-line                                        ((,class (:foreground "#FFFFFF":background "#777777" :box nil )) (t :inverse-video t)))
+   `(mode-line                                        ((t (:foreground "#FFFFFF":background "#777777" :box nil )) (t :inverse-video t)))
    `(mode-line-inactive                               ((t (:foreground "#FFFFFF":background "#AAAAAA" :box nil))))
    `(mode-line-buffer-id                              ((t (:foreground "#FFFFFF":weight bold))))
-   `(region                                           ((,class (:background "#555555" :foreground "#FFFFFF") (t :inverse-video t))))
    `(secondary-selection                              ((t (:background "#FFFFFF"))))
    `(cua-rectangle                                    ((t (:background "#FFFFFF"))))
    `(trailing-whitespace                              ((t (:background "#333333"))))
@@ -87,13 +92,13 @@
    `(font-lock-delimiter-face                         ((t (:foreground "#777777" :slant italic))))
    `(font-lock-constant-face                          ((t (:foreground "#777777" :weight bold))))
    `(font-lock-doc-face                               ((t (:foreground "#999999"))))
-   `(font-lock-function-name-face                     ((t (:background "#FFFFFF" :box (:color "#000000")))))
+   `(font-lock-function-name-face                     ((t (:background COLOR_0 :box (:color "#CCCCCC")))))
    `(font-lock-keyword-face                           ((t (:foreground "#000000" :weight bold))))
    `(font-lock-negation-char-face                     ((t (:foreground "#000000" :weight bold))))
    `(font-lock-preprocessor-face                      ((t (:foreground "#000000"))))
    `(font-lock-regexp-grouping-construct              ((t (:foreground "#000000" :weight bold))))
    `(font-lock-regexp-grouping-backslash              ((t (:foreground "#555555" :weight bold))))
-   `(font-lock-string-face                            ((t (:foreground "#999999"))))
+   `(font-lock-string-face                            ((t (:foreground "#777777"))))
    `(font-lock-type-face                              ((t (:foreground "#333333" :underline t))))
    `(font-lock-variable-name-face                     ((t (:foreground "#000000" ))))
    `(font-lock-warning-face                           ((t (:foreground "#000000" :weight bold))))
@@ -537,7 +542,7 @@
    `(nav-face-file                                    ((t (:foreground "#000000"))))
    `(nav-face-hfile                                   ((t (:foreground "#999999"))))
    ;; mu4e
-   `(mu4e-header-highlight-face                       ((t (:inverse-video t))))
+   `(mu4e-header-highlight-face                       ((, class ,highlight)))
    `(mu4e-cited-1-face                                ((t (:foreground "#000000"    :slant italic))))
    `(mu4e-cited-2-face                                ((t (:foreground "#000000" :slant italic))))
    `(mu4e-cited-3-face                                ((t (:foreground "#555555"  :slant italic))))
@@ -574,6 +579,7 @@
    `(org-level-7                                      ((,class ,ol7)))
    `(org-level-8                                      ((,class ,ol8)))
    `(org-link                                         ((t (:foreground "#000000" :underline t))))
+   `(org-list-dt                                      ((t (:weight bold))))
    `(org-property-value                               ((t (:foreground "#AAAAAA" :slant italic))))
    `(org-scheduled                                    ((t (:foreground "#000000"))))
    `(org-scheduled-previously                         ((t (:foreground "#333333"))))
@@ -584,7 +590,7 @@
    `(org-tag                                          ((t (:bold t :weight bold))))
    `(org-time-grid                                    ((t (:foreground "#000000"))))
    `(org-done                                         ((t (:bold t :background "#333333" :foreground "#FFFFFF" :weight bold))))
-   `(org-todo                                         ((t (:bold t  :background "#333333"  :foreground "#FFFFFF":weight bold))))
+   `(org-todo                                         ((t (:bold t :inverse-video t))))
    `(org-upcoming-deadline                            ((t (:inherit font-lock-keyword-face))))
    `(org-warning                                      ((t (:bold t :foreground "#333333" :weight bold :underline nil))))
    `(org-column                                       ((t (:background "#FFFFFF"))))
@@ -596,8 +602,8 @@
    `(org-meta-line                                    ((t (:foreground "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
    `(org-block-background                             ((t (:background "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
    `(org-block                                        ((t (:foreground "#999999" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
-   `(org-block-begin-line                             ((t (:foreground "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height .75))))))
-   `(org-block-end-line                               ((t (:foreground "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height .75))))))
+   `(org-block-begin-line                             ((t (:foreground "#999999" :background "#CCCCCC" ,@(when eziam-scale-non-headline-faces (list :height .75))))))
+   `(org-block-end-line                               ((t (:inherit org-block-begin-line))))
    ;; outline
    `(outline-1                                        ((t (:foreground "#000000"))))
    `(outline-2                                        ((t (:foreground "#000000"))))
