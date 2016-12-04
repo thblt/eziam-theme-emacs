@@ -1,12 +1,12 @@
 #+TITLE: Eziam Theme
 
-[[#screenshots][Screenshots]] [[#installation][Installation]] 
+[[#screenshots][Screenshots]] · [[#installation][Installation]] 
 
 ------
 
-*Eziam is not yet usable.  Don't use it*
+*State*: Eziam is almost usable.
 
-Eziam is a theme for Emacs.  It is a fork of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with a hint of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, it tries to keep some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.
+Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with the org-mode goodness of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, it tries to keep some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.
 
 It colorizes:
 
@@ -21,6 +21,28 @@ soon!
 ** Installation
 
 Eziam is not yet in Melpa.
+
+** Hacking
+
+Eziam build script (=make.sh=) uses the [[https://logological.org/gpp][gpp]] preprocessor to apply palette values into a single template file and generate the theme's el files.  Each =*.palette= file corresponds to an Eziam variant.  
+
+**** Palette
+
+To define a palette, simply copy a =.palette= file to a new name and update its values.  
+
+| Name    | Usage             | Notes |   |
+|---------+-------------------+-------+---|
+| COLOR_0 | Negative contrast |       |   |
+| COLOR_1 | Background color  |       |   |
+| COLOR_2 |                   |       |   |
+| COLOR_2 |                   |       |   |
+|         |                   |       |   |
+|         |                   |       |   |
+|         |                   |       |   |
+|         |                   |       |   |
+|         |                   |       |   |
+|         |                   |       |   |
+
 
 ** What's in a name?
 
