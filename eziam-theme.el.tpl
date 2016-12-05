@@ -49,7 +49,7 @@
    `(hl-paren-face                                    ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    `(cursor                                           ((t (:foreground COLOR_8 :background COLOR_8))))
    `(escape-glyph                                     ((t (:foreground COLOR_8 :bold t))))
-   `(fringe                                           ((t (:foreground COLOR_1:background COLOR_1))))
+   `(fringe                                           ((t (:foreground COLOR_1 :background COLOR_1))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background COLOR_0))))
    `(region                                           ((t (:background COLOR_3 :foreground COLOR_1))))
@@ -75,7 +75,7 @@
    `(grep-error-face                                  ((t (:foreground COLOR_6 :weight bold :underline t))))
    `(grep-hit-face                                    ((t (:foreground COLOR_8))))
    `(grep-match-face                                  ((t (:foreground COLOR_8 :weight bold))))
-   `(match                                            ((t (:background COLOR_1:foreground COLOR_8 :weight bold))))
+   `(match                                            ((t (:background COLOR_1 :foreground COLOR_8 :weight bold))))
    ;; make
    `(makefile-space                                   ((t (:background COLOR_1))))
    `(makefile-targets                                 ((t (:underline t))))
@@ -86,9 +86,9 @@
    `(lazy-highlight                                   ((t (:foreground COLOR_8 :weight bold :background COLOR_2))))
    `(menu                                             ((t (:foreground COLOR_8 :background COLOR_1))))
    `(minibuffer-prompt                                ((t (:foreground COLOR_8 :color COLOR_1))))
-   `(mode-line                                        ((t (:foreground COLOR_1:background COLOR_5 :box nil )) (t :inverse-video t)))
-   `(mode-line-inactive                               ((t (:foreground COLOR_1:background COLOR_3 :box nil))))
-   `(mode-line-buffer-id                              ((t (:foreground COLOR_1:weight bold))))
+   `(mode-line                                        ((t (:foreground COLOR_1 :background COLOR_5 :box nil ))))
+   `(mode-line-inactive                               ((t (:foreground COLOR_1 :background COLOR_3 :box nil))))
+   `(mode-line-buffer-id                              ((t (:foreground COLOR_1 :weight bold))))
    `(secondary-selection                              ((t (:background COLOR_1))))
    `(cua-rectangle                                    ((t (:background COLOR_1))))
    `(trailing-whitespace                              ((t (:background COLOR_7))))
@@ -127,12 +127,12 @@
    `(newsticker-treeview-new-face                     ((t (:foreground COLOR_8 :weight bold))))
    `(newsticker-treeview-obsolete-face                ((t (:foreground COLOR_7))))
    `(newsticker-treeview-old-face                     ((t (:foreground COLOR_5))))
-   `(newsticker-treeview-selection-face               ((t (:background COLOR_1:foreground COLOR_8))))
+   `(newsticker-treeview-selection-face               ((t (:background COLOR_1 :foreground COLOR_8))))
    ;; Third-party
    ;; highlight-symbol
    `(highlight-symbol-face                            ((t (:background COLOR_1))))
    ;; ace-jump
-   `(ace-jump-face-background                         ((t (:foreground COLOR_3 :background COLOR_1:inverse-video nil))))
+   `(ace-jump-face-background                         ((t (:foreground COLOR_3 :background COLOR_1 :inverse-video nil))))
    `(ace-jump-face-foreground                         ((t (:foreground COLOR_8 :background COLOR_1 :inverse-video nil))))
    ;; anzu
    `(anzu-mode-line                                   ((t (:foreground COLOR_8 :weight bold))))
@@ -140,7 +140,7 @@
    `(ack-separator                                    ((t (:foreground COLOR_8))))
    `(ack-file                                         ((t (:foreground COLOR_8))))
    `(ack-line                                         ((t (:foreground COLOR_8))))
-   `(ack-match                                        ((t (:foreground COLOR_8 :background COLOR_1:weight bold))))
+   `(ack-match                                        ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    ;; auctex
    `(font-latex-bold-face                             ((t (:inherit bold))))
    `(font-latex-warning-face                          ((t (:foreground nil :inherit font-lock-warning-face))))
@@ -150,7 +150,7 @@
    `(font-latex-string-face                           ((t (:inherit ,font-lock-string-face))))
    `(font-latex-math-face                             ((t (:foreground COLOR_8))))
    ;; auto-complete
-   `(ac-candidate-face                                ((t (:background COLOR_5 :foreground COLOR_1:underline nil))))
+   `(ac-candidate-face                                ((t (:background COLOR_5 :foreground COLOR_1 :underline nil))))
    `(ac-selection-face                                ((t (:background COLOR_4 :foreground COLOR_8 :underline nil))))
    `(ac-yasnippet-candidate-face                      ((t (:background COLOR_5 :foreground COLOR_1))))
    `(ac-yasnippet-selection-face                      ((t (:background COLOR_4 :foreground COLOR_8))))
@@ -164,7 +164,7 @@
    `(popup-tip-face                                   ((t (:background COLOR_8 :foreground COLOR_1))))
    `(popup-scroll-bar-foreground-face                 ((t (:background COLOR_3))))
    `(popup-scroll-bar-background-face                 ((t (:background COLOR_1))))
-   `(popup-isearch-match                              ((t (:background COLOR_1:foreground COLOR_8))))
+   `(popup-isearch-match                              ((t (:background COLOR_1 :foreground COLOR_8))))
    ;; android mode
    `(android-mode-debug-face                          ((t (:foreground COLOR_7))))
    `(android-mode-error-face                          ((t (:foreground COLOR_8 :weight bold))))
@@ -173,8 +173,8 @@
    `(android-mode-warning-face                        ((t (:foreground COLOR_8))))
    ;; bm
    `(bm-face                                          ((t (:background COLOR_8 :foreground COLOR_2))))
-   `(bm-fringe-face                                   ((t (:background COLOR_1:foreground COLOR_1))))
-   `(bm-fringe-persistent-face                        ((t (:background COLOR_1:foreground COLOR_1))))
+   `(bm-fringe-face                                   ((t (:background COLOR_1 :foreground COLOR_1))))
+   `(bm-fringe-persistent-face                        ((t (:background COLOR_1 :foreground COLOR_1))))
    `(bm-persistent-face                               ((t (:background COLOR_5 :foreground COLOR_2))))
    ;; clojure-test-mode
    `(clojure-test-failure-face                        ((t (:foreground COLOR_8 :weight bold :underline t))))
@@ -184,7 +184,7 @@
    `(coq-solve-tactics-face                           ((t (:foreground nil :inherit font-lock-constant-face))))
    ;; ctable
    `(ctbl:face-cell-select                            ((t (:background COLOR_8 :foreground COLOR_2))))
-   `(ctbl:face-continue-bar                           ((t (:background COLOR_1:foreground COLOR_2))))
+   `(ctbl:face-continue-bar                           ((t (:background COLOR_1 :foreground COLOR_2))))
    `(ctbl:face-row-select                             ((t (:background COLOR_8 :foreground COLOR_2))))
    ;; diff
    `(diff-added                                       ((,class (:foreground COLOR_8 :background nil)) (t (:foreground COLOR_5 :background nil))))
@@ -203,7 +203,7 @@
    `(diredp-date-time                                 ((t (:foreground COLOR_7))))
    `(diredp-deletion                                  ((t (:foreground COLOR_8))))
    `(diredp-deletion-file-name                        ((t (:foreground COLOR_7))))
-   `(diredp-dir-heading                               ((t (:foreground COLOR_8 :background COLOR_1:bold t))))
+   `(diredp-dir-heading                               ((t (:foreground COLOR_8 :background COLOR_1 :bold t))))
    `(diredp-dir-priv                                  ((t (:foreground COLOR_8 :bold t))))
    `(diredp-dir-name                                  ((t (:foreground COLOR_8 :bold t))))
    `(diredp-exec-priv                                 ((t (:foreground COLOR_7))))
@@ -288,18 +288,18 @@
    `(erc-nick-msg-face                                ((t (:inherit erc-default))))
    `(erc-notice-face                                  ((t (:foreground COLOR_6))))
    `(erc-pal-face                                     ((t (:foreground COLOR_8 :weight bold))))
-   `(erc-prompt-face                                  ((t (:foreground COLOR_8 :background COLOR_1:weight bold))))
+   `(erc-prompt-face                                  ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    `(erc-timestamp-face                               ((t (:foreground COLOR_8))))
    `(erc-underline-face                               ((t (:underline t))))
    ;; git-gutter
-   `(git-gutter:added                                 ((t (:background COLOR_1:foreground COLOR_1 :weight bold ))))
-   `(git-gutter:deleted                               ((t (:background COLOR_1:foreground COLOR_1 :weight bold ))))
-   `(git-gutter:modified                              ((t (:background COLOR_1:foreground COLOR_1 :weight bold ))))
-   `(git-gutter:unchanged                             ((t (:background COLOR_1:foreground COLOR_1 :weight bold ))))
+   `(git-gutter:added                                 ((t (:background COLOR_1 :foreground COLOR_1 :weight bold ))))
+   `(git-gutter:deleted                               ((t (:background COLOR_1 :foreground COLOR_1 :weight bold ))))
+   `(git-gutter:modified                              ((t (:background COLOR_1 :foreground COLOR_1 :weight bold ))))
+   `(git-gutter:unchanged                             ((t (:background COLOR_1 :foreground COLOR_1 :weight bold ))))
    ;; git-gutter-fr
-   `(git-gutter-fr:added                              ((t (:foreground COLOR_1:weight bold))))
-   `(git-gutter-fr:deleted                            ((t (:foreground COLOR_1:weight bold))))
-   `(git-gutter-fr:modified                           ((t (:foreground COLOR_1:weight bold))))
+   `(git-gutter-fr:added                              ((t (:foreground COLOR_1 :weight bold))))
+   `(git-gutter-fr:deleted                            ((t (:foreground COLOR_1 :weight bold))))
+   `(git-gutter-fr:modified                           ((t (:foreground COLOR_1 :weight bold))))
    ;; gnus
    `(gnus-group-mail-1                                ((t (:bold t :inherit gnus-group-mail-1-empty))))
    `(gnus-group-mail-1-empty                          ((t (:inherit gnus-group-news-1-empty))))
@@ -366,8 +366,8 @@
    `(guide-key/key-face                               ((t (:foreground COLOR_6))))
    `(guide-key/prefix-command-face                    ((t (:foreground COLOR_7))))
    ;; helm
-   `(helm-header                                      ((t (:foreground COLOR_6 :background COLOR_1:underline nil :box nil))))
-   `(helm-source-header                               ((t (:foreground COLOR_8 :background COLOR_1:underline nil :weight bold :box (:line-width -1 :style released-button)))))
+   `(helm-header                                      ((t (:foreground COLOR_6 :background COLOR_1 :underline nil :box nil))))
+   `(helm-source-header                               ((t (:foreground COLOR_8 :background COLOR_1 :underline nil :weight bold :box (:line-width -1 :style released-button)))))
    `(helm-selection                                   ((t (:background COLOR_3 :underline nil))))
    `(helm-selection-line                              ((t (:background COLOR_3))))
    `(helm-visible-mark                                ((t (:foreground COLOR_2 :background COLOR_8))))
@@ -408,7 +408,7 @@
    `(helm-moccur-buffer                               ((t (:foreground COLOR_8 :background COLOR_1))))
    `(helm-mu-contacts-address-face                    ((t (:foreground COLOR_4 :background COLOR_1))))
    `(helm-mu-contacts-name-face                       ((t (:foreground COLOR_8 :background COLOR_1))))
-   `(helm-M-x-key                                     ((t (:foreground COLOR_8 :background COLOR_1:weight bold))))
+   `(helm-M-x-key                                     ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    ;; hl-line-mode FIXME Looks weird
    `(hl-line-face                                     ((,class (:background COLOR_1) (t :weight bold))))
    `(hl-line                                          ((,class (:background COLOR_1) (t :weight bold))))
@@ -532,7 +532,7 @@
    `(mew-face-eof-part                                ((t (:foreground COLOR_8))))
    ;; mic-paren
    `(paren-face-match                                 ((t (:foreground COLOR_8 :background COLOR_1))))
-   `(paren-face-mismatch                              ((t (:foreground COLOR_1:background COLOR_1))))
+   `(paren-face-mismatch                              ((t (:foreground COLOR_1 :background COLOR_1))))
    `(paren-face-no-match                              ((t (:foreground COLOR_3 :background COLOR_1))))
    ;; mingus
    `(mingus-directory-face                            ((t (:foreground COLOR_8))))
@@ -601,7 +601,7 @@
    `(org-upcoming-deadline                            ((t (:inherit font-lock-keyword-face))))
    `(org-warning                                      ((t (:bold t :foreground COLOR_7 :weight bold :underline nil))))
    `(org-column                                       ((t (:background COLOR_1))))
-   `(org-column-title                                 ((t (:background COLOR_1:underline t :weight bold))))
+   `(org-column-title                                 ((t (:background COLOR_1 :underline t :weight bold))))
    `(org-mode-line-clock                              ((t (:foreground COLOR_8 :background COLOR_1))))
    `(org-mode-line-clock-overrun                      ((t (:foreground COLOR_2 :background COLOR_6))))
    `(org-ellipsis                                     ((t (:foreground COLOR_8 :underline t))))
@@ -609,8 +609,8 @@
    `(org-meta-line                                    ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
    `(org-block-background                             ((t (:background COLOR_3 NOL_HEIGHT(1.0)))))
    `(org-block                                        ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
-   `(org-block-begin-line                             ((t (:foreground COLOR_4 :background COLOR_2 NOL_HEIGHT(.75)))))
-   `(org-block-end-line                               ((t (:foreground COLOR_4 :background COLOR_2 NOL_HEIGHT(.75)))))
+   `(org-block-begin-line                             ((t (:foreground COLOR_4 :background COLOR_2))))
+   `(org-block-end-line                               ((t (:foreground COLOR_4 :background COLOR_2))))
    ;; outline
    `(outline-1                                        ((t (:foreground COLOR_8))))
    `(outline-2                                        ((t (:foreground COLOR_8))))
@@ -634,9 +634,9 @@
    `(persp-selected-face                              ((t (:foreground COLOR_8 :inherit mode-line))))
    ;; powerline
    `(powerline-active1                                ((t (:background COLOR_3 :foreground COLOR_8 :box nil :inherit mode-line ))))
-   `(powerline-active2                                ((t (:background COLOR_1:foreground COLOR_5 :box nil :inherit mode-line ))))
-   `(powerline-inactive1                              ((t (:background COLOR_1:foreground COLOR_3 :inherit mode-line-inactive))))
-   `(powerline-inactive2                              ((t (:background COLOR_1:foreground COLOR_4 :inherit mode-line-inactive))))
+   `(powerline-active2                                ((t (:background COLOR_1 :foreground COLOR_5 :box nil :inherit mode-line ))))
+   `(powerline-inactive1                              ((t (:background COLOR_1 :foreground COLOR_3 :inherit mode-line-inactive))))
+   `(powerline-inactive2                              ((t (:background COLOR_1 :foreground COLOR_4 :inherit mode-line-inactive))))
    ;; proofgeneral
    `(proof-active-area-face                           ((t (:underline t))))
    `(proof-boring-face                                ((t (:foreground COLOR_8 :background COLOR_4))))
@@ -729,7 +729,7 @@
    `(speedbar-tag-face                                ((t (:foreground COLOR_8))))
    ;; tabbar
    `(tabbar-button                                    ((t (:foreground COLOR_8 :background COLOR_1))))
-   `(tabbar-selected                                  ((t (:foreground COLOR_8 :background COLOR_1:box (:line-width -1 :style pressed-button)))))
+   `(tabbar-selected                                  ((t (:foreground COLOR_8 :background COLOR_1 :box (:line-width -1 :style pressed-button)))))
    `(tabbar-unselected                                ((t (:foreground COLOR_8 :background COLOR_3 :box (:line-width -1 :style released-button)))))
    ;; term
    `(term-color-black                                 ((t (:foreground COLOR_2 :background COLOR_1))))
@@ -751,7 +751,7 @@
    ;; volatile-highlights
    `(vhl/default-face                                 ((t (:background COLOR_1))))
    ;; emacs-w3m
-   `(w3m-anchor                                       ((t (:foreground COLOR_8 :background COLOR_1:underline t :weight normal))))
+   `(w3m-anchor                                       ((t (:foreground COLOR_8 :background COLOR_1 :underline t :weight normal))))
    `(w3m-current-anchor                               ((t (:foreground COLOR_8 :background COLOR_1 :underline nil :weight bold))))
    `(w3m-arrived-anchor-face                          ((t (:foreground COLOR_4 :background COLOR_2 :underline t :weight normal))))
    `(w3m-image-anchor-face                            ((t (:foreground COLOR_7  :background COLOR_2 :underline t :weight normal))))
@@ -766,7 +766,7 @@
    `(w3m-tab-selected-background-face                 ((t (:foreground COLOR_1 :background COLOR_8 :underline nil :weight bold))) )
    `(w3m-tab-selected-retrieving                      ((t (:foreground COLOR_1 :background COLOR_8 :underline nil :weight bold))) )
    `(w3m-lnum                                         ((t (:foreground COLOR_8 :background COLOR_1))))
-   `(w3m-lnum-match                                   ((t (:background COLOR_1:foreground COLOR_8 :weight bold))))
+   `(w3m-lnum-match                                   ((t (:background COLOR_1 :foreground COLOR_8 :weight bold))))
    `(w3m-lnum-minibuffer-prompt                       ((t (:foreground COLOR_8))))
    ;; web-mode
    `(web-mode-builtin-face                            ((t (:inherit ,font-lock-builtin-face))))
@@ -799,7 +799,7 @@
    `(whitespace-tab                                   ((t (:background COLOR_6))))
    `(whitespace-newline                               ((t (:foreground COLOR_3))))
    `(whitespace-trailing                              ((t (:background COLOR_7))))
-   `(whitespace-line                                  ((t (:background COLOR_1:foreground COLOR_7))))
+   `(whitespace-line                                  ((t (:background COLOR_1 :foreground COLOR_7))))
    `(whitespace-space-before-tab                      ((t (:background COLOR_8 :foreground COLOR_8))))
    `(whitespace-indentation                           ((t (:background COLOR_8 :foreground COLOR_7))))
    `(whitespace-empty                                 ((t (:background COLOR_8))))
@@ -835,7 +835,7 @@
    `(which-func                                       ((t (:foreground COLOR_8))))
    ;; yascroll
    `(yascroll:thumb-text-area                         ((t (:background COLOR_1))))
-   `(yascroll:thumb-fringe                            ((t (:background COLOR_1:foreground COLOR_1))))
+   `(yascroll:thumb-fringe                            ((t (:background COLOR_1 :foreground COLOR_1))))
    `(minimap-active-region-background                 ((t (:background COLOR_3 :foreground COLOR_4))))
    ;; html fold/unfold face
    `(html-fold-unfolded-face                          ((t (:background COLOR_1))))
@@ -858,7 +858,7 @@
    ;; swoop
    `(swoop-face-line-buffer-name                      ((t (:background COLOR_6 :foreground COLOR_1))))
    `(swoop-face-target-line                           ((t (:background COLOR_4 :foreground COLOR_8))))
-   `(swoop-face-line-number                           ((t (:background COLOR_1:foreground COLOR_3))))
+   `(swoop-face-line-number                           ((t (:background COLOR_1 :foreground COLOR_3))))
    `(swoop-face-header-format-line                    ((t (:background COLOR_3 :foreground COLOR_1))))
    `(swoop-face-target-words                          ((t (:background COLOR_3 :foreground COLOR_8))))
    `(highlight-indentation-face                       ((t (:background COLOR_2))))

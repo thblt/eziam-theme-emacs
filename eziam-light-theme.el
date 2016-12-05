@@ -42,7 +42,7 @@
    `(hl-paren-face                                    ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    `(cursor                                           ((t (:foreground "#000000" :background "#000000"))))
    `(escape-glyph                                     ((t (:foreground "#000000" :bold t))))
-   `(fringe                                           ((t (:foreground "#EEEEEE":background "#EEEEEE"))))
+   `(fringe                                           ((t (:foreground "#EEEEEE" :background "#EEEEEE"))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background "#FFFFFF"))))
    `(region                                           ((t (:background "#AAAAAA" :foreground "#EEEEEE"))))
@@ -68,7 +68,7 @@
    `(grep-error-face                                  ((t (:foreground "#444444" :weight bold :underline t))))
    `(grep-hit-face                                    ((t (:foreground "#000000"))))
    `(grep-match-face                                  ((t (:foreground "#000000" :weight bold))))
-   `(match                                            ((t (:background "#EEEEEE":foreground "#000000" :weight bold))))
+   `(match                                            ((t (:background "#EEEEEE" :foreground "#000000" :weight bold))))
    ;; make
    `(makefile-space                                   ((t (:background "#EEEEEE"))))
    `(makefile-targets                                 ((t (:underline t))))
@@ -79,9 +79,9 @@
    `(lazy-highlight                                   ((t (:foreground "#000000" :weight bold :background "#CCCCCC"))))
    `(menu                                             ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(minibuffer-prompt                                ((t (:foreground "#000000" :color "#EEEEEE"))))
-   `(mode-line                                        ((t (:foreground "#EEEEEE":background "#666666" :box nil )) (t :inverse-video t)))
-   `(mode-line-inactive                               ((t (:foreground "#EEEEEE":background "#AAAAAA" :box nil))))
-   `(mode-line-buffer-id                              ((t (:foreground "#EEEEEE":weight bold))))
+   `(mode-line                                        ((t (:foreground "#EEEEEE" :background "#666666" :box nil ))))
+   `(mode-line-inactive                               ((t (:foreground "#EEEEEE" :background "#AAAAAA" :box nil))))
+   `(mode-line-buffer-id                              ((t (:foreground "#EEEEEE" :weight bold))))
    `(secondary-selection                              ((t (:background "#EEEEEE"))))
    `(cua-rectangle                                    ((t (:background "#EEEEEE"))))
    `(trailing-whitespace                              ((t (:background "#222222"))))
@@ -120,12 +120,12 @@
    `(newsticker-treeview-new-face                     ((t (:foreground "#000000" :weight bold))))
    `(newsticker-treeview-obsolete-face                ((t (:foreground "#222222"))))
    `(newsticker-treeview-old-face                     ((t (:foreground "#666666"))))
-   `(newsticker-treeview-selection-face               ((t (:background "#EEEEEE":foreground "#000000"))))
+   `(newsticker-treeview-selection-face               ((t (:background "#EEEEEE" :foreground "#000000"))))
    ;; Third-party
    ;; highlight-symbol
    `(highlight-symbol-face                            ((t (:background "#EEEEEE"))))
    ;; ace-jump
-   `(ace-jump-face-background                         ((t (:foreground "#AAAAAA" :background "#EEEEEE":inverse-video nil))))
+   `(ace-jump-face-background                         ((t (:foreground "#AAAAAA" :background "#EEEEEE" :inverse-video nil))))
    `(ace-jump-face-foreground                         ((t (:foreground "#000000" :background "#EEEEEE" :inverse-video nil))))
    ;; anzu
    `(anzu-mode-line                                   ((t (:foreground "#000000" :weight bold))))
@@ -133,7 +133,7 @@
    `(ack-separator                                    ((t (:foreground "#000000"))))
    `(ack-file                                         ((t (:foreground "#000000"))))
    `(ack-line                                         ((t (:foreground "#000000"))))
-   `(ack-match                                        ((t (:foreground "#000000" :background "#EEEEEE":weight bold))))
+   `(ack-match                                        ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    ;; auctex
    `(font-latex-bold-face                             ((t (:inherit bold))))
    `(font-latex-warning-face                          ((t (:foreground nil :inherit font-lock-warning-face))))
@@ -143,7 +143,7 @@
    `(font-latex-string-face                           ((t (:inherit ,font-lock-string-face))))
    `(font-latex-math-face                             ((t (:foreground "#000000"))))
    ;; auto-complete
-   `(ac-candidate-face                                ((t (:background "#666666" :foreground "#EEEEEE":underline nil))))
+   `(ac-candidate-face                                ((t (:background "#666666" :foreground "#EEEEEE" :underline nil))))
    `(ac-selection-face                                ((t (:background "#888888" :foreground "#000000" :underline nil))))
    `(ac-yasnippet-candidate-face                      ((t (:background "#666666" :foreground "#EEEEEE"))))
    `(ac-yasnippet-selection-face                      ((t (:background "#888888" :foreground "#000000"))))
@@ -157,7 +157,7 @@
    `(popup-tip-face                                   ((t (:background "#000000" :foreground "#EEEEEE"))))
    `(popup-scroll-bar-foreground-face                 ((t (:background "#AAAAAA"))))
    `(popup-scroll-bar-background-face                 ((t (:background "#EEEEEE"))))
-   `(popup-isearch-match                              ((t (:background "#EEEEEE":foreground "#000000"))))
+   `(popup-isearch-match                              ((t (:background "#EEEEEE" :foreground "#000000"))))
    ;; android mode
    `(android-mode-debug-face                          ((t (:foreground "#222222"))))
    `(android-mode-error-face                          ((t (:foreground "#000000" :weight bold))))
@@ -166,8 +166,8 @@
    `(android-mode-warning-face                        ((t (:foreground "#000000"))))
    ;; bm
    `(bm-face                                          ((t (:background "#000000" :foreground "#CCCCCC"))))
-   `(bm-fringe-face                                   ((t (:background "#EEEEEE":foreground "#EEEEEE"))))
-   `(bm-fringe-persistent-face                        ((t (:background "#EEEEEE":foreground "#EEEEEE"))))
+   `(bm-fringe-face                                   ((t (:background "#EEEEEE" :foreground "#EEEEEE"))))
+   `(bm-fringe-persistent-face                        ((t (:background "#EEEEEE" :foreground "#EEEEEE"))))
    `(bm-persistent-face                               ((t (:background "#666666" :foreground "#CCCCCC"))))
    ;; clojure-test-mode
    `(clojure-test-failure-face                        ((t (:foreground "#000000" :weight bold :underline t))))
@@ -177,7 +177,7 @@
    `(coq-solve-tactics-face                           ((t (:foreground nil :inherit font-lock-constant-face))))
    ;; ctable
    `(ctbl:face-cell-select                            ((t (:background "#000000" :foreground "#CCCCCC"))))
-   `(ctbl:face-continue-bar                           ((t (:background "#EEEEEE":foreground "#CCCCCC"))))
+   `(ctbl:face-continue-bar                           ((t (:background "#EEEEEE" :foreground "#CCCCCC"))))
    `(ctbl:face-row-select                             ((t (:background "#000000" :foreground "#CCCCCC"))))
    ;; diff
    `(diff-added                                       ((,class (:foreground "#000000" :background nil)) (t (:foreground "#666666" :background nil))))
@@ -196,7 +196,7 @@
    `(diredp-date-time                                 ((t (:foreground "#222222"))))
    `(diredp-deletion                                  ((t (:foreground "#000000"))))
    `(diredp-deletion-file-name                        ((t (:foreground "#222222"))))
-   `(diredp-dir-heading                               ((t (:foreground "#000000" :background "#EEEEEE":bold t))))
+   `(diredp-dir-heading                               ((t (:foreground "#000000" :background "#EEEEEE" :bold t))))
    `(diredp-dir-priv                                  ((t (:foreground "#000000" :bold t))))
    `(diredp-dir-name                                  ((t (:foreground "#000000" :bold t))))
    `(diredp-exec-priv                                 ((t (:foreground "#222222"))))
@@ -281,18 +281,18 @@
    `(erc-nick-msg-face                                ((t (:inherit erc-default))))
    `(erc-notice-face                                  ((t (:foreground "#444444"))))
    `(erc-pal-face                                     ((t (:foreground "#000000" :weight bold))))
-   `(erc-prompt-face                                  ((t (:foreground "#000000" :background "#EEEEEE":weight bold))))
+   `(erc-prompt-face                                  ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    `(erc-timestamp-face                               ((t (:foreground "#000000"))))
    `(erc-underline-face                               ((t (:underline t))))
    ;; git-gutter
-   `(git-gutter:added                                 ((t (:background "#EEEEEE":foreground "#EEEEEE" :weight bold ))))
-   `(git-gutter:deleted                               ((t (:background "#EEEEEE":foreground "#EEEEEE" :weight bold ))))
-   `(git-gutter:modified                              ((t (:background "#EEEEEE":foreground "#EEEEEE" :weight bold ))))
-   `(git-gutter:unchanged                             ((t (:background "#EEEEEE":foreground "#EEEEEE" :weight bold ))))
+   `(git-gutter:added                                 ((t (:background "#EEEEEE" :foreground "#EEEEEE" :weight bold ))))
+   `(git-gutter:deleted                               ((t (:background "#EEEEEE" :foreground "#EEEEEE" :weight bold ))))
+   `(git-gutter:modified                              ((t (:background "#EEEEEE" :foreground "#EEEEEE" :weight bold ))))
+   `(git-gutter:unchanged                             ((t (:background "#EEEEEE" :foreground "#EEEEEE" :weight bold ))))
    ;; git-gutter-fr
-   `(git-gutter-fr:added                              ((t (:foreground "#EEEEEE":weight bold))))
-   `(git-gutter-fr:deleted                            ((t (:foreground "#EEEEEE":weight bold))))
-   `(git-gutter-fr:modified                           ((t (:foreground "#EEEEEE":weight bold))))
+   `(git-gutter-fr:added                              ((t (:foreground "#EEEEEE" :weight bold))))
+   `(git-gutter-fr:deleted                            ((t (:foreground "#EEEEEE" :weight bold))))
+   `(git-gutter-fr:modified                           ((t (:foreground "#EEEEEE" :weight bold))))
    ;; gnus
    `(gnus-group-mail-1                                ((t (:bold t :inherit gnus-group-mail-1-empty))))
    `(gnus-group-mail-1-empty                          ((t (:inherit gnus-group-news-1-empty))))
@@ -359,8 +359,8 @@
    `(guide-key/key-face                               ((t (:foreground "#444444"))))
    `(guide-key/prefix-command-face                    ((t (:foreground "#222222"))))
    ;; helm
-   `(helm-header                                      ((t (:foreground "#444444" :background "#EEEEEE":underline nil :box nil))))
-   `(helm-source-header                               ((t (:foreground "#000000" :background "#EEEEEE":underline nil :weight bold :box (:line-width -1 :style released-button)))))
+   `(helm-header                                      ((t (:foreground "#444444" :background "#EEEEEE" :underline nil :box nil))))
+   `(helm-source-header                               ((t (:foreground "#000000" :background "#EEEEEE" :underline nil :weight bold :box (:line-width -1 :style released-button)))))
    `(helm-selection                                   ((t (:background "#AAAAAA" :underline nil))))
    `(helm-selection-line                              ((t (:background "#AAAAAA"))))
    `(helm-visible-mark                                ((t (:foreground "#CCCCCC" :background "#000000"))))
@@ -401,7 +401,7 @@
    `(helm-moccur-buffer                               ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(helm-mu-contacts-address-face                    ((t (:foreground "#888888" :background "#EEEEEE"))))
    `(helm-mu-contacts-name-face                       ((t (:foreground "#000000" :background "#EEEEEE"))))
-   `(helm-M-x-key                                     ((t (:foreground "#000000" :background "#EEEEEE":weight bold))))
+   `(helm-M-x-key                                     ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    ;; hl-line-mode FIXME Looks weird
    `(hl-line-face                                     ((,class (:background "#EEEEEE") (t :weight bold))))
    `(hl-line                                          ((,class (:background "#EEEEEE") (t :weight bold))))
@@ -525,7 +525,7 @@
    `(mew-face-eof-part                                ((t (:foreground "#000000"))))
    ;; mic-paren
    `(paren-face-match                                 ((t (:foreground "#000000" :background "#EEEEEE"))))
-   `(paren-face-mismatch                              ((t (:foreground "#EEEEEE":background "#EEEEEE"))))
+   `(paren-face-mismatch                              ((t (:foreground "#EEEEEE" :background "#EEEEEE"))))
    `(paren-face-no-match                              ((t (:foreground "#AAAAAA" :background "#EEEEEE"))))
    ;; mingus
    `(mingus-directory-face                            ((t (:foreground "#000000"))))
@@ -594,7 +594,7 @@
    `(org-upcoming-deadline                            ((t (:inherit font-lock-keyword-face))))
    `(org-warning                                      ((t (:bold t :foreground "#222222" :weight bold :underline nil))))
    `(org-column                                       ((t (:background "#EEEEEE"))))
-   `(org-column-title                                 ((t (:background "#EEEEEE":underline t :weight bold))))
+   `(org-column-title                                 ((t (:background "#EEEEEE" :underline t :weight bold))))
    `(org-mode-line-clock                              ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(org-mode-line-clock-overrun                      ((t (:foreground "#CCCCCC" :background "#444444"))))
    `(org-ellipsis                                     ((t (:foreground "#000000" :underline t))))
@@ -602,8 +602,8 @@
    `(org-meta-line                                    ((t (:foreground "#888888" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
    `(org-block-background                             ((t (:background "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
    `(org-block                                        ((t (:foreground "#888888" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
-   `(org-block-begin-line                             ((t (:foreground "#888888" :background "#CCCCCC" ,@(when eziam-scale-non-headline-faces (list :height .75))))))
-   `(org-block-end-line                               ((t (:foreground "#888888" :background "#CCCCCC" ,@(when eziam-scale-non-headline-faces (list :height .75))))))
+   `(org-block-begin-line                             ((t (:foreground "#888888" :background "#CCCCCC"))))
+   `(org-block-end-line                               ((t (:foreground "#888888" :background "#CCCCCC"))))
    ;; outline
    `(outline-1                                        ((t (:foreground "#000000"))))
    `(outline-2                                        ((t (:foreground "#000000"))))
@@ -627,9 +627,9 @@
    `(persp-selected-face                              ((t (:foreground "#000000" :inherit mode-line))))
    ;; powerline
    `(powerline-active1                                ((t (:background "#AAAAAA" :foreground "#000000" :box nil :inherit mode-line ))))
-   `(powerline-active2                                ((t (:background "#EEEEEE":foreground "#666666" :box nil :inherit mode-line ))))
-   `(powerline-inactive1                              ((t (:background "#EEEEEE":foreground "#AAAAAA" :inherit mode-line-inactive))))
-   `(powerline-inactive2                              ((t (:background "#EEEEEE":foreground "#888888" :inherit mode-line-inactive))))
+   `(powerline-active2                                ((t (:background "#EEEEEE" :foreground "#666666" :box nil :inherit mode-line ))))
+   `(powerline-inactive1                              ((t (:background "#EEEEEE" :foreground "#AAAAAA" :inherit mode-line-inactive))))
+   `(powerline-inactive2                              ((t (:background "#EEEEEE" :foreground "#888888" :inherit mode-line-inactive))))
    ;; proofgeneral
    `(proof-active-area-face                           ((t (:underline t))))
    `(proof-boring-face                                ((t (:foreground "#000000" :background "#888888"))))
@@ -722,7 +722,7 @@
    `(speedbar-tag-face                                ((t (:foreground "#000000"))))
    ;; tabbar
    `(tabbar-button                                    ((t (:foreground "#000000" :background "#EEEEEE"))))
-   `(tabbar-selected                                  ((t (:foreground "#000000" :background "#EEEEEE":box (:line-width -1 :style pressed-button)))))
+   `(tabbar-selected                                  ((t (:foreground "#000000" :background "#EEEEEE" :box (:line-width -1 :style pressed-button)))))
    `(tabbar-unselected                                ((t (:foreground "#000000" :background "#AAAAAA" :box (:line-width -1 :style released-button)))))
    ;; term
    `(term-color-black                                 ((t (:foreground "#CCCCCC" :background "#EEEEEE"))))
@@ -744,7 +744,7 @@
    ;; volatile-highlights
    `(vhl/default-face                                 ((t (:background "#EEEEEE"))))
    ;; emacs-w3m
-   `(w3m-anchor                                       ((t (:foreground "#000000" :background "#EEEEEE":underline t :weight normal))))
+   `(w3m-anchor                                       ((t (:foreground "#000000" :background "#EEEEEE" :underline t :weight normal))))
    `(w3m-current-anchor                               ((t (:foreground "#000000" :background "#EEEEEE" :underline nil :weight bold))))
    `(w3m-arrived-anchor-face                          ((t (:foreground "#888888" :background "#CCCCCC" :underline t :weight normal))))
    `(w3m-image-anchor-face                            ((t (:foreground "#222222"  :background "#CCCCCC" :underline t :weight normal))))
@@ -759,7 +759,7 @@
    `(w3m-tab-selected-background-face                 ((t (:foreground "#EEEEEE" :background "#000000" :underline nil :weight bold))) )
    `(w3m-tab-selected-retrieving                      ((t (:foreground "#EEEEEE" :background "#000000" :underline nil :weight bold))) )
    `(w3m-lnum                                         ((t (:foreground "#000000" :background "#EEEEEE"))))
-   `(w3m-lnum-match                                   ((t (:background "#EEEEEE":foreground "#000000" :weight bold))))
+   `(w3m-lnum-match                                   ((t (:background "#EEEEEE" :foreground "#000000" :weight bold))))
    `(w3m-lnum-minibuffer-prompt                       ((t (:foreground "#000000"))))
    ;; web-mode
    `(web-mode-builtin-face                            ((t (:inherit ,font-lock-builtin-face))))
@@ -792,7 +792,7 @@
    `(whitespace-tab                                   ((t (:background "#444444"))))
    `(whitespace-newline                               ((t (:foreground "#AAAAAA"))))
    `(whitespace-trailing                              ((t (:background "#222222"))))
-   `(whitespace-line                                  ((t (:background "#EEEEEE":foreground "#222222"))))
+   `(whitespace-line                                  ((t (:background "#EEEEEE" :foreground "#222222"))))
    `(whitespace-space-before-tab                      ((t (:background "#000000" :foreground "#000000"))))
    `(whitespace-indentation                           ((t (:background "#000000" :foreground "#222222"))))
    `(whitespace-empty                                 ((t (:background "#000000"))))
@@ -828,7 +828,7 @@
    `(which-func                                       ((t (:foreground "#000000"))))
    ;; yascroll
    `(yascroll:thumb-text-area                         ((t (:background "#EEEEEE"))))
-   `(yascroll:thumb-fringe                            ((t (:background "#EEEEEE":foreground "#EEEEEE"))))
+   `(yascroll:thumb-fringe                            ((t (:background "#EEEEEE" :foreground "#EEEEEE"))))
    `(minimap-active-region-background                 ((t (:background "#AAAAAA" :foreground "#888888"))))
    ;; html fold/unfold face
    `(html-fold-unfolded-face                          ((t (:background "#EEEEEE"))))
@@ -851,7 +851,7 @@
    ;; swoop
    `(swoop-face-line-buffer-name                      ((t (:background "#444444" :foreground "#EEEEEE"))))
    `(swoop-face-target-line                           ((t (:background "#888888" :foreground "#000000"))))
-   `(swoop-face-line-number                           ((t (:background "#EEEEEE":foreground "#AAAAAA"))))
+   `(swoop-face-line-number                           ((t (:background "#EEEEEE" :foreground "#AAAAAA"))))
    `(swoop-face-header-format-line                    ((t (:background "#AAAAAA" :foreground "#EEEEEE"))))
    `(swoop-face-target-words                          ((t (:background "#AAAAAA" :foreground "#000000"))))
    `(highlight-indentation-face                       ((t (:background "#CCCCCC"))))
