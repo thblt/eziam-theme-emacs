@@ -258,12 +258,12 @@
    ;; flx
    `(flx-highlight-face                               ((t (:foreground COLOR_8 :weight bold))))
    ;; flycheck
-   `(flycheck-error                                   ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_4) :inherit unspecified)) (t (:foreground COLOR_8 :weight bold :underline t))))
-   `(flycheck-warning                                 ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_3) :inherit unspecified)) (t (:foreground COLOR_8 :weight bold :underline t))))
-   `(flycheck-info                                    ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_2) :inherit unspecified)) (t (:foreground COLOR_7 :weight bold :underline t))))
-   `(flycheck-fringe-error                            ((t (:foreground COLOR_1 :weight bold))))
-   `(flycheck-fringe-warning                          ((t (:foreground COLOR_1:weight bold))))
-   `(flycheck-fringe-info                             ((t (:foreground COLOR_1:weight bold))))
+   `(flycheck-error                                   ((t (:underline (:color ERROR)))))
+   `(flycheck-warning                                 ((t (:underline (:color WARNING)))))
+   `(flycheck-info                                    ((t (:underline (:color INFO)))))
+   `(flycheck-fringe-error                            ((t (:foreground ERROR))))
+   `(flycheck-fringe-warning                          ((t (:foreground WARNING))))
+   `(flycheck-fringe-info                             ((t (:foreground INFO))))
    ;; flymake
    `(flymake-errline                                  ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_7) :inherit unspecified :foreground unspecified :background unspecified)) (t (:foreground COLOR_6 :weight bold :underline t))))
    `(flymake-warnline                                 ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_8) :inherit unspecified :foreground unspecified :background unspecified)) (t (:foreground COLOR_8 :weight bold :underline t))))
@@ -594,7 +594,7 @@
    `(org-sexp-date                                    ((t (:foreground COLOR_8 :underline t))))
    `(org-special-keyword                              ((t (:foreground COLOR_3))))
    `(org-table                                        ((t (:foreground COLOR_8))))
-   `(org-tag                                          ((t (:bold t :weight bold))))
+   `(org-tag                                          ((t (OL_HEIGHT(1.0) :foreground COLOR_4))))
    `(org-time-grid                                    ((t (:foreground COLOR_8))))
    `(org-done                                         ((t (:bold t :background COLOR_7 :foreground COLOR_1 :weight bold))))
    `(org-todo                                         ((t (:bold t :inverse-video t))))
@@ -610,7 +610,7 @@
    `(org-block-background                             ((t (:background COLOR_3 NOL_HEIGHT(1.0)))))
    `(org-block                                        ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
    `(org-block-begin-line                             ((t (:foreground COLOR_4 :background COLOR_2 NOL_HEIGHT(.75)))))
-   `(org-block-end-line                               ((t (:inherit org-block-begin-line))))
+   `(org-block-end-line                               ((t (:foreground COLOR_4 :background COLOR_2 NOL_HEIGHT(.75)))))
    ;; outline
    `(outline-1                                        ((t (:foreground COLOR_8))))
    `(outline-2                                        ((t (:foreground COLOR_8))))
@@ -939,7 +939,7 @@
  )
 
 ;;; Footer
-                  (provide-theme 'eziam-VARIANT)
+(provide-theme 'eziam-VARIANT)
 
 ;;;###autoload
 
