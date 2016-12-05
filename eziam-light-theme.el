@@ -19,11 +19,11 @@
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1 `(,@(when eziam-scale-outline-headlines (list :height 1.9)) :overline t :background "#FFFFFF" :weight bold ))
-      (ol2 `(,@(when eziam-scale-outline-headlines (list :height 1.6)) :overline t :background "#D6EAF4"))
-      (ol3 `(,@(when eziam-scale-outline-headlines (list :height 1.3)) :overline t :background "#F4EAD6"))
-      (ol4 `(,@(when eziam-scale-outline-headlines (list :height 1.1)) :overline t :weight bold :slant normal :foreground "#800000"))
-      (ol5 `(:overline t :weight bold :slant normal :foreground "#800080"))
+      (ol1 `(,@(when eziam-scale-outline-headlines (list :height 1.8)) :overline t :background "#FFFFFF" :weight bold ))
+      (ol2 `(,@(when eziam-scale-outline-headlines (list :height 1.5)) :overline t :background "#D6EAF4"))
+      (ol3 `(,@(when eziam-scale-outline-headlines (list :height 1.2)) :overline t :weight bold :background "#B4C8D2"))
+      (ol4 `(,@(when eziam-scale-outline-headlines (list :height 1.0)) :overline t :background "#92A6B0"))
+      (ol5 `(:overline t :overline t :weight bold :foreground "#800080"))
       (ol6 `(:overline t :weight bold :slant italic :foreground "#008080"))
       (ol7 `(:overline t :weight bold :slant italic :foreground "#000080"))
       (ol8 `(:overline t :slant italic :foreground "#FF0000"))

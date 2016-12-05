@@ -10,10 +10,10 @@
 #define      COLOR_7           "#222222"
 #define      COLOR_8           "#000000"
 #define      COMMENT           "#007700"
-#define      HEADING_1         COLOR_0
+#define      HEADING_1         "#FFFFFF"
 #define      HEADING_2         "#D6EAF4"
-#define      HEADING_3         "#F4EAD6"
-#define      HEADING_4         "#800000"
+#define      HEADING_3         "#B4C8D2"
+#define      HEADING_4         "#92A6B0"
 #define      HEADING_5         "#800080"
 #define      HEADING_6         "#008080"
 #define      HEADING_7         "#000080"

@@ -26,11 +26,11 @@
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1 `(OL_HEIGHT(1.9) :overline t :background HEADING_1 :weight bold ))
-      (ol2 `(OL_HEIGHT(1.6) :overline t :background HEADING_2))
-      (ol3 `(OL_HEIGHT(1.3) :overline t :background HEADING_3))
-      (ol4 `(OL_HEIGHT(1.1) :overline t :weight bold :slant normal :foreground HEADING_4))
-      (ol5 `(:overline t :weight bold :slant normal :foreground HEADING_5))
+      (ol1 `(OL_HEIGHT(1.8) :overline t :background HEADING_1 :weight bold ))
+      (ol2 `(OL_HEIGHT(1.5) :overline t :background HEADING_2))
+      (ol3 `(OL_HEIGHT(1.2) :overline t :weight bold :background HEADING_3))
+      (ol4 `(OL_HEIGHT(1.0) :overline t :background HEADING_4))
+      (ol5 `(:overline t :overline t :weight bold :foreground HEADING_5))
       (ol6 `(:overline t :weight bold :slant italic :foreground HEADING_6))
       (ol7 `(:overline t :weight bold :slant italic :foreground HEADING_7))
       (ol8 `(:overline t :slant italic :foreground HEADING_8))
