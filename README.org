@@ -34,7 +34,7 @@ Eziam build script (=make.sh=) uses the [[https://logological.org/gpp][gpp]] pre
 | =COLOR_0=            | Negative contrast                                               |
 | =COLOR_1=            | Background color                                                |
 | =COLOR_2= to =COLOR_7= | Should be a set of shades grading from background to foreground |
-| COLOR_8            | Default foreground color                                        |
+| =COLOR_8=          | Default foreground color                                        |
 
  - =DARK_MODE= :: is used for outlines and a few other places where a dark background should be handled differently than a light one.  First levels of outline uses a colored background with a =COLOR_8= font in light modes, but a =COLOR_0= background with a colored face if =DARK_MODE= is set.
  - =COLOR_0= :: is “even more background than the background”.  In the “light” variant, it is used to get a perfectly white highlight background.  Looks at the various =.palette= files and =eziam-theme.el.tpl= to understand what it does.
