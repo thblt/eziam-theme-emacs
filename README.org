@@ -8,7 +8,7 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
    - [[#installation][Installation]]
    - [[#configuration][Configuration]]
    - [[#design-notes][Design notes]]
-   - [[#whats-in-a-name][What's in a name?]]
+   - [[#credits][Credits]]
 
 ** TODO Screenshots
 
@@ -40,6 +40,8 @@ Eziam build script (=make.sh=) uses the [[https://logological.org/gpp][gpp]] pre
  - =COLOR_0= :: is “even more background than the background”.  In the “light” variant, it is used to get a perfectly white highlight background.  Looks at the various =.palette= files and =eziam-theme.el.tpl= to understand what it does.
 
 
-** What's in a name?
+** Credits
 
-An extremely bad pun.
+Eziam is essentially a mix of two remarkable themes, Peter Kosov's [[https://github.com/11111000000/tao-theme-emacs][Tao]] and Fabrice Niessen's [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Although it is technically a fork of the former, it also borrows code from the latter, especially the “generic colors” logic and, of course, the great org/markdown outlines.
+
+The name “Eziam” is an extraordinarily bad pun, which I feel like I probably shouldn't explain.  If you don't get it, you're probably OK.
