@@ -5,23 +5,14 @@
 :PROPERTIES:
 :header-args: :cache yes
 :END:
-
+  
 ** DONE A second level header
 
 *** A third level header
 
 - A theme :: is a set of /faces/
--  :: 
 
 **** A fourth level header
-
-***** TODO A fifth level header
-
-****** A sixth level header
-
-******* A seventh leaver header
-
-******** A height level header
 
 #+begin_QUOTE
    It is a pune, or play on words (Terry Pratchett) 

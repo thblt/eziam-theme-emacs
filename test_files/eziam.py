@@ -10,14 +10,17 @@ def do_nothing():
 
 def do_something(regex, haystack):
     """
-    Takes a regex and an iterable and maps match to the iterable,
-    roughly.
+    Takes a regex and an iterable. Compiles the regex and maps match()
+    to the iterable, roughly.
     """
     re = compile(regex)
     ret = []
     for maybe_needle in haystack:
         ret += re.match(maybe_needle)
     return ret
+
+def missing_something:
+    pass
 
 if __name__ == "__main__":
     nada = DoingNothingWithClasses()
