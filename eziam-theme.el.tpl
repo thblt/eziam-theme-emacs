@@ -26,16 +26,19 @@
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1 `(OL_HEIGHT(1.8) :overline t :background HEADING_1 :weight bold ))
-      (ol2 `(OL_HEIGHT(1.5) :overline t :background HEADING_2))
-      (ol3 `(OL_HEIGHT(1.2) :overline t :weight bold :background HEADING_3))
-      (ol4 `(OL_HEIGHT(1.0) :overline t :background HEADING_4))
-      (ol5 `(:overline t :overline t :weight bold :foreground HEADING_5))
-      (ol6 `(:overline t :weight bold :slant italic :foreground HEADING_6))
-      (ol7 `(:overline t :weight bold :slant italic :foreground HEADING_7))
-      (ol8 `(:overline t :slant italic :foreground HEADING_8))
-      (highlight `(:inverse-video t))
-      (transient-highlight `(:background STRONG_HIGHLIGHT))      
+      (ol1                 `(OL_HEIGHT(1.8) :overline t :background HEADING_1 :weight bold ))
+      (ol2                 `(OL_HEIGHT(1.5) :overline t :background HEADING_2))
+      (ol3                 `(OL_HEIGHT(1.2) :overline t :weight bold :background HEADING_3))
+      (ol4                 `(OL_HEIGHT(1.0) :overline t :background HEADING_4))
+      (ol5                 `(:overline t :overline t :weight bold :foreground HEADING_5))
+      (ol6                 `(:overline t :weight bold :slant italic :foreground HEADING_6))
+      (ol7                 `(:overline t :weight bold :slant italic :foreground HEADING_7))
+      (ol8                 `(:overline t :slant italic :foreground HEADING_8))
+      (highlight           `(:inverse-video t))
+      (transient-highlight `(:background STRONG_HIGHLIGHT))
+      (info-text           `(:underline (:color INFO)))
+      (warning-text        `(:underline (:color WARNING :style wave)))
+      (error-text          `(:underline (:color ERROR)))
       )
 
   (custom-theme-set-faces
@@ -160,7 +163,7 @@
    `(ac-gtags-selection-face                          ((t (:background COLOR_4 :foreground COLOR_8))))
    `(ac-emmet-candidate-face                          ((t (:background COLOR_5 :foreground COLOR_1))))
    `(ac-emmet-selection-face                          ((t (:background COLOR_4 :foreground COLOR_8))))
-   
+
    `(popup-tip-face                                   ((t (:background COLOR_8 :foreground COLOR_1))))
    `(popup-scroll-bar-foreground-face                 ((t (:background COLOR_3))))
    `(popup-scroll-bar-background-face                 ((t (:background COLOR_1))))
@@ -265,12 +268,12 @@
    `(flycheck-fringe-warning                          ((t (:foreground WARNING))))
    `(flycheck-fringe-info                             ((t (:foreground INFO))))
    ;; flymake
-   `(flymake-errline                                  ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_7) :inherit unspecified :foreground unspecified :background unspecified)) (t (:foreground COLOR_6 :weight bold :underline t))))
-   `(flymake-warnline                                 ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_8) :inherit unspecified :foreground unspecified :background unspecified)) (t (:foreground COLOR_8 :weight bold :underline t))))
-   `(flymake-infoline                                 ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_6) :inherit unspecified :foreground unspecified :background unspecified)) (t (:foreground COLOR_5 :weight bold :underline t))))
+   `(flymake-errline                                  ((,class ,error-text)))
+   `(flymake-warnline                                 ((,class ,warning-text)))
+   `(flymake-infoline                                 ((,class ,info-text)))
    ;; flyspell
-   `(flyspell-duplicate                               ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_8) :inherit unspecified)) (t (:foreground COLOR_8 :weight bold :underline t))))
-   `(flyspell-incorrect                               ((((supports :underline (:style wave))) (:underline (:style wave :color COLOR_7) :inherit unspecified)) (t (:foreground COLOR_6 :weight bold :underline t))))
+   `(flyspell-duplicate                               ((,class ,warning-text)))
+   `(flyspell-incorrect                               ((,class ,warning-text)))
    ;; erc
    `(erc-action-face                                  ((t (:inherit erc-default-face))))
    `(erc-bold-face                                    ((t (:weight bold))))
@@ -422,7 +425,7 @@
    ;; iedit-mode
    `(iedit-occurrence                                 ((t (:background COLOR_4 :weight bold))))
    ;; js2-mode
-   
+
    `(js2-warning                                      ((t (:underline COLOR_1))))
    `(js2-error                                        ((t (:foreground COLOR_7 :weight bold))))
    `(js2-jsdoc-tag                                    ((t (:foreground COLOR_5))))
@@ -434,7 +437,7 @@
    `(js2-function-call                                ((t (:foreground, COLOR_8 :underline t))))
    `(js2-object-property                              ((t (:foreground, COLOR_8  :slant italic))))
    `(js2-external-variable                            ((t (:foreground COLOR_4))))
-   
+
    ;; jabber-mode
    `(jabber-roster-user-away                          ((t (:foreground COLOR_8))))
    `(jabber-roster-user-online                        ((t (:foreground COLOR_7))))
@@ -607,10 +610,10 @@
    `(org-ellipsis                                     ((t (:foreground COLOR_8 :underline t))))
    `(org-footnote                                     ((t (:foreground COLOR_8 :underline t))))
    `(org-meta-line                                    ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
-   `(org-block-background                             ((t (:background COLOR_3 NOL_HEIGHT(1.0)))))
+   `(org-block-background                             ((t (:background COLOR_2 NOL_HEIGHT(1.0)))))
    `(org-block                                        ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
-   `(org-block-begin-line                             ((t (:foreground COLOR_4 :background COLOR_2))))
-   `(org-block-end-line                               ((t (:foreground COLOR_4 :background COLOR_2))))
+   `(org-block-begin-line                             ((t (:foreground COLOR_4 :background COLOR_3))))
+   `(org-block-end-line                               ((t (:foreground COLOR_4 :background COLOR_3))))
    ;; outline
    `(outline-1                                        ((t (:foreground COLOR_8))))
    `(outline-2                                        ((t (:foreground COLOR_8))))
@@ -899,7 +902,7 @@
    `(avy-lead-face-2                                  ((t (:background COLOR_8  :foreground COLOR_1 :bold t))))
    `(avy-background-face                              ((t (:background COLOR_1 :foreground COLOR_4 :bold t))))
    )
-  )                                                                                                                                                                            
+  )
 
 (custom-theme-set-variables
  'eziam-VARIANT
