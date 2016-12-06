@@ -1,18 +1,14 @@
 #+TITLE: Eziam org-mode test-file
 #+AUTHOR: Thibault Polge
 
-* A first level header
-:PROPERTIES:
-:header-args: :cache yes
-:END:
-  
+* This is a test org-mode document
 ** DONE A second level header
 
 *** A third level header
 
 - A theme :: is a set of /faces/
 
-**** A fourth level header
+**** And now for some tables
 
 #+begin_QUOTE
    It is a pune, or play on words (Terry Pratchett) 
@@ -41,4 +37,17 @@
 |           34 |            19 |         |
 |            9 |            37 |         |
 
+**** And now for some Haskell
 
+#+begin_src haskell
+data EziamVariants = White | Light | Dark | Black
+  deriving (Eq, Ord, Bounded, Read, Show)
+
+isLight :: EziamVariant -> Bool
+isLight White = True
+isLight Light = True
+isLight _ = False
+
+isDark :: EziamVariant -> Bool
+isDark = not . isLight
+#+end_src
