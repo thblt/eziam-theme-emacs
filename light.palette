@@ -1,5 +1,4 @@
 // -*- mode: c; -*-
-#define      DARK_MODE         1
 #define      COLOR_0           "#FFFFFF"
 #define      COLOR_1           "#EEEEEE"
 #define      COLOR_2           "#DDDDDD"
