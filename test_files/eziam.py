@@ -20,7 +20,8 @@ def do_something(regex, haystack):
     return ret
 
 def missing_something:
-    pass
+    if (*args):
+        print("This function isn't broken")
 
 if __name__ == "__main__":
     nada = DoingNothingWithClasses()
