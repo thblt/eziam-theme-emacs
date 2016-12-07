@@ -10,11 +10,17 @@
 
 #ifdef DARK_MODE
 #define LIGHT_DARK(a,b) b
+#define IF_DARK(a) a
+#define IF_LIGHT(a) 
 #else
 #define LIGHT_DARK(a,b) a
+#define IF_DARK(a)
+#define IF_LIGHT(a) a 
 #endif
 
-#define OL_HEIGHT(h) ,@(when eziam-scale-outline-headlines (list :height h))
+#define LBDF           LIGHT_DARK(:background,:foreground)
+#define LFDB           LIGHT_DARK(:foreground,:background)
+#define OL_HEIGHT(h)  ,@(when eziam-scale-outline-headlines (list :height h))
 #define NOL_HEIGHT(h) ,@(when eziam-scale-non-headline-faces (list :height h))
 
 #mode nostring
@@ -26,9 +32,9 @@
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1                 `(OL_HEIGHT(1.8) :overline t :background HEADING_1 :weight bold ))
-      (ol2                 `(OL_HEIGHT(1.5) :overline t :background HEADING_2))
-      (ol3                 `(OL_HEIGHT(1.2) :overline t :weight bold :background HEADING_3))
+      (ol1                 `(OL_HEIGHT(1.8) :overline t LBDF HEADING_1 IF_DARK(:background COLOR_0) :weight bold ))
+      (ol2                 `(OL_HEIGHT(1.5) :overline t LBDF HEADING_2 IF_DARK(:background COLOR_0)))
+      (ol3                 `(OL_HEIGHT(1.2) :overline t :weight bold LBDF HEADING_3 IF_DARK(:background COLOR_0)))
       (ol4                 `(OL_HEIGHT(1.0) :overline t :background HEADING_4))
       (ol5                 `(:overline t :overline t :weight bold :foreground HEADING_5))
       (ol6                 `(:overline t :weight bold :slant italic :foreground HEADING_6))
@@ -44,7 +50,7 @@
   (custom-theme-set-faces
    'eziam-VARIANT
    ;; Built-in
-   `(default                                          ((t (:foreground COLOR_8 :background COLOR_1))))
+   `(default                                          ((t (:foreground COLOR_7 :background COLOR_1))))
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground COLOR_8 :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground COLOR_8 :underline t :weight normal))))
@@ -52,12 +58,14 @@
    `(hl-paren-face                                    ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    `(cursor                                           ((t (:foreground COLOR_8 :background COLOR_8))))
    `(escape-glyph                                     ((t (:foreground COLOR_8 :bold t))))
-   `(fringe                                           ((t (:foreground COLOR_1 :background COLOR_1))))
+   `(fringe                                           ((t (:foreground COLOR_4 :background LIGHT_DARK(COLOR_2,COLOR_0)))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background COLOR_0))))
    `(region                                           ((t (:background COLOR_3 :foreground COLOR_1))))
    `(success                                          ((t (:foreground COLOR_6 :weight bold))))
    `(warning                                          ((t (:foreground COLOR_8 :weight bold))))
+   `(bold                                             ((t (:weight bold :foreground COLOR_8))))
+   
    ;; compilation
    `(compilation-column-face                          ((t (:foreground COLOR_8))))
    `(compilation-enter-directory-face                 ((t (:foreground COLOR_6))))
@@ -469,7 +477,7 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground COLOR_8 :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground COLOR_8 :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:foreground COLOR_8 :background COLOR_1))))
+   `(linum                                            ((t (:background LIGHT_DARK(COLOR_2,COLOR_0) :box nil)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground COLOR_8 :background COLOR_1))))
    `(macrostep-gensym-2                               ((t (:foreground COLOR_8 :background COLOR_1))))

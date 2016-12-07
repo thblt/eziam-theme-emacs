@@ -19,9 +19,9 @@
 (let ((class '((class color) (min-colors 89)))
 
       ;; Eziam generic colors.
-      (ol1                 `(,@(when eziam-scale-outline-headlines (list :height 1.8)) :overline t :background "#FFFFFF" :weight bold ))
-      (ol2                 `(,@(when eziam-scale-outline-headlines (list :height 1.5)) :overline t :background "#D6EAF4"))
-      (ol3                 `(,@(when eziam-scale-outline-headlines (list :height 1.2)) :overline t :weight bold :background "#B4C8D2"))
+      (ol1                 `(,@(when eziam-scale-outline-headlines (list :height 1.8)) :overline t :background "#FFFFFF"  :weight bold ))
+      (ol2                 `(,@(when eziam-scale-outline-headlines (list :height 1.5)) :overline t :background "#D6EAF4" ))
+      (ol3                 `(,@(when eziam-scale-outline-headlines (list :height 1.2)) :overline t :weight bold :background "#B4C8D2" ))
       (ol4                 `(,@(when eziam-scale-outline-headlines (list :height 1.0)) :overline t :background "#92A6B0"))
       (ol5                 `(:overline t :overline t :weight bold :foreground "#800080"))
       (ol6                 `(:overline t :weight bold :slant italic :foreground "#008080"))
@@ -37,7 +37,7 @@
   (custom-theme-set-faces
    'eziam-light
    ;; Built-in
-   `(default                                          ((t (:foreground "#000000" :background "#EEEEEE"))))
+   `(default                                          ((t (:foreground "#222222" :background "#EEEEEE"))))
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground "#000000" :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground "#000000" :underline t :weight normal))))
@@ -45,12 +45,14 @@
    `(hl-paren-face                                    ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    `(cursor                                           ((t (:foreground "#000000" :background "#000000"))))
    `(escape-glyph                                     ((t (:foreground "#000000" :bold t))))
-   `(fringe                                           ((t (:foreground "#EEEEEE" :background "#EEEEEE"))))
+   `(fringe                                           ((t (:foreground "#AAAAAA" :background "#DDDDDD"))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background "#FFFFFF"))))
    `(region                                           ((t (:background "#CCCCCC" :foreground "#EEEEEE"))))
    `(success                                          ((t (:foreground "#555555" :weight bold))))
    `(warning                                          ((t (:foreground "#000000" :weight bold))))
+   `(bold                                             ((t (:weight bold :foreground "#000000"))))
+   
    ;; compilation
    `(compilation-column-face                          ((t (:foreground "#000000"))))
    `(compilation-enter-directory-face                 ((t (:foreground "#555555"))))
@@ -462,7 +464,7 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground "#000000" :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground "#000000" :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:foreground "#000000" :background "#EEEEEE"))))
+   `(linum                                            ((t (:background "#DDDDDD" :box nil)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(macrostep-gensym-2                               ((t (:foreground "#000000" :background "#EEEEEE"))))
