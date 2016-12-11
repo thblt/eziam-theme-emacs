@@ -45,7 +45,7 @@
    `(hl-paren-face                                    ((t (:foreground "#FFFFFF" :background "#222222" :weight bold))))
    `(cursor                                           ((t (:foreground "#FFFFFF" :background "#FFFFFF"))))
    `(escape-glyph                                     ((t (:foreground "#FFFFFF" :bold t))))
-   `(fringe                                           ((t (:foreground "#666666" :background "#000000"))))
+   `(fringe                                           ((t (:foreground "#666666" :background "#333333","#000000"))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background "#000000"))))
    `(region                                           ((t (:background "#444444" :foreground "#222222"))))
@@ -464,7 +464,7 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground "#FFFFFF" :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground "#FFFFFF" :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background "#000000" :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background "#333333" :box nil)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground "#FFFFFF" :background "#222222"))))
    `(macrostep-gensym-2                               ((t (:foreground "#FFFFFF" :background "#222222"))))

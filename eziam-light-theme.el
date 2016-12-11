@@ -45,7 +45,7 @@
    `(hl-paren-face                                    ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    `(cursor                                           ((t (:foreground "#000000" :background "#000000"))))
    `(escape-glyph                                     ((t (:foreground "#000000" :bold t))))
-   `(fringe                                           ((t (:foreground "#AAAAAA" :background "#DDDDDD"))))
+   `(fringe                                           ((t (:foreground "#AAAAAA" :background "#DDDDDD","#FFFFFF"))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background "#FFFFFF"))))
    `(region                                           ((t (:background "#CCCCCC" :foreground "#EEEEEE"))))

@@ -58,7 +58,7 @@
    `(hl-paren-face                                    ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    `(cursor                                           ((t (:foreground COLOR_8 :background COLOR_8))))
    `(escape-glyph                                     ((t (:foreground COLOR_8 :bold t))))
-   `(fringe                                           ((t (:foreground COLOR_4 :background LIGHT_DARK(COLOR_2,COLOR_0)))))
+   `(fringe                                           ((t (:foreground COLOR_4 :background COLOR_2,COLOR_0))))
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((t (:background COLOR_0))))
    `(region                                           ((t (:background COLOR_3 :foreground COLOR_1))))
@@ -477,7 +477,7 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground COLOR_8 :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground COLOR_8 :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background LIGHT_DARK(COLOR_2,COLOR_0) :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background COLOR_2 :box nil)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground COLOR_8 :background COLOR_1))))
    `(macrostep-gensym-2                               ((t (:foreground COLOR_8 :background COLOR_1))))
