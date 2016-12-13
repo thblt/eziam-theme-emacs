@@ -477,7 +477,9 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground COLOR_8 :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground COLOR_8 :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background COLOR_2 :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background COLOR_2 :foreground COLOR_6 :box nil)))) ;; @fringe
+   ;; linum-relative-mode
+   `(linum-relative-current-face                      ((t (:background COLOR_2 :foreground COLOR_8 :weight bold :box nil)))) ;; @fringe   
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground COLOR_8 :background COLOR_1))))
    `(macrostep-gensym-2                               ((t (:foreground COLOR_8 :background COLOR_1))))

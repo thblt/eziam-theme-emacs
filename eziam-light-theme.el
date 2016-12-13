@@ -464,7 +464,9 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground "#000000" :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground "#000000" :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background "#DDDDDD" :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background "#DDDDDD" :foreground "#555555" :box nil)))) ;; @fringe
+   ;; linum-relative-mode
+   `(linum-relative-current-face                      ((t (:background "#DDDDDD" :foreground "#000000" :weight bold :box nil)))) ;; @fringe   
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(macrostep-gensym-2                               ((t (:foreground "#000000" :background "#EEEEEE"))))
