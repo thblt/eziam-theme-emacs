@@ -589,7 +589,7 @@
    `(org-headline-done                                ((t (:foreground COLOR_8))))
    `(org-hide                                         ((t (:foreground COLOR_1))))
    `(org-document-title                               ((t (:foreground COLOR_8 NOL_HEIGHT(1.9) :bold t))))
-   `(org-document-info                                ((t ())))
+   `(org-document-info                                ((t (:inherit default))))
    `(org-level-1                                      ((,class ,ol1)))
    `(org-level-2                                      ((,class ,ol2)))
    `(org-level-3                                      ((,class ,ol3)))
@@ -619,11 +619,14 @@
    `(org-mode-line-clock-overrun                      ((t (:foreground COLOR_2 :background COLOR_6))))
    `(org-ellipsis                                     ((t (:foreground COLOR_8 :underline t))))
    `(org-footnote                                     ((t (:foreground COLOR_8 :underline t))))
-   `(org-meta-line                                    ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
-   `(org-block-background                             ((t (:background COLOR_2 NOL_HEIGHT(1.0)))))
-   `(org-block                                        ((t (:foreground COLOR_4 NOL_HEIGHT(1.0)))))
-   `(org-block-begin-line                             ((t (:foreground COLOR_4 :background COLOR_3))))
-   `(org-block-end-line                               ((t (:foreground COLOR_4 :background COLOR_3))))
+   `(org-meta-line                                    ((t (:foreground COLOR_4))))
+   ;; I believe the difference between org-block-background and
+   ;; org-block is that org 8.x uses the former, 9.x the latter.  Both
+   ;; should then be identical.
+   `(org-block-background                             ((t (:background COLOR_0))))
+   `(org-block                                        ((t (:background COLOR_0))))
+   `(org-block-begin-line                             ((t (:foreground COLOR_7 :background COLOR_3))))
+   `(org-block-end-line                               ((t (:foreground COLOR_7 :background COLOR_3))))
    ;; outline
    `(outline-1                                        ((t (:foreground COLOR_8))))
    `(outline-2                                        ((t (:foreground COLOR_8))))

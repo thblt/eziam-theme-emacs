@@ -576,7 +576,7 @@
    `(org-headline-done                                ((t (:foreground "#000000"))))
    `(org-hide                                         ((t (:foreground "#EEEEEE"))))
    `(org-document-title                               ((t (:foreground "#000000" ,@(when eziam-scale-non-headline-faces (list :height 1.9)) :bold t))))
-   `(org-document-info                                ((t ())))
+   `(org-document-info                                ((t (:inherit default))))
    `(org-level-1                                      ((,class ,ol1)))
    `(org-level-2                                      ((,class ,ol2)))
    `(org-level-3                                      ((,class ,ol3)))
@@ -606,11 +606,14 @@
    `(org-mode-line-clock-overrun                      ((t (:foreground "#DDDDDD" :background "#555555"))))
    `(org-ellipsis                                     ((t (:foreground "#000000" :underline t))))
    `(org-footnote                                     ((t (:foreground "#000000" :underline t))))
-   `(org-meta-line                                    ((t (:foreground "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
-   `(org-block-background                             ((t (:background "#DDDDDD" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
-   `(org-block                                        ((t (:foreground "#AAAAAA" ,@(when eziam-scale-non-headline-faces (list :height 1.0))))))
-   `(org-block-begin-line                             ((t (:foreground "#AAAAAA" :background "#CCCCCC"))))
-   `(org-block-end-line                               ((t (:foreground "#AAAAAA" :background "#CCCCCC"))))
+   `(org-meta-line                                    ((t (:foreground "#AAAAAA"))))
+   ;; I believe the difference between org-block-background and
+   ;; org-block is that org 8.x uses the former, 9.x the latter.  Both
+   ;; should then be identical.
+   `(org-block-background                             ((t (:background "#FFFFFF"))))
+   `(org-block                                        ((t (:background "#FFFFFF"))))
+   `(org-block-begin-line                             ((t (:foreground "#222222" :background "#CCCCCC"))))
+   `(org-block-end-line                               ((t (:foreground "#222222" :background "#CCCCCC"))))
    ;; outline
    `(outline-1                                        ((t (:foreground "#000000"))))
    `(outline-2                                        ((t (:foreground "#000000"))))
