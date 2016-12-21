@@ -11,11 +11,11 @@
 #ifdef DARK_MODE
 #define LIGHT_DARK(a,b) b
 #define IF_DARK(a) a
-#define IF_LIGHT(a) 
+#define IF_LIGHT(a)
 #else
 #define LIGHT_DARK(a,b) a
 #define IF_DARK(a)
-#define IF_LIGHT(a) a 
+#define IF_LIGHT(a) a
 #endif
 
 #define LBDF           LIGHT_DARK(:background,:foreground)
@@ -65,7 +65,7 @@
    `(success                                          ((t (:foreground COLOR_6 :weight bold))))
    `(warning                                          ((t (:foreground COLOR_8 :weight bold))))
    `(bold                                             ((t (:weight bold :foreground COLOR_8))))
-   
+
    ;; compilation
    `(compilation-column-face                          ((t (:foreground COLOR_8))))
    `(compilation-enter-directory-face                 ((t (:foreground COLOR_6))))
@@ -97,8 +97,8 @@
    `(lazy-highlight                                   ((t (:foreground COLOR_8 :weight bold :background COLOR_2))))
    `(menu                                             ((t (:foreground COLOR_8 :background COLOR_1))))
    `(minibuffer-prompt                                ((t (:foreground COLOR_8 :color COLOR_1))))
-   `(mode-line                                        ((t (:foreground COLOR_1 :background COLOR_5 :box nil ))))
-   `(mode-line-inactive                               ((t (:foreground COLOR_1 :background COLOR_3 :box nil))))
+   `(mode-line                                        ((t (:foreground COLOR_1 :background COLOR_7 :box nil ))))
+   `(mode-line-inactive                               ((t (:foreground COLOR_1 :background COLOR_6 :box nil ))))
    `(mode-line-buffer-id                              ((t (:foreground COLOR_1 :weight bold))))
    `(secondary-selection                              ((t (:background COLOR_1))))
    `(cua-rectangle                                    ((t (:background COLOR_1))))
@@ -479,7 +479,7 @@
    ;; linum-mode
    `(linum                                            ((t (:background COLOR_2 :foreground COLOR_6 :box nil)))) ;; @fringe
    ;; linum-relative-mode
-   `(linum-relative-current-face                      ((t (:background COLOR_2 :foreground COLOR_8 :weight bold :box nil)))) ;; @fringe   
+   `(linum-relative-current-face                      ((t (:background COLOR_2 :foreground COLOR_8 :weight bold :box nil)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground COLOR_8 :background COLOR_1))))
    `(macrostep-gensym-2                               ((t (:foreground COLOR_8 :background COLOR_1))))

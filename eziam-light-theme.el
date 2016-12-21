@@ -52,7 +52,7 @@
    `(success                                          ((t (:foreground "#555555" :weight bold))))
    `(warning                                          ((t (:foreground "#000000" :weight bold))))
    `(bold                                             ((t (:weight bold :foreground "#000000"))))
-   
+
    ;; compilation
    `(compilation-column-face                          ((t (:foreground "#000000"))))
    `(compilation-enter-directory-face                 ((t (:foreground "#555555"))))
@@ -84,8 +84,8 @@
    `(lazy-highlight                                   ((t (:foreground "#000000" :weight bold :background "#DDDDDD"))))
    `(menu                                             ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(minibuffer-prompt                                ((t (:foreground "#000000" :color "#EEEEEE"))))
-   `(mode-line                                        ((t (:foreground "#EEEEEE" :background "#888888" :box nil ))))
-   `(mode-line-inactive                               ((t (:foreground "#EEEEEE" :background "#CCCCCC" :box nil))))
+   `(mode-line                                        ((t (:foreground "#EEEEEE" :background "#222222" :box nil ))))
+   `(mode-line-inactive                               ((t (:foreground "#EEEEEE" :background "#555555" :box nil ))))
    `(mode-line-buffer-id                              ((t (:foreground "#EEEEEE" :weight bold))))
    `(secondary-selection                              ((t (:background "#EEEEEE"))))
    `(cua-rectangle                                    ((t (:background "#EEEEEE"))))
@@ -466,7 +466,7 @@
    ;; linum-mode
    `(linum                                            ((t (:background "#DDDDDD" :foreground "#555555" :box nil)))) ;; @fringe
    ;; linum-relative-mode
-   `(linum-relative-current-face                      ((t (:background "#DDDDDD" :foreground "#000000" :weight bold :box nil)))) ;; @fringe   
+   `(linum-relative-current-face                      ((t (:background "#DDDDDD" :foreground "#000000" :weight bold :box nil)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(macrostep-gensym-2                               ((t (:foreground "#000000" :background "#EEEEEE"))))
