@@ -37,7 +37,7 @@
   (custom-theme-set-faces
    'eziam-dark
    ;; Built-in
-   `(default                                          ((t (:foreground "#DDDDDD" :background "#222222"))))
+   `(default                                          ((t (:foreground "#FFFFFF" :background "#222222"))))
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground "#FFFFFF" :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground "#FFFFFF" :underline t :weight normal))))
@@ -74,6 +74,8 @@
    `(grep-hit-face                                    ((t (:foreground "#FFFFFF"))))
    `(grep-match-face                                  ((t (:foreground "#FFFFFF" :weight bold))))
    `(match                                            ((t (:background "#222222" :foreground "#FFFFFF" :weight bold))))
+   ;; haskell-mode @TODO: This is a work-in-progress
+   `(haskell-literate-comment-face                    ((t (:background "#000000"))))
    ;; make
    `(makefile-space                                   ((t (:background "#222222"))))
    `(makefile-targets                                 ((t (:underline t))))
