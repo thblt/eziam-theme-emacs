@@ -466,9 +466,9 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground "#FFFFFF" :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground "#FFFFFF" :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background "#333333" :foreground "#AAAAAA" :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background "#333333" :foreground "#AAAAAA" :inherit default)))) ;; @fringe
    ;; linum-relative-mode
-   `(linum-relative-current-face                      ((t (:background "#333333" :foreground "#FFFFFF" :weight bold :box nil)))) ;; @fringe
+   `(linum-relative-current-face                      ((t (:background "#222222" :foreground "#FFFFFF" :weight bold :inherit default)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground "#FFFFFF" :background "#222222"))))
    `(macrostep-gensym-2                               ((t (:foreground "#FFFFFF" :background "#222222"))))
@@ -903,6 +903,9 @@
    `(avy-lead-face-1                                  ((t (:background "#DDDDDD"  :foreground "#222222" :bold t))))
    `(avy-lead-face-2                                  ((t (:background "#FFFFFF"  :foreground "#222222" :bold t))))
    `(avy-background-face                              ((t (:background "#222222" :foreground "#666666" :bold t))))
+   ;; highlight-indent-guides
+   `(highlight-indent-guides-odd-face                 ((t (:background "#333333"))))
+   `(highlight-indent-guides-even-face                ((t (:background "#444444"))))
    )
   )
 

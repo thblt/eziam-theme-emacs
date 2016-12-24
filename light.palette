@@ -8,7 +8,6 @@
 #define      COLOR_6           "#555555"
 #define      COLOR_7           "#222222"
 #define      COLOR_8           "#000000"
-#define      COMMENT           "#007700"
 #define      HEADING_1         "#FFFFFF"
 #define      HEADING_2         "#D6EAF4"
 #define      HEADING_3         "#B4C8D2"

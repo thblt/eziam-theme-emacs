@@ -479,9 +479,9 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground COLOR_8 :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground COLOR_8 :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background COLOR_2 :foreground COLOR_6 :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background COLOR_2 :foreground COLOR_6 :inherit default)))) ;; @fringe
    ;; linum-relative-mode
-   `(linum-relative-current-face                      ((t (:background COLOR_2 :foreground COLOR_8 :weight bold :box nil)))) ;; @fringe
+   `(linum-relative-current-face                      ((t (:background COLOR_1 :foreground COLOR_8 :weight bold :inherit default)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground COLOR_8 :background COLOR_1))))
    `(macrostep-gensym-2                               ((t (:foreground COLOR_8 :background COLOR_1))))
@@ -916,6 +916,9 @@
    `(avy-lead-face-1                                  ((t (:background COLOR_7  :foreground COLOR_1 :bold t))))
    `(avy-lead-face-2                                  ((t (:background COLOR_8  :foreground COLOR_1 :bold t))))
    `(avy-background-face                              ((t (:background COLOR_1 :foreground COLOR_4 :bold t))))
+   ;; highlight-indent-guides
+   `(highlight-indent-guides-odd-face                 ((t (:background COLOR_2))))
+   `(highlight-indent-guides-even-face                ((t (:background COLOR_3))))
    )
   )
 

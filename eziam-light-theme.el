@@ -1,3 +1,6 @@
+
+
+
 ;;; eziam-light-theme.el --- The light Eziam theme for Emacs
 ;;;
 ;;; Commentary:
@@ -466,9 +469,9 @@
    `(ledger-font-reconciler-pending-face              ((t (:foreground "#000000" :weight normal))))
    `(ledger-font-report-clickable-face                ((t (:foreground "#000000" :weight normal))))
    ;; linum-mode
-   `(linum                                            ((t (:background "#DDDDDD" :foreground "#555555" :box nil)))) ;; @fringe
+   `(linum                                            ((t (:background "#DDDDDD" :foreground "#555555" :inherit default)))) ;; @fringe
    ;; linum-relative-mode
-   `(linum-relative-current-face                      ((t (:background "#DDDDDD" :foreground "#000000" :weight bold :box nil)))) ;; @fringe
+   `(linum-relative-current-face                      ((t (:background "#EEEEEE" :foreground "#000000" :weight bold :inherit default)))) ;; @fringe
    ;; macrostep
    `(macrostep-gensym-1                               ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(macrostep-gensym-2                               ((t (:foreground "#000000" :background "#EEEEEE"))))
@@ -903,6 +906,9 @@
    `(avy-lead-face-1                                  ((t (:background "#222222"  :foreground "#EEEEEE" :bold t))))
    `(avy-lead-face-2                                  ((t (:background "#000000"  :foreground "#EEEEEE" :bold t))))
    `(avy-background-face                              ((t (:background "#EEEEEE" :foreground "#AAAAAA" :bold t))))
+   ;; highlight-indent-guides
+   `(highlight-indent-guides-odd-face                 ((t (:background "#DDDDDD"))))
+   `(highlight-indent-guides-even-face                ((t (:background "#CCCCCC"))))
    )
   )
 
