@@ -1,6 +1,3 @@
-
-
-
 ;;; eziam-light-theme.el --- The light Eziam theme for Emacs
 ;;;
 ;;; Commentary:
