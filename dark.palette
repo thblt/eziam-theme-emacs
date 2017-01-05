@@ -22,3 +22,10 @@
 #define      WARNING           "#ffaa00"
 #define      ERROR             "#ff0000"
 #define      INFO              "#2244ff"
+
+#define      RAINBOW_1         "#FF0000"
+#define      RAINBOW_2         "#FF7700"
+#define      RAINBOW_3         "#FFFF00"
+#define      RAINBOW_4         "#00FF00"
+#define      RAINBOW_5         "#0000FF"
+#define      RAINBOW_6         "#8F00FF"

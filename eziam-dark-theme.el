@@ -1,3 +1,4 @@
+
 ;;; eziam-dark-theme.el --- The dark Eziam theme for Emacs
 ;;;
 ;;; Commentary:
@@ -661,18 +662,18 @@
    `(proof-tactics-name-face                          ((t (:inherit font-lock-constant-face :foreground nil :background "#222222"))))
    `(proof-warning-face                               ((t (:foreground "#333333" :background "#FFFFFF"))))
    ;; rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face                  ((t (:foreground "#666666"))))
-   `(rainbow-delimiters-depth-2-face                  ((t (:foreground "#888888"))))
-   `(rainbow-delimiters-depth-3-face                  ((t (:foreground "#AAAAAA"))))
-   `(rainbow-delimiters-depth-4-face                  ((t (:foreground "#DDDDDD"))))
-   `(rainbow-delimiters-depth-5-face                  ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-6-face                  ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-7-face                  ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-8-face                  ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-9-face                  ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-10-face                 ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-11-face                 ((t (:foreground "#FFFFFF"))))
-   `(rainbow-delimiters-depth-12-face                 ((t (:foreground "#FFFFFF"))))
+   `(rainbow-delimiters-depth-1-face                  ((t (:background "#FF0000"))))
+   `(rainbow-delimiters-depth-2-face                  ((t (:background "#FF7700"))))
+   `(rainbow-delimiters-depth-3-face                  ((t (:background "#FFFF00"))))
+   `(rainbow-delimiters-depth-4-face                  ((t (:background "#00FF00"))))
+   `(rainbow-delimiters-depth-5-face                  ((t (:background "#0000FF"))))
+   `(rainbow-delimiters-depth-6-face                  ((t (:background "#8F00FF"))))
+   `(rainbow-delimiters-depth-7-face                  ((t (:foreground "#FF0000"))))
+   `(rainbow-delimiters-depth-8-face                  ((t (:foreground "#FF7700"))))
+   `(rainbow-delimiters-depth-9-face                  ((t (:foreground "#FFFF00"))))
+   `(rainbow-delimiters-depth-10-face                 ((t (:foreground "#00FF00"))))
+   `(rainbow-delimiters-depth-11-face                 ((t (:foreground "#0000FF"))))
+   `(rainbow-delimiters-depth-12-face                 ((t (:foreground "#8F00FF"))))
    ;; rcirc
    `(rcirc-my-nick                                    ((t (:foreground "#FFFFFF"))))
    `(rcirc-other-nick                                 ((t (:foreground "#FFFFFF"))))
