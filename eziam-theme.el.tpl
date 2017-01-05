@@ -916,9 +916,7 @@
    `(avy-lead-face-1                                  ((t (:background COLOR_7  :foreground COLOR_1 :bold t))))
    `(avy-lead-face-2                                  ((t (:background COLOR_8  :foreground COLOR_1 :bold t))))
    `(avy-background-face                              ((t (:background COLOR_1 :foreground COLOR_4 :bold t))))
-   ;; highlight-indent-guides
-   `(highlight-indent-guides-odd-face                 ((t (:background COLOR_2))))
-   `(highlight-indent-guides-even-face                ((t (:background COLOR_3))))
+   ;; highlight-indent-guides has been removed: newer versions automatically compute faces.
    )
   )
 
