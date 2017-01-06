@@ -904,9 +904,7 @@
    `(avy-lead-face-1                                  ((t (:background "#222222"  :foreground "#EEEEEE" :bold t))))
    `(avy-lead-face-2                                  ((t (:background "#000000"  :foreground "#EEEEEE" :bold t))))
    `(avy-background-face                              ((t (:background "#EEEEEE" :foreground "#AAAAAA" :bold t))))
-   ;; highlight-indent-guides
-   `(highlight-indent-guides-odd-face                 ((t (:background "#DDDDDD"))))
-   `(highlight-indent-guides-even-face                ((t (:background "#CCCCCC"))))
+   ;; highlight-indent-guides has been removed: newer versions automatically compute faces.
    )
   )
 
