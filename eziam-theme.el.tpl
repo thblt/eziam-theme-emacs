@@ -54,7 +54,6 @@
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground COLOR_8 :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground COLOR_8 :underline t :weight normal))))
-   `(default                                          ((t (:foreground COLOR_6 :background COLOR_1))))
    `(hl-paren-face                                    ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    `(cursor                                           ((t (:foreground COLOR_8 :background COLOR_8))))
    `(escape-glyph                                     ((t (:foreground COLOR_8 :bold t))))
