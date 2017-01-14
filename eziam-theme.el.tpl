@@ -60,11 +60,12 @@
    `(escape-glyph                                     ((t (:foreground COLOR_8 :bold t))))
    `(fringe                                           ((t (:foreground COLOR_4 :background COLOR_2,COLOR_0))))
    `(header-line                                      ((t (:inherit mode-line))))
-   `(highlight                                        ((t (:background COLOR_0))))
+   `(highlight                                        ((,class ,highlight)))
    `(region                                           ((t (:background COLOR_3 :foreground COLOR_1))))
    `(success                                          ((t (:foreground COLOR_6 :weight bold))))
    `(warning                                          ((t (:foreground COLOR_8 :weight bold))))
-   `(bold                                             ((t (:weight bold :foreground COLOR_8))))
+   `(bold                                             ((t (:weight bold))))
+    ;; @FIXED - Don't set foreground for bold: it is used by some modes on a different background (eg tabulated-list-mode)
 
    ;; compilation
    `(compilation-column-face                          ((t (:foreground COLOR_8))))
@@ -423,8 +424,8 @@
    `(helm-mu-contacts-name-face                       ((t (:foreground COLOR_8 :background COLOR_1))))
    `(helm-M-x-key                                     ((t (:foreground COLOR_8 :background COLOR_1 :weight bold))))
    ;; hl-line-mode FIXME Looks weird
-   `(hl-line-face                                     ((,class (:background COLOR_1) (t :weight bold))))
-   `(hl-line                                          ((,class (:background COLOR_1) (t :weight bold))))
+   `(hl-line                                          ((,class ,highlight)))
+   `(hl-line-face                                     ((,class ,highlight)))
    ;; hl-sexp
    `(hl-sexp-face                                     ((,class (:background COLOR_3)) (t :weight bold)))
    ;; ido-mode

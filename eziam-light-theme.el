@@ -48,11 +48,11 @@
    `(escape-glyph                                     ((t (:foreground "#000000" :bold t))))
    `(fringe                                           ((t (:foreground "#AAAAAA" :background "#DDDDDD","#FFFFFF"))))
    `(header-line                                      ((t (:inherit mode-line))))
-   `(highlight                                        ((t (:background "#FFFFFF"))))
+   `(highlight                                        ((,class ,highlight)))
    `(region                                           ((t (:background "#CCCCCC" :foreground "#EEEEEE"))))
    `(success                                          ((t (:foreground "#555555" :weight bold))))
    `(warning                                          ((t (:foreground "#000000" :weight bold))))
-   `(bold                                             ((t (:weight bold :foreground "#000000"))))
+   `(bold                                             ((t (:weight bold))))
 
    ;; compilation
    `(compilation-column-face                          ((t (:foreground "#000000"))))
@@ -411,8 +411,8 @@
    `(helm-mu-contacts-name-face                       ((t (:foreground "#000000" :background "#EEEEEE"))))
    `(helm-M-x-key                                     ((t (:foreground "#000000" :background "#EEEEEE" :weight bold))))
    ;; hl-line-mode FIXME Looks weird
-   `(hl-line-face                                     ((,class (:background "#EEEEEE") (t :weight bold))))
-   `(hl-line                                          ((,class (:background "#EEEEEE") (t :weight bold))))
+   `(hl-line                                          ((,class ,highlight)))
+   `(hl-line-face                                     ((,class ,highlight)))
    ;; hl-sexp
    `(hl-sexp-face                                     ((,class (:background "#CCCCCC")) (t :weight bold)))
    ;; ido-mode
