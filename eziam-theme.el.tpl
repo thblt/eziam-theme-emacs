@@ -50,6 +50,7 @@
   (custom-theme-set-faces
    'eziam-VARIANT
    ;; Built-in
+   `(bold                                             ((t (:weight bold))))
    `(default                                          ((t (:foreground COLOR_8 :background COLOR_1))))
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground COLOR_8 :underline t :weight bold))))
@@ -63,7 +64,6 @@
    `(region                                           ((t (:background COLOR_3 :foreground COLOR_1))))
    `(success                                          ((t (:foreground COLOR_6 :weight bold))))
    `(warning                                          ((t (:foreground COLOR_8 :weight bold))))
-   `(bold                                             ((t (:weight bold))))
     ;; @FIXED - Don't set foreground for bold: it is used by some modes on a different background (eg tabulated-list-mode)
 
    ;; compilation
