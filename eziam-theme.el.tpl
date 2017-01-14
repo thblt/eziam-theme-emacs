@@ -62,6 +62,7 @@
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((,class ,highlight)))
    `(region                                           ((t (:background COLOR_3 :foreground COLOR_1))))
+   `(shadow                                           ((t (:foreground COLOR_3))))
    `(success                                          ((t (:foreground COLOR_6 :weight bold))))
    `(warning                                          ((t (:foreground COLOR_8 :weight bold))))
     ;; @FIXED - Don't set foreground for bold: it is used by some modes on a different background (eg tabulated-list-mode)
