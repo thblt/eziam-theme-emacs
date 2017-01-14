@@ -38,11 +38,11 @@
   (custom-theme-set-faces
    'eziam-dark
    ;; Built-in
+   `(bold                                             ((t (:weight bold))))
    `(default                                          ((t (:foreground "#FFFFFF" :background "#222222"))))
    `(button                                           ((t (:underline t))))
    `(link                                             ((t (:foreground "#FFFFFF" :underline t :weight bold))))
    `(link-visited                                     ((t (:foreground "#FFFFFF" :underline t :weight normal))))
-   `(default                                          ((t (:foreground "#AAAAAA" :background "#222222"))))
    `(hl-paren-face                                    ((t (:foreground "#FFFFFF" :background "#222222" :weight bold))))
    `(cursor                                           ((t (:foreground "#FFFFFF" :background "#FFFFFF"))))
    `(escape-glyph                                     ((t (:foreground "#FFFFFF" :bold t))))
@@ -50,9 +50,10 @@
    `(header-line                                      ((t (:inherit mode-line))))
    `(highlight                                        ((,class ,highlight)))
    `(region                                           ((t (:background "#444444" :foreground "#222222"))))
+   `(shadow                                           ((t (:foreground "#444444"))))
    `(success                                          ((t (:foreground "#AAAAAA" :weight bold))))
    `(warning                                          ((t (:foreground "#FFFFFF" :weight bold))))
-   `(bold                                             ((t (:weight bold))))
+    ;; @FIXED - Don't set foreground for bold: it is used by some modes on a different background (eg tabulated-list-mode)
 
    ;; compilation
    `(compilation-column-face                          ((t (:foreground "#FFFFFF"))))
