@@ -10,7 +10,8 @@ def do_nothing():
 
 def do_something(regex, haystack):
     """
-    Takes a regex and an iterable. Compiles the regex and maps match()
+    Takes a regex and an iterable. Compiles
+    the regex and maps match()
     to the iterable, roughly.
     """
     re = compile(regex)

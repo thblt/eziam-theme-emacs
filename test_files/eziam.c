@@ -7,9 +7,8 @@ struct course
    char subject[30];
 };
 
-
-/** 
-    Delta 
+/**
+    A long comment
 */
 int main()
 {
@@ -18,7 +17,8 @@ int main()
    printf("Enter number of records: ");
    scanf("%d", &noOfRecords);
 
-   // Allocates the memory for noOfRecords structures with pointer ptr pointing to the base address.
+   // Allocates the memory for noOfRecords structures
+   // with pointer ptr pointing to the base address.
    ptr = (struct course*) malloc (noOfRecords * sizeof(struct course));
 
    for(i = 0; i < noOfRecords; ++i)
