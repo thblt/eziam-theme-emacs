@@ -120,7 +120,7 @@
    `(font-lock-preprocessor-face                      ((t (:foreground COLOR_8))))
    `(font-lock-regexp-grouping-construct              ((t (:foreground COLOR_8 :weight bold))))
    `(font-lock-regexp-grouping-backslash              ((t (:foreground COLOR_6 :weight bold))))
-   `(font-lock-string-face                            ((t (:foreground COLOR_5))))
+   `(font-lock-string-face                            ((t (:foreground COLOR_6))))
    `(font-lock-type-face                              ((t (:foreground COLOR_7 :underline t))))
    `(font-lock-variable-name-face                     ((t (:foreground COLOR_8 ))))
    `(font-lock-warning-face                           ((t (:foreground COLOR_8 :weight bold))))
