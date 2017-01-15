@@ -29,13 +29,13 @@
 
 (deftheme eziam-VARIANT "The VARIANT Eziam color theme")
 
-(let ((class '((class color) (min-colors 89)))
+(let ((class '((class color) (min-colors 256)))
 
       ;; Eziam generic colors.
       (ol1                 `(OL_HEIGHT(1.8) :overline t LBDF HEADING_1 IF_DARK(:background COLOR_0) :weight bold ))
       (ol2                 `(OL_HEIGHT(1.5) :overline t LBDF HEADING_2 IF_DARK(:background COLOR_0)))
       (ol3                 `(OL_HEIGHT(1.2) :overline t :weight bold LBDF HEADING_3 IF_DARK(:background COLOR_0)))
-      (ol4                 `(OL_HEIGHT(1.0) :overline t :background HEADING_4))
+      (ol4                 `(OL_HEIGHT(1.0) :overline t :weight bold :background HEADING_4))
       (ol5                 `(:overline t :overline t :weight bold :foreground HEADING_5))
       (ol6                 `(:overline t :weight bold :slant italic :foreground HEADING_6))
       (ol7                 `(:overline t :weight bold :slant italic :foreground HEADING_7))
