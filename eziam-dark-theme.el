@@ -14,6 +14,7 @@
 
 (eziam-with-color-variables
   (
+   ;; Base palette
    ("color-0"          . "#000000")
    ("color-1"          . "#222222")
    ("color-2"          . "#333333")
@@ -23,19 +24,29 @@
    ("color-6"          . "#aaaaaa")
    ("color-7"          . "#dddddd")
    ("color-8"          . "#ffffff")
-   ("comment"          . "#007700")
-   ("heading_1"        . "#ffffff")
-   ("heading_2"        . "#d6eaf4")
-   ("heading_3"        . "#b4c8d2")
-   ("heading_4"        . "#92a6b0")
-   ("heading_5"        . "#800080")
-   ("heading_6"        . "#008080")
-   ("heading_7"        . "#000080")
-   ("heading_8"        . "#ff0000")
+ ;; Headings
+   ("ol1-fg"           . nil)
+   ("ol1-bg"           . "#ffffff")
+   ("ol2-fg"           . nil)
+   ("ol2-bg"           . "#d6eaf4")
+   ("ol3-fg"           . nil)
+   ("ol3-bg"           . "#c1d3dc")
+   ("ol4-fg"           . nil)
+   ("ol4-bg"           . "#abbbc3")
+   ("ol5-fg"           . "#222222")
+   ("ol5-bg"           . "#96a4ab")
+   ("ol6-fg"           . nil)
+   ("ol6-bg"           . nil)
+   ("ol7-fg"           . nil)
+   ("ol7-bg"           . nil)
+   ("ol8-fg"           . nil)
+   ("ol8-bg"           . nil)
+   ;; Misc
    ("strong_highlight" . "#ffff00")
    ("warning"          . "#ffaa00")
    ("error"            . "#ff0000")
    ("info"             . "#2244ff")
+
    ("rainbow_1"        . "#ff0000")
    ("rainbow_2"        . "#ff7700")
    ("rainbow_3"        . "#ffff00")
