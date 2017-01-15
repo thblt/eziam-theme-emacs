@@ -4,41 +4,36 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
 
 
 ** Contents :TOC:
-   - [[#screenshots][Screenshots]]
+ - [[#screenshots][Screenshots]]
    - [[#installation][Installation]]
    - [[#configuration][Configuration]]
-   - [[#design-notes][Design notes]]
    - [[#credits][Credits]]
 
-** TODO Screenshots
+* Screenshots
 
-     #+CAPTION: First screenshot
-     #+NAME:   screenshot-1
-     [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshot.png]]
+     #+CAPTION: Editing an org file with Eziam-light
+     #+NAME:    org-light
+     [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/org-light.png]]
+
+     #+CAPTION: Editing code with Eziam-dark
+     #+NAME:    code-light
+     [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/code-light.png]]
+
+     #+CAPTION: Editing an org file with Eziam-dark
+     #+NAME:    org-dark
+     [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/org-dark.png]]
+
+     #+CAPTION: Editing code with Eziam-dark
+     #+NAME:    code-dark
+     [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/code-dark.png]]
 
 ** Installation
 
-Eziam is not yet in Melpa.
+Eziam is not yet in Melpa.  Clone the repository somewhere in your load-path.
 
 ** Configuration
 
-** Design notes
-
-These notes are meant for people who wish to understand the way Eziam is built, either to fork it, or to modify it in a way that can be contributed back to Eziam.
-
-Eziam build script (=make.sh=) uses the [[https://logological.org/gpp][gpp]] preprocessor to apply palette values into a single template file and generate the theme's el files.  Each =*.palette= file corresponds to an Eziam variant, the name of the file will become the name of the variant.  It looks a bit weird, but is in fact super easy (and avoids code duplication, yay!).  A =.palette= files defines constants for the colors (in a fashion reminiscent of the C/C++ preprocessor), and eventually a magic constant called =DARK_MODE=.
-
-| Constant name      | Meaning                                                         |
-|--------------------+-----------------------------------------------------------------|
-| =DARK_MODE=          | ~#define~ only for a dark variant.  Value doesn't matter          |
-| =COLOR_0=            | Negative contrast                                               |
-| =COLOR_1=            | Default background color                                        |
-| =COLOR_2= to =COLOR_7= | Should be a set of shades grading from background to foreground |
-| =COLOR_8=            | Default foreground color                                        |
-
- - =DARK_MODE= :: is used for outlines and a few other places where a dark background should be handled differently than a light one.  First levels of outline uses a colored background with a =COLOR_8= font in light modes, but a =COLOR_0= background with a colored face if =DARK_MODE= is set.
- - =COLOR_0= :: is “even more background than the background”.  In the “light” variant, it is used to get a perfectly white highlight background.  Looks at the various =.palette= files and =eziam-theme.el.tpl= to understand what it does.
-
+Eziam can be customized.  `M-x customize-group RET eziam-theme RET`.
 
 ** Credits
 
