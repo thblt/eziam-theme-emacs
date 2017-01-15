@@ -1,9 +1,15 @@
 ;;; eziam-common --- Common tools and face assignment table for Eziam
 
 ;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
-;; Based on Tao Copyright (C) 2014 Peter  <11111000000 at email.com> with
-;; contributions by Jasonm23 <jasonm23@gmail.com>.
-;; Tao also credits: "Original faces taken from Zenburn theme port (c) by Bozhidar Batsov"
+;; Author: Thibault Polge <thibault@thb.lt>
+;;
+;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
+;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
+;; Tao also credits: "Original faces taken from Zenburn theme port (c)
+;; by Bozhidar Batsov"
+;;
+;; Url: https://github.com/thblt/eziam-theme-emacs
+;; Version: 0.1
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +26,8 @@
 
 ;;; Commentary:
 
-;;
+;; This package provides a dark and a light version of the Eziam theme
+;; for Emacs.
 
 ;;; Code:
 
@@ -31,6 +38,10 @@
 
 (defcustom eziam-scale-headings t
   "Non-nil means eziam-theme is allowed to customize the height of outline headlines."  :type 'boolean
+  :group 'eziam-theme)
+
+(defcustom eziam-scale-other t
+  "Non-nil means eziam-theme is allowed to customize the height of non-outline headlines faces."  :type 'boolean
   :group 'eziam-theme)
 
 (defcustom eziam-theme-colorize-headers t
@@ -53,6 +64,12 @@
       height
     1.0))
 
+(defun eziam-other-height (height)
+  (if eziam-scale-other
+      height
+    1.0))
+
+
 (defmacro eziam-with-color-variables (eziam-colors &rest body)
   "`let' bind all colors defined in TAO-COLORS around BODY.
 Also bind `class' to ((class color) (min-colors 89))."
@@ -64,27 +81,27 @@ Also bind `class' to ((class color) (min-colors 89))."
      ,@body))
 
 (defun eziam-apply-custom-theme (theme-name)
-
   (let ((class '((class color) (min-colors 256)))
-        (ol1                  `(:height ,(eziam-heading-height 1.8) :overline t :foreground ,warning :background "#fff000" :weight bold))
-        (ol2                  `(:height ,(eziam-heading-height 1.5) :overline t :foreground "#D6EAF4" :background "#000000"))
-        (ol3                  `(,@(when eziam-scale-headings (list :height 1.2)) :overline t :weight bold :foreground "#B4C8D2" :background "#000000"))
-        (ol4                  `(,@(when eziam-scale-headings (list :height 1.0)) :overline t :background "#92A6B0"))
-        (ol5                  `(:overline t :overline t :weight bold :foreground "#800080"))
-        (ol6                  `(:overline t :weight bold :slant italic :foreground "#008080"))
-        (ol7                  `(:overline t :weight bold :slant italic :foreground "#000080"))
-        (ol8                  `(:overline t :slant italic :foreground "#FF0000"))
+        (ol1                  `(:height ,(eziam-heading-height 1.8) :foreground ,ol1-fg :background ,ol1-bg :weight bold :overline t))
+        (ol2                  `(:height ,(eziam-heading-height 1.5) :foreground ,ol2-fg :background ,ol2-bg :overline t ))
+        (ol3                  `(:height ,(eziam-heading-height 1.2) :foreground ,ol3-fg :background ,ol3-bg :weight bold :overline t ))
+        (ol4                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol4-fg :background ,ol4-bg :overline t))
+        (ol5                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol5-fg :background ,ol5-bg :overline t :weight bold))
+        (ol6                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol6-fg :background ,ol6-bg :underline t :overline t :weight bold))
+        (ol7                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol7-fg :background ,ol7-bg :underline t :weight bold :slant italic))
+        (ol8                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol8-fg :background ,ol8-bg :underline t :slant italic))
         (highlight            `(:background ,color-3))
-        (transient-highlight  `(:background "#ffff00"))
-        (info-text            `(:underline (:color "#2244ff")))
-        (warning-text         `(:underline (:color "#ffaa00" :style wave)))
-        (error-text           `(:underline (:color "#ff0000")))
+        (transient-highlight  `(:background ,strong-highlight))
+        (info-text            `(:underline (:color ,info)))
+        (warning-text         `(:underline (:color ,warning :style wave)))
+        (error-text           `(:underline (:color ,error)))
         )
 
     (custom-theme-set-faces
      theme-name
      ;; Built-in
      `(bold                                             ((t (:weight bold))))
+     ;; @FIXED - Don't set foreground for bold: it is used by some modes on a different background (eg tabulated-list-mode)
      `(default                                          ((t (:foreground ,color-8 :background ,color-1))))
      `(button                                           ((t (:underline t))))
      `(link                                             ((t (:foreground ,color-8 :underline t :weight bold))))
@@ -99,8 +116,6 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(shadow                                           ((t (:foreground ,color-3))))
      `(success                                          ((t (:foreground ,color-6 :weight bold))))
      `(warning                                          ((t (:foreground ,color-8 :weight bold))))
-     ;; @FIXED - Don't set foreground for bold: it is used by some modes on a different background (eg tabulated-list-mode)
-
      ;; compilation
      `(compilation-column-face                          ((t (:foreground ,color-8))))
      `(compilation-enter-directory-face                 ((t (:foreground ,color-6))))
@@ -162,7 +177,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(newsticker-date-face                             ((t (:foreground ,color-8))))
      `(newsticker-default-face                          ((t (:foreground ,color-8))))
      `(newsticker-enclosure-face                        ((t (:foreground ,color-8))))
-     `(newsticker-extra-face                            ((t (:foreground ,color-4 NOL_HEIGHT(0.8))))) ;; FIXME
+     `(newsticker-extra-face                            ((t (:foreground ,color-4 :height ,(eziam-other-height 0.8))))) ;; FIXME
      `(newsticker-feed-face ((t (:foreground ,color-8))))
      `(newsticker-immortal-item-face                    ((t (:foreground ,color-6))))
      `(newsticker-new-item-face                         ((t (:foreground ,color-8))))
@@ -306,8 +321,9 @@ Also bind `class' to ((class color) (min-colors 89))."
      ;; flx
      `(flx-highlight-face                               ((t (:foreground ,color-8 :weight bold))))
      ;; flycheck
-     `(flycheck-error                                   ((t (:underline (:color ,error)))))
-     `(flycheck-warning                                 ((t (:underline (:color ,warning)))))
+     `(flycheck-error                                   ((,class ,error-text)))
+     `(flycheck-warning                                 ((,class ,warning-text)))
+     `(flycheck-info                                    ((,class ,info-text)))
      `(flycheck-info                                    ((t (:underline (:color ,info)))))
      `(flycheck-fringe-error                            ((t (:foreground ,error))))
      `(flycheck-fringe-warning                          ((t (:foreground ,warning))))
@@ -492,9 +508,9 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(jabber-chat-prompt-foreign                       ((t (:foreground ,color-8))))
      `(jabber-activity-face                             ((t (:foreground ,color-8))))
      `(jabber-activity-personal-face                    ((t (:foreground ,color-8))))
-     `(jabber-title-small                               ((t (NOL_HEIGHT(1.1) :weight bold))))
-     `(jabber-title-medium                              ((t (NOL_HEIGHT(1.2) :weight bold))))
-     `(jabber-title-large                               ((t (NOL_HEIGHT(1.3) :weight bold))))
+     `(jabber-title-small                               ((t (:height ,(eziam-other-height 1.1) :weight bold))))
+     `(jabber-title-medium                              ((t (:height ,(eziam-other-height 1.2) :weight bold))))
+     `(jabber-title-medium                              ((t (:height ,(eziam-other-height 1.3) :weight bold))))
      ;; ledger-mode
      `(ledger-font-payee-uncleared-face                 ((t (:foreground ,color-6 :weight bold))))
      `(ledger-font-payee-cleared-face                   ((t (:foreground ,color-8 :weight normal))))
@@ -620,15 +636,16 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(org-agenda-structure                             ((t (:inherit font-lock-comment-face))))
      `(org-archived                                     ((t (:foreground ,color-8 :weight bold))))
      `(org-checkbox                                     ((t (:background ,color-4 :foreground ,color-8 :box (:line-width 1 :style released-button)))))
-     `(org-code                                         ((t (:background ,color-2 :foreground ,color-6 :box ,color-3))))
-     `(org-verbatim                                     ((t (:background ,color-2 :foreground ,color-6 :box ,color-3))))
+     `(org-code                                         ((t (:background ,color-2 :box ,color-3))))
+     `(org-verbatim                                     ((t (:background ,color-2 :box ,color-3))))
      `(org-date                                         ((t (:foreground ,color-8 :underline t))))
      `(org-deadline-announce                            ((t (:foreground ,color-6))))
-     `(org-formula                                      ((t (:foreground ,color-4))))
+     `(org-formula                                      ((t (:foreground ,color-5))))
      `(org-headline-done                                ((t (:foreground ,color-8))))
      `(org-hide                                         ((t (:foreground ,color-1))))
-     `(org-document-title                               ((t (:foreground ,color-8 NOL_HEIGHT(1.9) :bold t))))
+     `(org-document-title                               ((t (:foreground ,color-8 :height ,(eziam-other-height 1.9) :bold t))))
      `(org-document-info                                ((t (:inherit default))))
+     `(org-document-info-keyword                        ((t (:foreground ,color-6 :weight bold :underline t))))
      `(org-level-1                                      ((,class ,ol1)))
      `(org-level-2                                      ((,class ,ol2)))
      `(org-level-3                                      ((,class ,ol3)))
@@ -646,7 +663,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(org-sexp-date                                    ((t (:foreground ,color-8 :underline t))))
      `(org-special-keyword                              ((t (:foreground ,color-5))))
      `(org-table                                        ((t (:foreground ,color-8))))
-     `(org-tag                                          ((t (OL_HEIGHT(1.0) :foreground ,color-4))))
+     `(org-tag                                          ((t (:foreground ,color-4))))
      `(org-time-grid                                    ((t (:foreground ,color-8))))
      `(org-done                                         ((t (:bold t :background ,color-7 :foreground ,color-1 :weight bold))))
      `(org-todo                                         ((t (:bold t :inverse-video t))))
@@ -658,14 +675,14 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(org-mode-line-clock-overrun                      ((t (:foreground ,color-2 :background ,color-6))))
      `(org-ellipsis                                     ((t (:foreground ,color-8 :underline t))))
      `(org-footnote                                     ((t (:foreground ,color-8 :underline t))))
-     `(org-meta-line                                    ((t (:foreground ,color-4))))
+     `(org-meta-line                                    ((t ())))
      ;; I believe the difference between org-block-background and
      ;; org-block is that org 8.x uses the former, 9.x the latter.  Both
      ;; should then be identical.
      `(org-block-background                             ((t (:background ,color-0))))
      `(org-block                                        ((t (:background ,color-0))))
-     `(org-block-begin-line                             ((t (:foreground ,color-7 :background ,color-3))))
-     `(org-block-end-line                               ((t (:foreground ,color-7 :background ,color-3))))
+     `(org-block-begin-line                             ((t (:foreground ,color-6 :background ,color-3))))
+     `(org-block-end-line                               ((t (:foreground ,color-6 :background ,color-3))))
      ;; outline
      `(outline-1                                        ((t (:foreground ,color-8))))
      `(outline-2                                        ((t (:foreground ,color-8))))
@@ -711,18 +728,18 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(proof-tactics-name-face                          ((t (:inherit font-lock-constant-face :foreground nil :background ,color-1))))
      `(proof-warning-face                               ((t (:foreground ,color-2 :background ,color-8))))
      ;; rainbow-delimiters
-     `(rainbow-delimiters-depth-1-face                  ((t (:background RAINBOW_1))))
-     `(rainbow-delimiters-depth-2-face                  ((t (:background RAINBOW_2))))
-     `(rainbow-delimiters-depth-3-face                  ((t (:background RAINBOW_3))))
-     `(rainbow-delimiters-depth-4-face                  ((t (:background RAINBOW_4))))
-     `(rainbow-delimiters-depth-5-face                  ((t (:background RAINBOW_5))))
-     `(rainbow-delimiters-depth-6-face                  ((t (:background RAINBOW_6))))
-     `(rainbow-delimiters-depth-7-face                  ((t (:foreground RAINBOW_1))))
-     `(rainbow-delimiters-depth-8-face                  ((t (:foreground RAINBOW_2))))
-     `(rainbow-delimiters-depth-9-face                  ((t (:foreground RAINBOW_3))))
-     `(rainbow-delimiters-depth-10-face                 ((t (:foreground RAINBOW_4))))
-     `(rainbow-delimiters-depth-11-face                 ((t (:foreground RAINBOW_5))))
-     `(rainbow-delimiters-depth-12-face                 ((t (:foreground RAINBOW_6))))
+     `(rainbow-delimiters-depth-1-face                  ((t (:foreground ,rainbow-1))))
+     `(rainbow-delimiters-depth-2-face                  ((t (:foreground ,rainbow-2))))
+     `(rainbow-delimiters-depth-3-face                  ((t (:foreground ,rainbow-3))))
+     `(rainbow-delimiters-depth-4-face                  ((t (:foreground ,rainbow-4))))
+     `(rainbow-delimiters-depth-5-face                  ((t (:foreground ,rainbow-5))))
+     `(rainbow-delimiters-depth-6-face                  ((t (:foreground ,rainbow-6))))
+     `(rainbow-delimiters-depth-7-face                  ((t (:foreground ,rainbow-1))))
+     `(rainbow-delimiters-depth-8-face                  ((t (:foreground ,rainbow-2))))
+     `(rainbow-delimiters-depth-9-face                  ((t (:foreground ,rainbow-3))))
+     `(rainbow-delimiters-depth-10-face                 ((t (:foreground ,rainbow-4))))
+     `(rainbow-delimiters-depth-11-face                 ((t (:foreground ,rainbow-5))))
+     `(rainbow-delimiters-depth-12-face                 ((t (:foreground ,rainbow-6))))
      ;; rcirc
      `(rcirc-my-nick                                    ((t (:foreground ,color-8))))
      `(rcirc-other-nick                                 ((t (:foreground ,color-8))))

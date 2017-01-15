@@ -1,9 +1,11 @@
-
-;;; eziam-dark-theme.el --- The dark Eziam theme for Emacs
-;;;
+;;; eziam-dark --- The eziam-dark theme.
+;;
+;; License and copyright information:  see eziam-common.el
+;;
 ;;; Commentary:
 ;;
-;; Copyright and licence information in eziam-common.el
+;; This is the dark version of the Eziam theme.
+;;
 ;;; Code:
 
 (require 'eziam-common)
