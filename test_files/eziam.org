@@ -11,7 +11,7 @@
 **** And now for some tables
 
 #+begin_QUOTE
-   It is a pune, or play on words (Terry Pratchett) 
+   It is a pune, or play on words (Terry Pratchett)
 #+end_QUOTE
 
 #+CAPTION: An amazing table with numbers in it (borrowed from org-mode documentation)
@@ -30,12 +30,6 @@
 | $ | max=50  |        |        |        |       |      |
 |---+---------+--------+--------+--------+-------+------|
 #+TBLFM: $6=vsum($P1..$P3)::$7=10*$Tot/$max;%.1f::$at=vmean(@-II..@-I);%.1f
-
-| First number | Second number | Average |
-|--------------+---------------+---------|
-|           18 |            14 |         |
-|           34 |            19 |         |
-|            9 |            37 |         |
 
 **** And now for some Haskell
 
