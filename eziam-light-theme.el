@@ -33,7 +33,7 @@
    ("ol3-bg"           . "#c1d3dc")
    ("ol4-fg"           . nil)
    ("ol4-bg"           . "#abbbc3")
-   ("ol5-fg"           . "#222222")
+   ("ol5-fg"           . nil)
    ("ol5-bg"           . "#96a4ab")
    ("ol6-fg"           . nil)
    ("ol6-bg"           . nil)
