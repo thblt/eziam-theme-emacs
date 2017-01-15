@@ -11,17 +11,31 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
 
 * Screenshots
 
+ - Org mode, light theme ::
+
      #+CAPTION: Editing an org file with Eziam-light
      #+NAME:    org-light
      [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/org-light.png]]
+
+ - Org mode, light theme, headers scaling activated ::
+
+     #+CAPTION: Editing an org file with Eziam-light
+     #+NAME:    org-light
+     [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/org-light-scaled.png]]
+
+ - Org mode, dark theme ::
 
      #+CAPTION: Editing an org file with Eziam-dark
      #+NAME:    org-dark
      [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/org-dark.png]]
 
+ - Code, light theme ::
+
      #+CAPTION: Editing code with Eziam-dark
      #+NAME:    code-light
      [[https://raw.githubusercontent.com/thblt/eziam-theme-emacs/master/screenshots/code-light.png]]
+
+ - Code, dark theme ::
 
      #+CAPTION: Editing code with Eziam-dark
      #+NAME:    code-dark
