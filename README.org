@@ -47,7 +47,7 @@ Eziam is not yet in Melpa.  Clone the repository somewhere in your load-path.
 
 ** Configuration
 
-Eziam can be customized.  `M-x customize-group RET eziam-theme RET`.
+Eziam can be customized.  =M-x customize-group RET eziam-theme RET=.
 
 ** Credits
 
