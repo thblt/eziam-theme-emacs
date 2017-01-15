@@ -587,6 +587,8 @@
    `(org-agenda-structure                             ((t (:inherit font-lock-comment-face))))
    `(org-archived                                     ((t (:foreground COLOR_8 :weight bold))))
    `(org-checkbox                                     ((t (:background COLOR_4 :foreground COLOR_8 :box (:line-width 1 :style released-button)))))
+   `(org-code                                         ((t (:background COLOR_2 :foreground COLOR_6 :box COLOR_3))))
+   `(org-verbatim                                     ((t (:background COLOR_2 :foreground COLOR_6 :box COLOR_3))))
    `(org-date                                         ((t (:foreground COLOR_8 :underline t))))
    `(org-deadline-announce                            ((t (:foreground COLOR_6))))
    `(org-formula                                      ((t (:foreground COLOR_4))))
