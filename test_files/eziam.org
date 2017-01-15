@@ -3,12 +3,11 @@
 
 * This is a test org-mode document
 ** DONE A second level header
-
 *** A third level header
 
-- A theme :: is a set of /faces/
+Load eziam with =load-theme=.
 
-**** And now for some tables
+**** What's in the name “Eziam“?
 
 #+begin_QUOTE
    It is a pune, or play on words (Terry Pratchett)
@@ -36,12 +35,16 @@
 #+begin_src haskell
 data EziamVariants = White | Light | Dark | Black
   deriving (Eq, Ord, Bounded, Read, Show)
-
-isLight :: EziamVariant -> Bool
-isLight White = True
-isLight Light = True
-isLight _ = False
-
-isDark :: EziamVariant -> Bool
-isDark = not . isLight
 #+end_src
+
+**** And now for some more headings
+
+***** Level 5
+
+****** Level 6
+
+*******  Level 7
+
+******** Level 8
+
+- Description lists :: are /cool/ !
