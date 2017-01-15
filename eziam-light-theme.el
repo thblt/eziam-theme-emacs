@@ -17,13 +17,13 @@
 
 (deftheme eziam-light "The light Eziam color theme")
 
-(let ((class '((class color) (min-colors 89)))
+(let ((class '((class color) (min-colors 256)))
 
       ;; Eziam generic colors.
       (ol1                 `(,@(when eziam-scale-outline-headlines (list :height 1.8)) :overline t :background "#FFFFFF"  :weight bold ))
       (ol2                 `(,@(when eziam-scale-outline-headlines (list :height 1.5)) :overline t :background "#D6EAF4" ))
       (ol3                 `(,@(when eziam-scale-outline-headlines (list :height 1.2)) :overline t :weight bold :background "#B4C8D2" ))
-      (ol4                 `(,@(when eziam-scale-outline-headlines (list :height 1.0)) :overline t :background "#92A6B0"))
+      (ol4                 `(,@(when eziam-scale-outline-headlines (list :height 1.0)) :overline t :weight bold :background "#B4C8D2"))
       (ol5                 `(:overline t :overline t :weight bold :foreground "#800080"))
       (ol6                 `(:overline t :weight bold :slant italic :foreground "#008080"))
       (ol7                 `(:overline t :weight bold :slant italic :foreground "#000080"))
@@ -108,7 +108,7 @@
    `(font-lock-preprocessor-face                      ((t (:foreground "#000000"))))
    `(font-lock-regexp-grouping-construct              ((t (:foreground "#000000" :weight bold))))
    `(font-lock-regexp-grouping-backslash              ((t (:foreground "#555555" :weight bold))))
-   `(font-lock-string-face                            ((t (:foreground "#888888"))))
+   `(font-lock-string-face                            ((t (:foreground "#555555"))))
    `(font-lock-type-face                              ((t (:foreground "#222222" :underline t))))
    `(font-lock-variable-name-face                     ((t (:foreground "#000000" ))))
    `(font-lock-warning-face                           ((t (:foreground "#000000" :weight bold))))
