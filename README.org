@@ -4,12 +4,12 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
 
 
 ** Contents :TOC:
- - [[#screenshots][Screenshots]]
+   - [[#screenshots][Screenshots]]
    - [[#installation][Installation]]
    - [[#configuration][Configuration]]
    - [[#credits][Credits]]
 
-* Screenshots
+** Screenshots
 
  - Org mode, light theme ::
 
