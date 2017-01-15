@@ -51,6 +51,6 @@ Eziam can be customized.  =M-x customize-group RET eziam-theme RET=.
 
 ** Credits
 
-Eziam is essentially a mix of two remarkable themes, Peter Kosov's [[https://github.com/11111000000/tao-theme-emacs][Tao]] and Fabrice Niessen's [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Although it is technically a fork of the former, it also borrows code from the latter, especially the “generic colors” logic and, of course, the great org/markdown outlines.
+Eziam is essentially a mix of two remarkable themes, Peter Kosov's [[https://github.com/11111000000/tao-theme-emacs][Tao]] and Fabrice Niessen's [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Although it is technically a fork of the former, it also borrows a lot of ideas from the latter, especially the “generic colors” logic (which may not be original, but as an Emacs Lisp beginner, that's where I found it) and, of course, the great org/markdown outlines.
 
 The name “Eziam” is an extraordinarily bad pun, which I feel like I probably shouldn't explain.  If you don't get it, you're probably OK.
