@@ -34,7 +34,7 @@
 (require 'cl-lib)
 
 (defgroup eziam-theme nil
-  "eziam-theme customization options")
+  "Customization options for the Eziam theme family.")
 
 (defcustom eziam-scale-headings t
   "Non-nil means eziam-theme is allowed to customize the height of outline headlines."  :type 'boolean
