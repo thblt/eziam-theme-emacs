@@ -44,21 +44,6 @@
   "Non-nil means eziam-theme is allowed to customize the height of non-outline headlines faces."  :type 'boolean
   :group 'eziam-theme)
 
-(defcustom eziam-theme-colorize-headers t
-  "Non-nil means eziam-themes."
-  :type 'boolean
-  :group 'eziam-theme)
-
-(defcustom eziam-theme-colorize-class-names t
-  "Non-nil means eziam-themes is allowed to colorize class names in declarations and definitions."
-  :type 'boolean
-  :group 'eziam-theme)
-
-(defcustom eziam-theme-colorize-function-names t
-  "Non-nil means eziam-themes is allowed to colorize function names in declarations and definitions."
-  :type 'boolean
-  :group 'eziam-theme)
-
 (defun eziam-heading-height (height)
   (if eziam-scale-headings
       height
