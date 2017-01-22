@@ -54,7 +54,6 @@
       height
     1.0))
 
-
 (defmacro eziam-with-color-variables (eziam-colors &rest body)
   "`let' bind all colors defined in TAO-COLORS around BODY.
 Also bind `class' to ((class color) (min-colors 89))."
@@ -653,7 +652,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(org-done                                         ((t (:bold t :background ,color-7 :foreground ,color-1 :weight bold))))
      `(org-todo                                         ((t (:bold t :inverse-video t))))
      `(org-upcoming-deadline                            ((t (:inherit font-lock-keyword-face))))
-     `(org-warning                                      ((t (:bold t :foreground ,color-7 :weight bold :underline nil))))
+     `(org-warning                                      ((t (:bold t :foreground ,color-7 :weight bold :underline t))))
      `(org-column                                       ((t (:background ,color-1))))
      `(org-column-title                                 ((t (:background ,color-1 :underline t :weight bold))))
      `(org-mode-line-clock                              ((t (:foreground ,color-8 :background ,color-1))))
