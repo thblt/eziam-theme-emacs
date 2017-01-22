@@ -1,4 +1,4 @@
 (define-package
   "eziam-theme"
-  "0.0"
-  "A fork of Tao with a hint of Leuven")
+  "0.1"
+  "A mostly monochrome color theme, inspired by Tao and Leuven.  Comes with dark and light background.")
