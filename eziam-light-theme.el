@@ -1,6 +1,7 @@
 ;;; eziam-light --- The eziam-light theme.
 ;;
 ;; License and copyright information:  see eziam-common.el
+;; Version: 0.1
 ;;
 ;;; Commentary:
 ;;

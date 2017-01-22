@@ -1,6 +1,7 @@
-;;; eziam-dark --- The eziam-dark theme.
+;;; eziam-dark-theme --- The eziam-dark theme.
 ;;
 ;; License and copyright information:  see eziam-common.el
+;; Version: 0.1
 ;;
 ;;; Commentary:
 ;;
