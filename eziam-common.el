@@ -1,16 +1,14 @@
-;;; eziam-common --- Common tools and face assignment table for Eziam
+;;; eziam-common.el --- Common tools and face assignment table for Eziam
 
 ;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
+
 ;; Author: Thibault Polge <thibault@thb.lt>
+;; Maintener: Thibault Polge <thibault@thb.lt>
 ;;
-;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
-;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
-;; Tao also credits: "Original faces taken from Zenburn theme port (c)
-;; by Bozhidar Batsov"
-;;
-;; Url: https://github.com/thblt/eziam-theme-emacs
+;; Keywords: faces
+;; Homepage: https://github.com/thblt/eziam-theme-emacs
 ;; Version: 0.1
-;;
+
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
@@ -995,4 +993,4 @@ Also bind `class' to ((class color) (min-colors 89))."
      ))
 
 (provide 'eziam-common)
-;;; eziam-common ends here
+;;; eziam-common.el ends here

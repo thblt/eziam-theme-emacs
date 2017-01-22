@@ -1,15 +1,34 @@
-;;; eziam-light --- The eziam-light theme.
+;;; eziam-light-theme.el --- Light version of the Eziam theme
+
+;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
+
+;; Author: Thibault Polge <thibault@thb.lt>
+;; Maintener: Thibault Polge <thibault@thb.lt>
 ;;
-;; License and copyright information:  see eziam-common.el
+;; Keywords: faces
+;; Homepage: https://github.com/thblt/eziam-theme-emacs
 ;; Version: 0.1
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
 ;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 ;;; Commentary:
-;;
-;; This is the light version of the Eziam theme.
-;;
+
+;; This package provides a light version of the Eziam theme for Emacs.
+
 ;;; Code:
 
-(require 'eziam-common)
+(require 'eziam)
 
 (deftheme eziam-light "The light Eziam color theme")
 
@@ -65,4 +84,4 @@
 ;; indent-tabs-mode: nil
 ;; End:
 
-;;; eziam-dark-theme.el ends here
+;;; eziam-light-theme.el ends here
