@@ -28,7 +28,7 @@
 
 ;;; Code:
 
-(require 'eziam)
+(require 'eziam-common)
 
 (deftheme eziam-light "The light Eziam color theme")
 

@@ -28,12 +28,12 @@
 
 ;;; Code:
 
-(require 'eziam)
+(require 'eziam-common)
 
 (deftheme eziam-dark "The dark Eziam color theme")
 
 (eziam-with-color-variables
-  (
+
    ;; Base palette
    ("color-0"          . "#000000")
    ("color-1"          . "#222222")
