@@ -2,6 +2,9 @@
 
 Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with the org-mode goodness of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, keeps some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.  Unlike Leuven, it remains mostly greyscale, with no color for syntax, and easily allows multiple variants.
 
+[[https://melpa.org/#/eziam-theme][file:https://melpa.org/packages/eziam-theme-badge.svg]]
+[[http://stable.melpa.org/#/eziam-theme][file:http://stable.melpa.org/packages/eziam-theme-badge.svg]]
+
 ** Contents :TOC:
    - [[#screenshots][Screenshots]]
    - [[#installation][Installation]]
@@ -42,7 +45,17 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
 
 ** Installation
 
-Eziam is in Melpa.
+Eziam is in Melpa and Melpa Stable.  To enable Melpa in your Emacs, see [[https://melpa.org/#/getting-started][here]].  Once it's done, using Eziam is simply a matter of
+
+#+begin_src emacs-lisp
+M-x package-install RET eziam-theme RET
+#+end_src
+
+Or, with [[https://github.com/jwiegley/use-package][John Wigley's use-package]]:
+
+#+begin_src emacs-lisp
+(use-package eziam-theme)
+#+end_src
 
 ** Configuration
 
