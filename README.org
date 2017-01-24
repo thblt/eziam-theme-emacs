@@ -42,7 +42,7 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
 
 ** Installation
 
-A [[https://github.com/melpa/melpa/pull/4514][pull request]] has been opened for inclusion in Melpa.  In the meantime, you can install Eziam either by cloning the repository somewhere in your load-path, or using [[https://github.com/dimitri/el-get][el-get]].
+Eziam is in Melpa.
 
 ** Configuration
 
