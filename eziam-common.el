@@ -29,8 +29,6 @@
 
 ;;; Code:
 
-(require 'cl-lib)
-
 (defgroup eziam-theme nil
   "Customization options for the Eziam theme family.")
 
