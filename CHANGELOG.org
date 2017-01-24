@@ -1,0 +1,9 @@
+#+TITLE: Changelog/release notes
+
+* 0.1.1
+
+ - Remove unused library loading (4d286d9)
+
+* 0.1
+
+ - Initial version
