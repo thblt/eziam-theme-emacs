@@ -2,7 +2,7 @@
 
 * 0.2
 
-  - 8831e36 * master Document rainbow delimiters support
+  - 8831e36 * Document rainbow delimiters support
   - 1811a75 * Improve rainbow-delimiters support
   - 8306462 * Fix rainbow yellow value
 
