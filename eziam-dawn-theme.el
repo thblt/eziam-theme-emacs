@@ -1,4 +1,4 @@
-;;; eziam-dark-theme.el --- Dark version of the Eziam theme
+;;; eziam-dawn-theme.el --- Dark gray version of the Eziam theme
 
 ;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
 
@@ -35,7 +35,7 @@
 
 (require 'eziam-common)
 
-(deftheme eziam-dawn "The dark Eziam color theme")
+(deftheme eziam-dawn "The dark gray Eziam color theme")
 
 (eziam-with-color-variables
   (
