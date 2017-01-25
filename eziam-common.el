@@ -2,12 +2,17 @@
 
 ;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
 
+;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
+;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
+;; Tao also credits: "Original faces taken from Zenburn theme port (c)
+;; by Bozhidar Batsov"
+
 ;; Author: Thibault Polge <thibault@thb.lt>
 ;; Maintener: Thibault Polge <thibault@thb.lt>
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 0.1
+;; Version: 0.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -29,8 +34,6 @@
 
 ;;; Code:
 
-(require 'cl-lib)
-
 (defgroup eziam-theme nil
   "Customization options for the Eziam theme family.")
 
@@ -43,17 +46,19 @@
   :group 'eziam-theme)
 
 (defun eziam-heading-height (height)
+  "Return HEIGHT if EZIAM-SCALE-HEADINGS is non-nil."
   (if eziam-scale-headings
       height
     1.0))
 
 (defun eziam-other-height (height)
+  "Return HEIGHT if EZIAM-SCALE-OTHER is non-nil."
   (if eziam-scale-other
       height
     1.0))
 
 (defmacro eziam-with-color-variables (eziam-colors &rest body)
-  "`let' bind all colors defined in TAO-COLORS around BODY.
+  "`let' bind all colors defined in EZIAM-COLORS around BODY.
 Also bind `class' to ((class color) (min-colors 89))."
   (declare (indent 0))
   `(let ((class '((class color) (min-colors 89)))
@@ -63,6 +68,10 @@ Also bind `class' to ((class color) (min-colors 89))."
      ,@body))
 
 (defun eziam-apply-custom-theme (theme-name)
+  "Apply the Eziam theme faces under the name THEME-NAME.
+
+This function should not be called directly, but wrapped in a let
+block using EZIAM-WITH-COLOR-VARIABLES."
   (let ((class '((class color) (min-colors 256)))
         (ol1                  `(:height ,(eziam-heading-height 1.8) :foreground ,ol1-fg :background ,ol1-bg :weight bold :overline t))
         (ol2                  `(:height ,(eziam-heading-height 1.5) :foreground ,ol2-fg :background ,ol2-bg :overline t ))
@@ -710,18 +719,18 @@ Also bind `class' to ((class color) (min-colors 89))."
      `(proof-tactics-name-face                          ((t (:inherit font-lock-constant-face :foreground nil :background ,color-1))))
      `(proof-warning-face                               ((t (:foreground ,color-2 :background ,color-8))))
      ;; rainbow-delimiters
-     `(rainbow-delimiters-depth-1-face                  ((t (:foreground ,rainbow-1))))
-     `(rainbow-delimiters-depth-2-face                  ((t (:foreground ,rainbow-2))))
-     `(rainbow-delimiters-depth-3-face                  ((t (:foreground ,rainbow-3))))
-     `(rainbow-delimiters-depth-4-face                  ((t (:foreground ,rainbow-4))))
-     `(rainbow-delimiters-depth-5-face                  ((t (:foreground ,rainbow-5))))
-     `(rainbow-delimiters-depth-6-face                  ((t (:foreground ,rainbow-6))))
-     `(rainbow-delimiters-depth-7-face                  ((t (:foreground ,rainbow-1))))
-     `(rainbow-delimiters-depth-8-face                  ((t (:foreground ,rainbow-2))))
-     `(rainbow-delimiters-depth-9-face                  ((t (:foreground ,rainbow-3))))
-     `(rainbow-delimiters-depth-10-face                 ((t (:foreground ,rainbow-4))))
-     `(rainbow-delimiters-depth-11-face                 ((t (:foreground ,rainbow-5))))
-     `(rainbow-delimiters-depth-12-face                 ((t (:foreground ,rainbow-6))))
+     `(rainbow-delimiters-depth-1-face                  ((t (:foreground ,rainbow-1 :bold t))))
+     `(rainbow-delimiters-depth-2-face                  ((t (:foreground ,rainbow-4 :bold t))))
+     `(rainbow-delimiters-depth-3-face                  ((t (:foreground ,rainbow-2 :bold t))))
+     `(rainbow-delimiters-depth-4-face                  ((t (:foreground ,rainbow-5 :bold t))))
+     `(rainbow-delimiters-depth-5-face                  ((t (:foreground ,rainbow-3 :bold t))))
+     `(rainbow-delimiters-depth-6-face                  ((t (:foreground ,rainbow-6 :bold t))))
+     `(rainbow-delimiters-depth-7-face                  ((t (:foreground ,rainbow-1 :bold t))))
+     `(rainbow-delimiters-depth-8-face                  ((t (:foreground ,rainbow-4 :bold t))))
+     `(rainbow-delimiters-depth-9-face                  ((t (:foreground ,rainbow-2 :bold t))))
+     `(rainbow-delimiters-depth-10-face                 ((t (:foreground ,rainbow-5 :bold t))))
+     `(rainbow-delimiters-depth-11-face                 ((t (:foreground ,rainbow-3 :bold t))))
+     `(rainbow-delimiters-depth-12-face                 ((t (:foreground ,rainbow-6 :bold t))))
      ;; rcirc
      `(rcirc-my-nick                                    ((t (:foreground ,color-8))))
      `(rcirc-other-nick                                 ((t (:foreground ,color-8))))

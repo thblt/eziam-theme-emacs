@@ -1,0 +1,15 @@
+#+TITLE: Changelog/release notes
+
+* 0.2
+
+  - 8831e36 * Document rainbow delimiters support
+  - 1811a75 * Improve rainbow-delimiters support
+  - 8306462 * Fix rainbow yellow value
+
+* 0.1.1
+
+ - 4d286d9 * Remove unused library loading (
+
+* 0.1
+
+ - Initial version

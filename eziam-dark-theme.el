@@ -2,12 +2,17 @@
 
 ;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
 
+;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
+;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
+;; Tao also credits: "Original faces taken from Zenburn theme port (c)
+;; by Bozhidar Batsov"
+
 ;; Author: Thibault Polge <thibault@thb.lt>
 ;; Maintener: Thibault Polge <thibault@thb.lt>
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 0.1
+;; Version: 0.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -33,7 +38,7 @@
 (deftheme eziam-dark "The dark Eziam color theme")
 
 (eziam-with-color-variables
-
+  (
    ;; Base palette
    ("color-0"          . "#000000")
    ("color-1"          . "#222222")
