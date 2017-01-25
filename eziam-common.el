@@ -41,17 +41,19 @@
   :group 'eziam-theme)
 
 (defun eziam-heading-height (height)
+  "Return HEIGHT if EZIAM-SCALE-HEADINGS is non-nil."
   (if eziam-scale-headings
       height
     1.0))
 
 (defun eziam-other-height (height)
+  "Return HEIGHT if EZIAM-SCALE-OTHER is non-nil."
   (if eziam-scale-other
       height
     1.0))
 
 (defmacro eziam-with-color-variables (eziam-colors &rest body)
-  "`let' bind all colors defined in TAO-COLORS around BODY.
+  "`let' bind all colors defined in EZIAM-COLORS around BODY.
 Also bind `class' to ((class color) (min-colors 89))."
   (declare (indent 0))
   `(let ((class '((class color) (min-colors 89)))
@@ -61,6 +63,10 @@ Also bind `class' to ((class color) (min-colors 89))."
      ,@body))
 
 (defun eziam-apply-custom-theme (theme-name)
+  "Apply the Eziam theme faces under the name THEME-NAME.
+
+This function should not be called directly, but wrapped in a let
+block using EZIAM-WITH-COLOR-VARIABLES."
   (let ((class '((class color) (min-colors 256)))
         (ol1                  `(:height ,(eziam-heading-height 1.8) :foreground ,ol1-fg :background ,ol1-bg :weight bold :overline t))
         (ol2                  `(:height ,(eziam-heading-height 1.5) :foreground ,ol2-fg :background ,ol2-bg :overline t ))
