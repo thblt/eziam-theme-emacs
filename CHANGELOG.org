@@ -3,9 +3,7 @@
 * 0.3
 
  - b99516e * Improve org-agenda (Closes #8)
- - 488b892 * Update README
  - 33fb604 * Reintroduce accidentally deleted credits
- - 7920eaa * Fix typo in changelog
 
 * 0.2
 
