@@ -52,17 +52,23 @@ Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://g
 
 ** Installation
 
-Eziam is in Melpa and Melpa Stable.  To enable Melpa in your Emacs, see [[https://melpa.org/#/getting-started][here]].  Once it's done, using Eziam is simply a matter of
+Eziam is available in the Melpa and Melpa Stable repositories.   If you've already configured at least one of them, all you need to do is either:
 
-#+begin_src emacs-lisp
-M-x package-install RET eziam-theme RET
-#+end_src
+ - With bare =package.el=,
 
-Or, with [[https://github.com/jwiegley/use-package][John Wigley's use-package]]:
+   #+begin_src
+     M-x package-install RET eziam-theme RET
+   #+end_src
 
-#+begin_src emacs-lisp
-(use-package eziam-theme)
-#+end_src
+ - Or, with [[https://github.com/jwiegley/use-package][use-package]]:
+
+    #+begin_src emacs-lisp
+      (use-package eziam-theme)
+    #+end_src
+
+Both the Melpa and Melpa stable versions are actually stable and fit for daily use; experimental features are tested on separate branches.
+
+(See [[https://melpa.org/#/getting-started][here]] if you don't know how to use Melpa in Emacs)
 
 ** Configuration
 
