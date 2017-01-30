@@ -103,7 +103,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(fringe                                           ((t (:foreground ,color-4 :background ,color-2))))
      `(header-line                                      ((t (:inherit mode-line))))
      `(highlight                                        ((,class ,highlight)))
-     `(region                                           ((t (:background ,color-3 :foreground ,color-1))))
+     `(region                                           ((t (:background ,color-6 :foreground ,color-1))))
      `(shadow                                           ((t (:foreground ,color-3))))
      `(success                                          ((t (:foreground ,color-6 :weight bold))))
      `(warning                                          ((t (:foreground ,color-8 :weight bold))))
