@@ -655,6 +655,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(org-special-keyword                              ((t (:foreground ,color-5))))
      `(org-table                                        ((t (:foreground ,color-8))))
      `(org-tag                                          ((t (:foreground ,color-4))))
+     `(org-target                                       ((t (:foreground ,color-4))))
      `(org-time-grid                                    ((t (:foreground ,color-8))))
      `(org-done                                         ((t (:bold t :background ,color-7 :foreground ,color-1 :weight bold))))
      `(org-todo                                         ((t (:bold t :inverse-video t))))
