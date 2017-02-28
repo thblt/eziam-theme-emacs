@@ -667,7 +667,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(org-mode-line-clock-overrun                      ((t (:foreground ,color-2 :background ,color-6))))
      `(org-ellipsis                                     ((t (:foreground ,color-8 :underline t))))
      `(org-footnote                                     ((t (:foreground ,color-8 :underline t))))
-     `(org-meta-line                                    ((t ())))
+     `(org-meta-line                                    ((t (:foreground ,color-5))))
      ;; I believe the difference between org-block-background and
      ;; org-block is that org 8.x uses the former, 9.x the latter.  Both
      ;; should then be identical.
