@@ -1,5 +1,13 @@
 #+TITLE: Changelog/release notes
 
+* 0.4
+
+ - b34a9d1 * Add eziam to custom-theme-load-path
+ - 4872561 * Make org-meta-line easy to distinguish from default
+ - 97262b8 * Improve dark headers
+ - 5580dad * Create face for org-target
+ - 2811c09 * Improve contrast on region
+
 * 0.3
 
  - b99516e * Improve org-agenda (Closes #8)
