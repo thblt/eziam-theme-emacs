@@ -152,7 +152,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(font-lock-comment-face                           ((t (:foreground ,color-5 :slant italic))))
      `(font-lock-delimiter-face                         ((t (:foreground ,color-5 :slant italic))))
      `(font-lock-constant-face                          ((t (:foreground ,color-5 :weight bold))))
-     `(font-lock-doc-face                               ((t (:foreground ,color-4))))
+     `(font-lock-doc-face                               ((t (:foreground ,color-6 :slant italic))))
      `(font-lock-function-name-face                     ((t (:background ,color-0 :box (:color ,color-2)))))
      `(font-lock-keyword-face                           ((t (:foreground ,color-8 :weight bold))))
      `(font-lock-negation-char-face                     ((t (:foreground ,color-8 :weight bold))))
