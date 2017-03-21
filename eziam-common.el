@@ -86,6 +86,8 @@ block using EZIAM-WITH-COLOR-VARIABLES."
         (info-text            `(:underline (:color ,info)))
         (warning-text         `(:underline (:color ,warning :style wave)))
         (error-text           `(:underline (:color ,error)))
+        (button-on            `(:background ,color-0 :foreground ,color-7 :overline ,color-4 :weight bold))
+        (button-off           `(:background ,color-2 :foreground ,color-7 :overline ,color-4))
         )
 
     (custom-theme-set-faces
@@ -963,6 +965,20 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(avy-lead-face-2                                  ((t (:background ,color-8  :foreground ,color-1 :bold t))))
      `(avy-background-face                              ((t (:background ,color-1 :foreground ,color-4 :bold t))))
      ;; highlight-indent-guides has been removed: newer versions automatically compute faces.
+     ;; calfw
+     `(cfw:face-title                                   ((t (:height ,(eziam-heading-height 2.5) :foreground ,color-5 :weight bold))))
+     `(cfw:face-grid                                    ((t (:foreground ,color-5))))
+     `(cfw:face-day-title                               ((t (:foreground ,color-5))))
+     `(cfw:face-header                                  ((t (:foreground ,color-6 :background ,color-2 :weight bold))))
+     `(cfw:face-saturday                                ((t (:inherit 'cfw:face-header))))
+     `(cfw:face-sunday                                  ((t (:inherit 'cfw:face-header))))
+     `(cfw:face-holiday                                 ((t (:foreground ,color-5 :slant italic))))
+     `(cfw:face-today                                   ((t (:background ,color-0))))
+     `(cfw:face-today-title                             ((t (:background ,color-0 :foreground ,color-8))))
+     `(cfw:face-select                                  ((,class ,highlight)))
+     `(cfw:face-toolbar                                 ((t (:background ,color-1))))
+     `(cfw:face-toolbar-button-on                       ((,class ,button-on)))
+     `(cfw:face-toolbar-button-off                      ((,class ,button-off)))
      )
 
     (custom-theme-set-variables
