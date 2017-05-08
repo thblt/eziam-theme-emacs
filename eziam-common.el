@@ -132,6 +132,8 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(match                                            ((t (:background ,color-1 :foreground ,color-8 :weight bold))))
      ;; haskell-mode @TODO: This is a work-in-progress
      `(haskell-literate-comment-face                    ((t (:background ,color-0))))
+     ;; ivy
+     `(ivy-current-match                                ((t (:inherit highlight :weight bold))))
      ;; make
      `(makefile-space                                   ((t (:background ,color-1))))
      `(makefile-targets                                 ((t (:underline t))))
@@ -216,7 +218,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(ac-gtags-selection-face                          ((t (:background ,color-4 :foreground ,color-8))))
      `(ac-emmet-candidate-face                          ((t (:background ,color-5 :foreground ,color-1))))
      `(ac-emmet-selection-face                          ((t (:background ,color-4 :foreground ,color-8))))
-
+     ;; popup
      `(popup-tip-face                                   ((t (:background ,color-8 :foreground ,color-1))))
      `(popup-scroll-bar-foreground-face                 ((t (:background ,color-3))))
      `(popup-scroll-bar-background-face                 ((t (:background ,color-1))))
@@ -479,7 +481,6 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      ;; iedit-mode
      `(iedit-occurrence                                 ((t (:background ,color-4 :weight bold))))
      ;; js2-mode
-
      `(js2-warning                                      ((t (:underline ,color-1))))
      `(js2-error                                        ((t (:foreground ,color-7 :weight bold))))
      `(js2-jsdoc-tag                                    ((t (:foreground ,color-5))))
@@ -491,7 +492,6 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(js2-function-call                                ((t (:foreground ,color-8 :underline t))))
      `(js2-object-property                              ((t (:foreground ,color-8  :slant italic))))
      `(js2-external-variable                            ((t (:foreground ,color-4))))
-
      ;; jabber-mode
      `(jabber-roster-user-away                          ((t (:foreground ,color-8))))
      `(jabber-roster-user-online                        ((t (:foreground ,color-7))))
@@ -616,8 +616,11 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(mu4e-cited-5-face                                ((t (:foreground ,color-4 :slant italic))))
      `(mu4e-cited-6-face                                ((t (:foreground ,color-5 :slant italic))))
      `(mu4e-cited-7-face                                ((t (:foreground ,color-8 :slant italic))))
-     `(mu4e-replied-face                                ((t (:foreground ,color-5))))
+     `(mu4e-unread-face                                 ((t (:background ,color-0 :weight bold))))
+     `(mu4e-replied-face                                ((t (:foreground ,color-6 :slant italic))))
      `(mu4e-trashed-face                                ((t (:foreground ,color-5 :strike-through t))))
+     `(mu4e-flagged-face                                ((t (:foreground ,info))))
+     `(mu4e-ok-face                                     ((t (:foreground ,ok :weight bold))))
      ;; mumamo
      `(mumamo-background-chunk-major                    ((t (:background nil))))
      `(mumamo-background-chunk-submode1                 ((t (:background ,color-1))))
@@ -773,8 +776,8 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(show-paren-mismatch                              ((t (:foreground ,color-1 :background ,color-4 :weight bold))))
      `(show-paren-match                                 ((t (:foreground ,color-8 :background ,color-1 :weight bold))))
      ;; smartparens
-     `(sp-show-pair-mismatch-face                       ((t (:foreground ,color-8 :background ,color-1))))
-     `(sp-show-pair-match-face                          ((t (:foreground ,color-8 :background ,color-3 :underline nil))))
+     `(sp-show-pair-mismatch-face                       ((t (:foreground ,error :background ,color-1))))
+     `(sp-show-pair-match-face                          ((,class ,transient-highlight)))
      ;; sml-mode-line
      `(sml-modeline-end-face                            ((t :inherit default :width condensed)))
      ;; SLIME
