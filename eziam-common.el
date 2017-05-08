@@ -82,7 +82,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
         (ol7                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol7-fg :background ,ol7-bg :underline t :weight bold :slant italic))
         (ol8                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol8-fg :background ,ol8-bg :underline t :slant italic))
         (highlight            `(:background ,color-3))
-        (transient-highlight  `(:background ,strong-highlight))
+        (transient-highlight  `(:background ,transient-highlight :foreground ,transient-highlight-fg))
         (info-text            `(:underline (:color ,info)))
         (warning-text         `(:underline (:color ,warning :style wave)))
         (error-text           `(:underline (:color ,error)))
