@@ -621,6 +621,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(mu4e-trashed-face                                ((t (:foreground ,color-5 :strike-through t))))
      `(mu4e-flagged-face                                ((t (:foreground ,info))))
      `(mu4e-ok-face                                     ((t (:foreground ,ok :weight bold))))
+     `(mu4e-warning-face                                ((t (:foreground ,warning :weight bold))))
      ;; mumamo
      `(mumamo-background-chunk-major                    ((t (:background nil))))
      `(mumamo-background-chunk-submode1                 ((t (:background ,color-1))))
