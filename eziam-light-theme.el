@@ -69,7 +69,7 @@
    ;; Misc
    ("transient-highlight"    . "yellow")
    ("transient-highlight-fg" . "#000000")
-   ("warning"                . "#ffaa00")
+   ("warning"                . "OrangeRed")
    ("error"                  . "#ff0000")
    ("info"                   . "#2244ff")
    ("ok"                     . "ForestGreen")
