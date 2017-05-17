@@ -778,12 +778,13 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      ;; sh-mode
      `(sh-heredoc                                       ((t (:foreground ,color-8 :bold t))))
      `(sh-quoted-exec                                   ((t (:foreground ,color-7))))
-     ;; show-paren
      `(show-paren-mismatch                              ((t (:foreground ,color-1 :background ,color-4 :weight bold))))
-     `(show-paren-match                                 ((t (:foreground ,color-8 :background ,color-1 :weight bold))))
      ;; smartparens
      `(sp-show-pair-mismatch-face                       ((t (:foreground ,error :background ,color-1))))
-     `(sp-show-pair-match-face                          ((,class ,transient-highlight)))
+     `(sp-show-pair-match-face                          ((t (:foreground ,info :background ,color-0))))
+     ;; show-paren
+     `(show-paren-match                                 ((t (:inherit sp-show-pair-match-face))))
+     `(show-paren-mismatch                              ((t (:inherit sp-show-pair-mismatch-face))))
      ;; sml-mode-line
      `(sml-modeline-end-face                            ((t :inherit default :width condensed)))
      ;; SLIME
