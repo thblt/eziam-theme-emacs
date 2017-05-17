@@ -613,6 +613,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(nav-face-file                                    ((t (:foreground ,color-8))))
      `(nav-face-hfile                                   ((t (:foreground ,color-4))))
      ;; mu4e
+     `(mu4e-title-face                                  ((t (:foreground ,color-8 :weight bold))))
      `(mu4e-header-highlight-face                       ((, class ,highlight)))
      `(mu4e-cited-1-face                                ((t (:foreground ,color-8 :slant italic))))
      `(mu4e-cited-2-face                                ((t (:foreground ,color-8 :slant italic))))
