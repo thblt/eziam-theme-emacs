@@ -323,8 +323,11 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(flycheck-info                                    ((,class ,info-text)))
      `(flycheck-info                                    ((t (:underline (:color ,info)))))
      `(flycheck-fringe-error                            ((t (:foreground ,error))))
+     `(flycheck-error-list-error                        ((t (:foreground ,error))))
      `(flycheck-fringe-warning                          ((t (:foreground ,warning))))
+     `(flycheck-error-list-warning                      ((t (:foreground ,warning))))
      `(flycheck-fringe-info                             ((t (:foreground ,info))))
+     `(flycheck-error-list-info                         ((t (:foreground ,info))))
      ;; flymake
      `(flymake-errline                                  ((,class ,error-text)))
      `(flymake-warnline                                 ((,class ,warning-text)))
