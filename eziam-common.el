@@ -133,7 +133,9 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      ;; haskell-mode @TODO: This is a work-in-progress
      `(haskell-literate-comment-face                    ((t (:background ,color-0))))
      ;; ivy
-     `(ivy-current-match                                ((t (:inherit highlight :weight bold))))
+     `(ivy-current-match
+       ;; This is very similar to :inverse-video t, but works better with color selectors.
+       ((t (:background ,color-8 :foreground ,color-0 :weight bold))))
      ;; make
      `(makefile-space                                   ((t (:background ,color-1))))
      `(makefile-targets                                 ((t (:underline t))))
