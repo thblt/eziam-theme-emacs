@@ -12,7 +12,7 @@
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 0.4.4
+;; Version: 0.4.5
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
