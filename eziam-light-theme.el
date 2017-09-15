@@ -76,7 +76,7 @@
 
    ("rainbow-1"              . "#ff0000")
    ("rainbow-2"              . "#ff7700")
-   ("rainbow-3"              . "#ffff00")
+   ("rainbow-3"              . "goldenrod")
    ("rainbow-4"              . "#00aa00")
    ("rainbow-5"              . "#0000ff")
    ("rainbow-6"              . "#8f00ff")
