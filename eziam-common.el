@@ -1003,6 +1003,10 @@ block using EZIAM-WITH-COLOR-VARIABLES."
 
     (custom-theme-set-variables
      theme-name
+     ;; pdf-tools midnight-mode
+     `(pdf-view-midnight-colors ,(if (string> color-1 color-8)
+                                     `(quote (,color-1 . ,color-8))
+                                   `(quote (,color-8 . ,color-1))))
      ;; ansi-color
      `(ansi-color-names-vector [,color-2
                                 ,color-7
