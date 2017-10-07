@@ -334,7 +334,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(flymake-infoline                                 ((,class ,info-text)))
      ;; flyspell
      `(flyspell-duplicate                               ((,class ,warning-text)))
-     `(flyspell-incorrect                               ((,class ,warning-text)))
+     `(flyspell-incorrect                               ((,class ,error-text)))
      ;; erc
      `(erc-action-face                                  ((t (:inherit erc-default-face))))
      `(erc-bold-face                                    ((t (:weight bold))))
