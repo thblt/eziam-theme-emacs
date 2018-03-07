@@ -42,12 +42,12 @@
    ;; Base palette
    ("color-0"                . "#000000")
    ("color-1"                . "#222222")
-   ("color-2"                . "#333333")
-   ("color-3"                . "#444444")
-   ("color-4"                . "#666666")
-   ("color-5"                . "#888888")
-   ("color-6"                . "#aaaaaa")
-   ("color-7"                . "#dddddd")
+   ("color-2"                . "#444444")
+   ("color-3"                . "#666666")
+   ("color-4"                . "#888888")
+   ("color-5"                . "#AAAAAA")
+   ("color-6"                . "#CCCCCC")
+   ("color-7"                . "#E0E0E0")
    ("color-8"                . "#ffffff")
    ;; Headings
    ("ol1-fg"                 . nil)
