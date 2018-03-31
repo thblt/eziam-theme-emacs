@@ -38,11 +38,13 @@
   "Customization options for the Eziam theme family.")
 
 (defcustom eziam-scale-headings t
-  "Non-nil means eziam-theme is allowed to customize the height of outline headlines."  :type 'boolean
+  "Non-nil means eziam-theme is allowed to customize the height of outline headlines."
+  :type 'boolean
   :group 'eziam-theme)
 
 (defcustom eziam-scale-other t
-  "Non-nil means eziam-theme is allowed to customize the height of non-outline headlines faces."  :type 'boolean
+  "Non-nil means eziam-theme is allowed to customize the height of non-outline headlines faces."
+  :type 'boolean
   :group 'eziam-theme)
 
 (defun eziam--heading-height (height)
@@ -71,7 +73,7 @@ Also bind `class' to ((class color) (min-colors 89))."
   "Apply the Eziam theme faces under the name THEME-NAME.
 
 This function should not be called directly, but wrapped in a let
-block using EZIAM-WITH-COLOR-VARIABLES."
+block using `eziam-with-color-variables'."
   (let ((class '((class color) (min-colors 256)))
         (ol1                  `(:height ,(eziam--heading-height 1.8) :foreground ,ol1-fg :background ,ol1-bg :weight bold :overline t))
         (ol2                  `(:height ,(eziam--heading-height 1.5) :foreground ,ol2-fg :background ,ol2-bg :overline t ))
