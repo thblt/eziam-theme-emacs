@@ -45,13 +45,13 @@
   "Non-nil means eziam-theme is allowed to customize the height of non-outline headlines faces."  :type 'boolean
   :group 'eziam-theme)
 
-(defun eziam-heading-height (height)
+(defun eziam--heading-height (height)
   "Return HEIGHT if EZIAM-SCALE-HEADINGS is non-nil."
   (if eziam-scale-headings
       height
     1.0))
 
-(defun eziam-other-height (height)
+(defun eziam--other-height (height)
   "Return HEIGHT if EZIAM-SCALE-OTHER is non-nil."
   (if eziam-scale-other
       height
@@ -73,14 +73,14 @@ Also bind `class' to ((class color) (min-colors 89))."
 This function should not be called directly, but wrapped in a let
 block using EZIAM-WITH-COLOR-VARIABLES."
   (let ((class '((class color) (min-colors 256)))
-        (ol1                  `(:height ,(eziam-heading-height 1.8) :foreground ,ol1-fg :background ,ol1-bg :weight bold :overline t))
-        (ol2                  `(:height ,(eziam-heading-height 1.5) :foreground ,ol2-fg :background ,ol2-bg :overline t ))
-        (ol3                  `(:height ,(eziam-heading-height 1.2) :foreground ,ol3-fg :background ,ol3-bg :weight bold :overline t ))
-        (ol4                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol4-fg :background ,ol4-bg :overline t))
-        (ol5                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol5-fg :background ,ol5-bg :overline t :weight bold))
-        (ol6                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol6-fg :background ,ol6-bg :underline t :overline t :weight bold))
-        (ol7                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol7-fg :background ,ol7-bg :underline t :weight bold :slant italic))
-        (ol8                  `(:height ,(eziam-heading-height 1.0) :foreground ,ol8-fg :background ,ol8-bg :underline t :slant italic))
+        (ol1                  `(:height ,(eziam--heading-height 1.8) :foreground ,ol1-fg :background ,ol1-bg :weight bold :overline t))
+        (ol2                  `(:height ,(eziam--heading-height 1.5) :foreground ,ol2-fg :background ,ol2-bg :overline t ))
+        (ol3                  `(:height ,(eziam--heading-height 1.2) :foreground ,ol3-fg :background ,ol3-bg :weight bold :overline t ))
+        (ol4                  `(:height ,(eziam--heading-height 1.0) :foreground ,ol4-fg :background ,ol4-bg :overline t))
+        (ol5                  `(:height ,(eziam--heading-height 1.0) :foreground ,ol5-fg :background ,ol5-bg :overline t :weight bold))
+        (ol6                  `(:height ,(eziam--heading-height 1.0) :foreground ,ol6-fg :background ,ol6-bg :underline t :overline t :weight bold))
+        (ol7                  `(:height ,(eziam--heading-height 1.0) :foreground ,ol7-fg :background ,ol7-bg :underline t :weight bold :slant italic))
+        (ol8                  `(:height ,(eziam--heading-height 1.0) :foreground ,ol8-fg :background ,ol8-bg :underline t :slant italic))
         (highlight            `(:background ,color-3))
         (transient-highlight  `(:background ,transient-highlight :foreground ,transient-highlight-fg))
         (info-text            `(:underline (:color ,info)))
@@ -174,7 +174,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(newsticker-date-face                             ((t (:foreground ,color-8))))
      `(newsticker-default-face                          ((t (:foreground ,color-8))))
      `(newsticker-enclosure-face                        ((t (:foreground ,color-8))))
-     `(newsticker-extra-face                            ((t (:foreground ,color-4 :height ,(eziam-other-height 0.8))))) ;; FIXME
+     `(newsticker-extra-face                            ((t (:foreground ,color-4 :height ,(eziam--other-height 0.8))))) ;; FIXME
      `(newsticker-feed-face ((t (:foreground ,color-8))))
      `(newsticker-immortal-item-face                    ((t (:foreground ,color-6))))
      `(newsticker-new-item-face                         ((t (:foreground ,color-8))))
@@ -506,9 +506,9 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(jabber-chat-prompt-foreign                       ((t (:foreground ,color-8))))
      `(jabber-activity-face                             ((t (:foreground ,color-8))))
      `(jabber-activity-personal-face                    ((t (:foreground ,color-8))))
-     `(jabber-title-small                               ((t (:height ,(eziam-other-height 1.1) :weight bold))))
-     `(jabber-title-medium                              ((t (:height ,(eziam-other-height 1.2) :weight bold))))
-     `(jabber-title-medium                              ((t (:height ,(eziam-other-height 1.3) :weight bold))))
+     `(jabber-title-small                               ((t (:height ,(eziam--other-height 1.1) :weight bold))))
+     `(jabber-title-medium                              ((t (:height ,(eziam--other-height 1.2) :weight bold))))
+     `(jabber-title-medium                              ((t (:height ,(eziam--other-height 1.3) :weight bold))))
      ;; ledger-mode
      `(ledger-font-payee-uncleared-face                 ((t (:foreground ,color-6 :weight bold))))
      `(ledger-font-payee-cleared-face                   ((t (:foreground ,color-8 :weight normal))))
@@ -646,7 +646,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(org-formula                                      ((t (:foreground ,color-5))))
      `(org-headline-done                                ((t (:foreground ,color-8))))
      `(org-hide                                         ((t (:foreground ,color-1))))
-     `(org-document-title                               ((t (:foreground ,color-8 :height ,(eziam-other-height 1.9) :bold t))))
+     `(org-document-title                               ((t (:foreground ,color-8 :height ,(eziam--other-height 1.9) :bold t))))
      `(org-document-info                                ((t (:inherit default))))
      `(org-document-info-keyword                        ((t (:foreground ,color-6 :weight bold :underline t))))
      `(org-level-1                                      ((,class ,ol1)))
@@ -986,7 +986,7 @@ block using EZIAM-WITH-COLOR-VARIABLES."
      `(avy-background-face                              ((t (:background ,color-1 :foreground ,color-4 :bold t))))
      ;; highlight-indent-guides has been removed: newer versions automatically compute faces.
      ;; calfw
-     `(cfw:face-title                                   ((t (:height ,(eziam-heading-height 2.5) :foreground ,color-5 :weight bold))))
+     `(cfw:face-title                                   ((t (:height ,(eziam--heading-height 2.5) :foreground ,color-5 :weight bold))))
      `(cfw:face-grid                                    ((t (:foreground ,color-5))))
      `(cfw:face-day-title                               ((t (:foreground ,color-5))))
      `(cfw:face-header                                  ((t (:foreground ,color-6 :background ,color-2 :weight bold))))
