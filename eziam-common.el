@@ -1006,7 +1006,7 @@ block using `eziam-with-color-variables'."
     (custom-theme-set-variables
      theme-name
      ;; pdf-tools midnight-mode
-     `(pdf-view-midnight-colors ,(if (string> color-1 color-8)
+     `(pdf-view-midnight-colors ,(if (string-lessp color-8 color-1)
                                      `(quote (,color-1 . ,color-8))
                                    `(quote (,color-8 . ,color-1))))
      ;; ansi-color
