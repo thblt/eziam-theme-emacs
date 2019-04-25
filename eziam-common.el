@@ -1,6 +1,6 @@
 ;;; eziam-common.el --- Common tools and face assignment table for Eziam
 
-;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
+;; Copyright (c) 2016-2019 Thibault Polge <thibault@thb.lt>
 
 ;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
 ;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
@@ -476,8 +476,8 @@ block using `eziam-with-color-variables'."
      `(helm-mu-contacts-name-face                       ((t (:foreground ,color-8 :background ,color-1))))
      `(helm-M-x-key                                     ((t (:foreground ,color-8 :background ,color-1 :weight bold))))
      ;; hl-line-mode FIXME Looks weird
-     `(hl-line                                          ((,class ,highlight)))
-     `(hl-line-face                                     ((,class ,highlight)))
+     `(hl-line                                          ((t (:background ,color-2))))
+     `(hl-line-face                                     ((t (:background ,color-2))))
      ;; hl-sexp
      `(hl-sexp-face                                     ((,class (:background ,color-3)) (t :weight bold)))
      ;; ido-mode
@@ -679,7 +679,7 @@ block using `eziam-with-color-variables'."
      `(org-column-title                                 ((t (:background ,color-1 :underline t :weight bold))))
      `(org-mode-line-clock                              ((t (:foreground ,color-8 :background ,color-1))))
      `(org-mode-line-clock-overrun                      ((t (:foreground ,color-2 :background ,color-6))))
-     `(org-ellipsis                                     ((t (:foreground ,color-8 :underline t))))
+     `(org-ellipsis                                     ((t (:background ,color-1 :foreground ,color-8 :underline nil :box nil :scale 1.0))))
      `(org-footnote                                     ((t (:foreground ,color-8 :underline t))))
      `(org-meta-line                                    ((t (:foreground ,color-5))))
      ;; I believe the difference between org-block-background and
