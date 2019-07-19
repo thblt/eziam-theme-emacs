@@ -8,7 +8,7 @@
 ;; by Bozhidar Batsov"
 
 ;; Author: Thibault Polge <thibault@thb.lt>
-;; Maintener: Thibault Polge <thibault@thb.lt>
+;; Maintainer: Thibault Polge <thibault@thb.lt>
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
