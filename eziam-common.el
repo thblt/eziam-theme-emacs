@@ -989,7 +989,7 @@ block using `eziam-with-color-variables'."
      `(markdown-header-face-2                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 2)))))
      `(markdown-header-face-3                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 3)))))
      `(markdown-header-face-4                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 4)))))
-     `(markdown-header-face-5                           ((,class ,(intern (format "ol-%s-%s" markdown-header-face-heading-style 5)))))
+     `(markdown-header-face-5                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 5)))))
      `(markdown-header-face-6                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 6)))))
      `(markdown-header-face-7                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 7)))))
      `(markdown-header-face-8                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 8)))))
