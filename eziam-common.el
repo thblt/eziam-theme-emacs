@@ -12,7 +12,7 @@
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 1.1
+;; Version: 1.1.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -761,7 +761,6 @@ block using `eziam-with-color-variables'."
      `(outshine-6                                       ((t ,(eval (intern (format "ol-%s-%s" outshine-heading-style 6))))))
      `(outshine-7                                       ((t ,(eval (intern (format "ol-%s-%s" outshine-heading-style 7))))))
      `(outshine-8                                       ((t ,(eval (intern (format "ol-%s-%s" outshine-heading-style 8))))))
-
 ;;;;; p4
      `(p4-depot-added-face                              ((t :inherit diff-added)))
      `(p4-depot-branch-op-face                          ((t :inherit diff-changed)))
@@ -986,14 +985,12 @@ block using `eziam-with-color-variables'."
 ;;;;; Markdown mode
      `(markdown-header-delimiter-face                   ((t (:weight normal :foreground ,color-3))))
      ;; ;; outline
-     `(markdown-header-face-1                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 1)))))
-     `(markdown-header-face-2                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 2)))))
-     `(markdown-header-face-3                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 3)))))
-     `(markdown-header-face-4                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 4)))))
-     `(markdown-header-face-5                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 5)))))
-     `(markdown-header-face-6                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 6)))))
-     `(markdown-header-face-7                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 7)))))
-     `(markdown-header-face-8                           ((,class ,(intern (format "ol-%s-%s" markdown-heading-style 8)))))
+     `(markdown-header-face-1                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 1))))))
+     `(markdown-header-face-2                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 2))))))
+     `(markdown-header-face-3                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 3))))))
+     `(markdown-header-face-4                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 4))))))
+     `(markdown-header-face-5                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 5))))))
+     `(markdown-header-face-6                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 6))))))
      `(markdown-link-face                               ((t (:underline t :foreground ,color-8))))
      `(markdown-url-face                                ((t (:underline t :foreground ,color-8))))
      `(markdown-pre-face                                ((t (:foreground ,color-8 NOL_HEIGHT(.8)))))
