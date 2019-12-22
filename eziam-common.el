@@ -269,6 +269,8 @@ block using `eziam-with-color-variables'."
      `(ac-gtags-selection-face                          ((t (:background ,color-4 :foreground ,color-8))))
      `(ac-emmet-candidate-face                          ((t (:background ,color-5 :foreground ,color-1))))
      `(ac-emmet-selection-face                          ((t (:background ,color-4 :foreground ,color-8))))
+;;;;; auto-dim-other-buffers
+     `(auto-dim-other-buffers-face                      ((t (:background ,color-2))))
 ;;;;; popup
      `(popup-tip-face                                   ((t (:background ,color-8 :foreground ,color-1))))
      `(popup-scroll-bar-foreground-face                 ((t (:background ,color-3))))
