@@ -724,7 +724,7 @@ block using `eziam-with-color-variables'."
      `(org-sexp-date                                    ((t (:foreground ,color-8 :underline t))))
      `(org-special-keyword                              ((t (:foreground ,color-5))))
      `(org-table                                        ((t (:foreground ,color-8))))
-     `(org-tag                                          ((t (:foreground ,color-4))))
+     `(org-tag                                          ((t (:foreground ,color-4 :distant-foreground ,color-0))))
      `(org-target                                       ((t (:foreground ,color-4))))
      `(org-time-grid                                    ((t (:foreground ,color-8))))
      `(org-done                                         ((t (:bold t :background ,color-4 :foreground ,color-8 :weight bold))))
