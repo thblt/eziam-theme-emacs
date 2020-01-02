@@ -12,7 +12,7 @@
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 1.2
+;; Version: 1.3
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -741,9 +741,9 @@ block using `eziam-with-color-variables'."
      ;; org-block is that org 8.x uses the former, 9.x the latter.  Both
      ;; should then be identical.
      `(org-block-background                             ((t (:background ,color-0))))
-     `(org-block                                        ((t (:background ,color-0))))
-     `(org-block-begin-line                             ((t (:foreground ,color-6 :background ,color-3))))
-     `(org-block-end-line                               ((t (:foreground ,color-6 :background ,color-3))))
+     `(org-block                                        ((t (:background ,color-0 :extend t))))
+     `(org-block-begin-line                             ((t (:foreground ,color-6 :background ,color-3 :extend t))))
+     `(org-block-end-line                               ((t (:foreground ,color-6 :background ,color-3 :extend t))))
 ;;;;; outline
      `(outline-1                                        ((t ,(eval (intern (format "ol-%s-%s" outline-heading-style 1))))))
      `(outline-2                                        ((t ,(eval (intern (format "ol-%s-%s" outline-heading-style 2))))))
