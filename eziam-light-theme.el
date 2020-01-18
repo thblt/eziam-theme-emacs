@@ -1,6 +1,6 @@
 ;;; eziam-light-theme.el --- Light version of the Eziam theme
 
-;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
+;; Copyright (c) 2016-2020 Thibault Polge <thibault@thb.lt>
 
 ;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
 ;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
@@ -12,7 +12,7 @@
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 2
+;; Version: 3
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

@@ -1,6 +1,6 @@
 ;;; eziam-common.el --- Common tools and face assignment table for Eziam
 
-;; Copyright (c) 2016-2019 Thibault Polge <thibault@thb.lt>
+;; Copyright (c) 2016-2020 Thibault Polge <thibault@thb.lt>
 
 ;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
 ;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
@@ -12,7 +12,7 @@
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 2
+;; Version: 3
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -391,7 +391,7 @@ block using `eziam-with-color-variables'."
 ;;;;; erc
      `(erc-action-face                                  ((t (:inherit erc-default-face))))
      `(erc-bold-face                                    ((t (:weight bold))))
-     `(erc-current-nick-face                            ((t (:foreground ,color-8 :weight bold))))
+     `(erc-current-nick-face                            ((t (:inverse-video t :weight bold))))
      `(erc-dangerous-host-face                          ((t (:inherit font-lock-warning-face))))
      `(erc-default-face                                 ((t (:foreground ,color-8))))
      `(erc-direct-msg-face                              ((t (:inherit erc-default))))
