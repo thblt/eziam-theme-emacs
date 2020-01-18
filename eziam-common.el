@@ -596,6 +596,7 @@ block using `eziam-with-color-variables'."
      `(macrostep-expansion-highlight-face               ((t (:inherit highlight))))
      `(macrostep-macro-face                             ((t (:underline t))))
 ;;;;; magit
+     `(magit-section-highlight                          ((t (:background ,color-2 :extend t))))
      `(magit-section-title                              ((t (:foreground ,color-8 :weight bold))))
      `(magit-branch                                     ((t (:foreground ,color-8 :weight bold))))
      `(magit-item-highlight                             ((t (:inverse-video t))))
