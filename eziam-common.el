@@ -379,9 +379,9 @@ block using `eziam-with-color-variables'."
      `(flycheck-fringe-info                             ((t (:foreground ,info))))
      `(flycheck-error-list-info                         ((t (:foreground ,info))))
 ;;;;; flymake
-     `(flymake-errline                                  ((,class ,error-text)))
-     `(flymake-warnline                                 ((,class ,warning-text)))
-     `(flymake-infoline                                 ((,class ,info-text)))
+     `(flymake-error                                    ((,class ,error-text)))
+     `(flymake-warning                                  ((,class ,warning-text)))
+     `(flymake-note                                     ((,class ,info-text)))
 ;;;;; flyspell
      `(flyspell-duplicate                               ((,class ,warning-text)))
      `(flyspell-incorrect                               ((,class ,error-text)))
