@@ -74,6 +74,9 @@ Appearance for specific modes are controlled with dedicated variables
 (defcustom eziam-outshine-heading-style nil
   "Style for Outshine headings.  See `eziam-heading-style' for legal values.")
 
+(defcustom eziam-color-comments nil
+  "If non-nil, comments will be rendered in a non-neutral color. I like this better.")
+
 (defun eziam--heading-height (height)
   "Return HEIGHT if EZIAM-SCALE-HEADINGS is non-nil."
   (if eziam-scale-headings
@@ -204,10 +207,12 @@ block using `eziam-with-color-variables'."
 ;;;;; font lock
      `(font-lock-builtin-face                           ((t (:foreground ,color-8 :weight bold))))
      `(font-lock-comment-face                           ((t (:foreground ,color-5 :slant italic))))
+     `(font-lock-comment-face                           ((t (:foreground ,(if eziam-color-comments colored-comments color-5) :slant italic))))
      `(font-lock-delimiter-face                         ((t (:foreground ,color-5 :slant italic))))
      `(font-lock-constant-face                          ((t (:foreground ,color-5 :weight bold))))
      `(font-lock-doc-face                               ((t (:foreground ,color-6 :slant italic))))
      `(font-lock-function-name-face                     ((t (:background ,color-0 :box (:color ,color-2)))))
+     `(font-lock-doc-face                               ((t (:foreground ,(if eziam-color-comments colored-comments color-5)))))
      `(font-lock-keyword-face                           ((t (:foreground ,color-8 :weight bold))))
      `(font-lock-negation-char-face                     ((t (:foreground ,color-8 :weight bold))))
      `(font-lock-preprocessor-face                      ((t (:foreground ,color-8))))
