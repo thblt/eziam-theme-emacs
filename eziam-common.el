@@ -12,7 +12,7 @@
 ;;
 ;; Keywords: faces
 ;; Homepage: https://github.com/thblt/eziam-theme-emacs
-;; Version: 3
+;; Version: 4
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -1071,8 +1071,8 @@ block using `eziam-with-color-variables'."
      theme-name
 ;;;;; pdf-tools midnight-mode
      `(pdf-view-midnight-colors ,(if (string-lessp color-8 color-1)
-                                     `(quote (,color-1 . ,color-8))
-                                   `(quote (,color-8 . ,color-1))))
+                                     `(quote (,color-0 . ,color-8))
+                                   `(quote (,color-8 . ,color-0))))
 ;;;;; ansi-color
      `(ansi-color-names-vector [,color-2
                                 ,color-7
