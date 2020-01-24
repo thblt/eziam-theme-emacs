@@ -67,6 +67,7 @@
    ("ol8-fg"                 . nil)
    ("ol8-bg"                 . nil)
    ;; Misc
+   ("colored-comments"       . "#ccffcc")
    ("transient-highlight"    . "yellow")
    ("transient-highlight-fg" . "#000000")
    ("warning"                . "gold")
