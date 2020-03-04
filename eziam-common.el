@@ -531,12 +531,6 @@ block using `eziam-with-color-variables'."
      `(hl-line-face                                     ((t (:background ,color-2))))
 ;;;;; hl-sexp
      `(hl-sexp-face                                     ((,class (:background ,color-3)) (t :weight bold)))
-     ;; hydra
-     `(hydra-face-amaranth ((t)))
-     `(hydra-face-blue ((t)))
-     `(hydra-face-pink ((t)))
-     `(hydra-face-red ((t (:background ,color-0 :foreground "red"))))
-     `(hydra-face-teal ((t)))
 ;;;;; ido-mode
      `(ido-first-match                                  ((t (:foreground ,color-8 :weight bold))))
      `(ido-only-match                                   ((t (:foreground ,color-8 :weight bold))))
