@@ -1,5 +1,16 @@
 #+TITLE: Eziam Theme
 
+*I probably don't use Eziam anymore.*
+
+I will try to fix bugs as get reported, but nothing more.
+
+I still enjoy almost monochrome themes.  If you like the Eziam way of
+doing things, you may want to steal (by all means please do!) my
+Solarized variant, Solaris.  As both Eziam and Solarized use eight
+color palettes, it will probably be easy to port Eziam as a Solaris variant, but this is left as an exercise to the reader :)
+
+-----------
+
 Eziam is a theme for Emacs, which tries to combine the simplicity of [[https://github.com/11111000000/tao-theme-emacs][Tao]] with the org-mode goodness of [[https://github.com/fniessen/emacs-leuven-theme/issues][Leuven]].  Unlike Tao, keeps some very minimal color indications, while remaining mainly grayscale and trying to avoid the “angry fruit salad” syndrome.  Unlike Leuven, it remains mostly grayscale, with no color for syntax, and easily allows multiple variants.  Eziam is really new: ideas, suggestions and bug reports are very welcome, either by [[https://github.com/thblt/eziam-theme-emacs/issues/new][creating an issue here]] or through e-mail at <thibault AT thb.lt>.  Thanks!
 
 [[https://melpa.org/#/eziam-theme][file:https://melpa.org/packages/eziam-theme-badge.svg]]
