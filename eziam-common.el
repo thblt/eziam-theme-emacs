@@ -37,7 +37,9 @@
 ;;;; Variables
 
 (defgroup eziam-theme nil
-  "Customization options for the Eziam theme family.")
+  "Customization options for the Eziam theme family."
+  :group 'eziam
+  :group 'faces)
 
 (defcustom eziam-scale-headings t
   "Non-nil means eziam-theme is allowed to customize the height of outline headlines."
@@ -57,10 +59,10 @@ Accepted values are:
  - 'classic, the classic Eziam look.
  - 'gray-blocks, scaled gray blocks organized by brightness.
 
-Appearance for specific modes are controlled with dedicated variables
- - `eziam-org-heading-style' (`org-mode')
- - `eziam-outline-heading-style' (`outline-mode' and `outline-minor-mode')
- - `eziam-outshine-heading-style' (`outshine-mode')")
+Appearance for specific modes are controlled with dedicated variables whose names match `eziam-*-heading-style'.")
+
+(defcustom eziam-latex-heading-style nil
+  "Style for outline-(minor)-mode headings.  See `eziam-heading-style' for legal values.")
 
 (defcustom eziam-markdown-heading-style nil
   "Style for markdown-mode headings.  See `eziam-heading-style' for legal values.")
@@ -117,28 +119,27 @@ block using `eziam-with-color-variables'."
         (ol-classic-7     `(:height ,(eziam--heading-height 1.0) :foreground ,ol7-fg :background ,ol7-bg :underline t :weight bold :slant italic))
         (ol-classic-8     `(:height ,(eziam--heading-height 1.0) :foreground ,ol8-fg :background ,ol8-bg :underline t :slant italic))
         ;; Outline headings, gray blocks style
-        (ol-gray-blocks-1 `(:background ,color-6 :height ,(eziam--heading-height 1.6) :foreground ,color-1 :weight normal :slant normal :overline nil :underline nil :box ,color-4))
-        (ol-gray-blocks-2 `(:background ,color-5 :height ,(eziam--heading-height 1.4) :foreground ,color-1 :weight normal :slant normal :overline nil :underline nil :box nil))
-        (ol-gray-blocks-3 `(:background ,color-4 :height ,(eziam--heading-height 1.2) :foreground ,color-7 :weight normal :slant normal :overline nil :underline nil :box nil))
-        (ol-gray-blocks-4 `(:background ,color-3 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :weight normal :slant italic :overline nil :underline ,color-5 :box nil))
-        (ol-gray-blocks-5 `(:background ,color-2 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :weight bold   :slant normal :overline nil :underline ,color-5 :box nil))
-        (ol-gray-blocks-6 `(:background ,color-1 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :weight normal :slant normal :overline nil :underline ,color-7 :box nil))
-        (ol-gray-blocks-7 `(:background ,color-1 :height ,(eziam--heading-height 1.0) :foreground ,color-6 :weight normal :slant italic :overline nil :underline ,color-7 :box nil))
-        (ol-gray-blocks-8 `(:background ,color-0 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :weight normal :slant italic :overline nil :underline nil :box nil))
+        (ol-gray-blocks-1 `(:background ,color-6 :height ,(eziam--heading-height 1.6) :foreground ,color-1 :distant-foreground ,color-7 :weight normal :slant normal :overline nil :underline nil :box ,color-4))
+        (ol-gray-blocks-2 `(:background ,color-5 :height ,(eziam--heading-height 1.4) :foreground ,color-1 :distant-foreground ,color-7 :weight normal :slant normal :overline nil :underline nil :box nil))
+        (ol-gray-blocks-3 `(:background ,color-4 :height ,(eziam--heading-height 1.2) :foreground ,color-7 :distant-foreground ,color-7 :weight normal :slant normal :overline nil :underline nil :box nil))
+        (ol-gray-blocks-4 `(:background ,color-3 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :distant-foreground ,color-7 :weight normal :slant italic :overline nil :underline ,color-5 :box nil))
+        (ol-gray-blocks-5 `(:background ,color-2 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :distant-foreground ,color-7 :weight bold   :slant normal :overline nil :underline ,color-5 :box nil))
+        (ol-gray-blocks-6 `(:background ,color-1 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :distant-foreground ,color-7 :weight normal :slant normal :overline nil :underline ,color-7 :box nil))
+        (ol-gray-blocks-7 `(:background ,color-1 :height ,(eziam--heading-height 1.0) :foreground ,color-6 :distant-foreground ,color-7 :weight normal :slant italic :overline nil :underline ,color-7 :box nil))
+        (ol-gray-blocks-8 `(:background ,color-0 :height ,(eziam--heading-height 1.0) :foreground ,color-7 :distant-foreground ,color-7 :weight normal :slant italic :overline nil :underline nil :box nil))
 
+        (latex-heading-style (or eziam-latex-heading-style eziam-heading-style))
         (markdown-heading-style (or eziam-markdown-heading-style eziam-heading-style))
         (outline-heading-style  (or eziam-outline-heading-style eziam-heading-style))
         (org-heading-style      (or eziam-org-heading-style eziam-heading-style))
         (outshine-heading-style (or eziam-outshine-heading-style eziam-heading-style))
 
-        (highlight            `(:background ,color-3))
         (transient-highlight  `(:background ,transient-highlight :foreground ,transient-highlight-fg))
         (info-text            `(:underline (:color ,info :style wave)))
         (warning-text         `(:underline (:color ,warning :style wave)))
         (error-text           `(:underline (:color ,error :style wave)))
         (button-on            `(:background ,color-0 :foreground ,color-7 :overline ,color-4 :weight bold))
-        (button-off           `(:background ,color-2 :foreground ,color-7 :overline ,color-4))
-        )
+        (button-off           `(:background ,color-2 :foreground ,color-7 :overline ,color-4)))
 
     (custom-theme-set-faces
      theme-name
@@ -154,7 +155,7 @@ block using `eziam-with-color-variables'."
      `(escape-glyph                                     ((t (:foreground ,color-8 :bold t))))
      `(fringe                                           ((t (:foreground ,color-4 :background ,color-2))))
      `(header-line                                      ((t (:inherit mode-line))))
-     `(highlight                                        ((,class ,highlight)))
+     `(highlight                                        ((t (:background ,color-3))))
      `(region                                           ((t (:background ,color-6 :foreground ,color-1))))
      `(shadow                                           ((t (:foreground ,color-3))))
      `(success                                          ((t (:foreground ,color-6 :weight bold))))
@@ -174,6 +175,13 @@ block using `eziam-with-color-variables'."
      `(compilation-mode-line-exit                       ((t (:foreground ,color-8 :weight bold))))
      `(compilation-mode-line-fail                       ((t (:foreground ,color-7 :weight bold))))
      `(compilation-mode-line-run                        ((t (:foreground ,color-8 :weight bold))))
+;;;;; line numbers
+     `(line-number                                      ((t (:background ,color-2 :foreground ,color-4))))
+     `(line-number-current-line                         ((t (:background ,color-1 :foreground ,color-6))))
+     `(line-number-major-tick                           ((t (:background ,color-2 :foreground ,color-6 :weight bold))))
+     `(line-number-minor-tick                           ((t (:background ,color-2 :foreground ,color-5 :weight bold))))
+     `(linum                                            ((t (:inherit line-number))))
+     `(linum-relative-current-face                      ((t (:inherit line-number-current-line))))
 ;;;;; grep
      `(grep-context-face                                ((t (:foreground ,color-8))))
      `(grep-error-face                                  ((t (:foreground ,color-6 :weight bold :underline t))))
@@ -182,7 +190,8 @@ block using `eziam-with-color-variables'."
      `(match                                            ((t (:background ,color-1 :foreground ,color-8 :weight bold))))
 ;;;;; haskell-mode
      ;; @TODO: This is a work-in-progress
-     `(haskell-literate-comment-face                    ((t (:background ,color-0))))
+     `(haskell-literate-comment-face                    ((t :background ,(if eziam-color-comments colored-comments color-0))))
+     `(haskell-operator-face                            ((t (:background ,color-0))))
 ;;;;; ivy
      `(ivy-current-match
        ;; This is very similar to :inverse-video t, but works better with color selectors.
@@ -260,6 +269,12 @@ block using `eziam-with-color-variables'."
      `(font-latex-italic-face                           ((t (:foreground ,color-8 :slant italic))))
      `(font-latex-string-face                           ((t (:inherit ,font-lock-string-face))))
      `(font-latex-math-face                             ((t (:foreground ,color-8))))
+     `(font-latex-sectioning-0-face                     ((t ,(eval (intern (format "ol-%s-%s" latex-heading-style 1))))))
+     `(font-latex-sectioning-1-face                     ((t ,(eval (intern (format "ol-%s-%s" latex-heading-style 2))))))
+     `(font-latex-sectioning-2-face                     ((t ,(eval (intern (format "ol-%s-%s" latex-heading-style 3))))))
+     `(font-latex-sectioning-3-face                     ((t ,(eval (intern (format "ol-%s-%s" latex-heading-style 4))))))
+     `(font-latex-sectioning-4-face                     ((t ,(eval (intern (format "ol-%s-%s" latex-heading-style 5))))))
+     `(font-latex-sectioning-5-face                     ((t ,(eval (intern (format "ol-%s-%s" latex-heading-style 6))))))
 ;;;;; auto-complete
      `(ac-candidate-face                                ((t (:background ,color-5 :foreground ,color-1 :underline nil))))
      `(ac-selection-face                                ((t (:background ,color-4 :foreground ,color-8 :underline nil))))
@@ -580,10 +595,6 @@ block using `eziam-with-color-variables'."
      `(ledger-font-reconciler-cleared-face              ((t (:foreground ,color-8 :weight normal))))
      `(ledger-font-reconciler-pending-face              ((t (:foreground ,color-8 :weight normal))))
      `(ledger-font-report-clickable-face                ((t (:foreground ,color-8 :weight normal))))
-;;;;; linum-mode
-     `(linum                                            ((t (:background ,color-2 :foreground ,color-6 :inherit default)))) ;; @fringe
-;;;;; linum-relative-mode
-     `(linum-relative-current-face                      ((t (:background ,color-1 :foreground ,color-8 :weight bold :inherit default)))) ;; @fringe
 ;;;;; macrostep
      `(macrostep-gensym-1                               ((t (:foreground ,color-8 :background ,color-1))))
      `(macrostep-gensym-2                               ((t (:foreground ,color-8 :background ,color-1))))
@@ -593,7 +604,7 @@ block using `eziam-with-color-variables'."
      `(macrostep-expansion-highlight-face               ((t (:inherit highlight))))
      `(macrostep-macro-face                             ((t (:underline t))))
 ;;;;; magit
-     `(magit-section-highlight                          ((t (:background ,color-2 :extend t))))
+     `(magit-section-highlight                          ((t (:inherit highlight :extend t))))
      `(magit-section-title                              ((t (:foreground ,color-8 :weight bold))))
      `(magit-branch                                     ((t (:foreground ,color-8 :weight bold))))
      `(magit-item-highlight                             ((t (:inverse-video t))))
@@ -668,7 +679,7 @@ block using `eziam-with-color-variables'."
      `(nav-face-hfile                                   ((t (:foreground ,color-4))))
 ;;;;; mu4e
      `(mu4e-title-face                                  ((t (:foreground ,color-8 :weight bold))))
-     `(mu4e-header-highlight-face                       ((, class ,highlight)))
+     `(mu4e-header-highlight-face                       ((t (:inherit highlight :extend t))))
      `(mu4e-cited-1-face                                ((t (:foreground ,color-8 :slant italic))))
      `(mu4e-cited-2-face                                ((t (:foreground ,color-8 :slant italic))))
      `(mu4e-cited-3-face                                ((t (:foreground ,color-6 :slant italic))))
@@ -676,7 +687,7 @@ block using `eziam-with-color-variables'."
      `(mu4e-cited-5-face                                ((t (:foreground ,color-4 :slant italic))))
      `(mu4e-cited-6-face                                ((t (:foreground ,color-5 :slant italic))))
      `(mu4e-cited-7-face                                ((t (:foreground ,color-8 :slant italic))))
-     `(mu4e-unread-face                                 ((t (:background ,color-0 :weight bold))))
+     `(mu4e-unread-face                                 ((t (:background ,color-0 :weight bold :extend t))))
      `(mu4e-replied-face                                ((t (:foreground ,color-6 :slant italic))))
      `(mu4e-trashed-face                                ((t (:foreground ,color-5 :strike-through t))))
      `(mu4e-flagged-face                                ((t (:foreground ,info))))
@@ -732,7 +743,7 @@ block using `eziam-with-color-variables'."
      `(org-column-title                                 ((t (:background ,color-1 :underline t :weight bold))))
      `(org-mode-line-clock                              ((t (:foreground ,color-8 :background ,color-1))))
      `(org-mode-line-clock-overrun                      ((t (:foreground ,color-2 :background ,color-6))))
-     `(org-ellipsis                                     ((t (:foreground ,color-1 :distant-foreground ,color-7 :underline nil :box nil :scale 1.0))))
+     `(org-ellipsis                                     ((t (:foreground ,color-1 :distant-foreground ,color-7 :underline nil :box nil))))
      `(org-footnote                                     ((t (:foreground ,color-8 :underline t))))
      `(org-meta-line                                    ((t (:foreground ,color-5))))
      ;; I believe the difference between org-block-background and
@@ -992,7 +1003,7 @@ block using `eziam-with-color-variables'."
      `(markdown-header-face-6                           ((t ,(eval (intern (format "ol-%s-%s" markdown-heading-style 6))))))
      `(markdown-link-face                               ((t (:underline t :foreground ,color-8))))
      `(markdown-url-face                                ((t (:underline t :foreground ,color-8))))
-     `(markdown-pre-face                                ((t (:foreground ,color-8 NOL_HEIGHT(.8)))))
+     `(markdown-pre-face                                ((t (:foreground ,color-8))))
      `(markdown-bold-face                               ((t (:foreground ,color-5 :bold t ))))
      `(markdown-italic-face                             ((t (:foreground ,color-5 :italic t ))))
      `(markdown-list-face                               ((t (:foreground ,color-8))))
@@ -1050,7 +1061,7 @@ block using `eziam-with-color-variables'."
      `(cfw:face-holiday                                 ((t (:foreground ,color-5 :slant italic))))
      `(cfw:face-today                                   ((t (:background ,color-0))))
      `(cfw:face-today-title                             ((t (:background ,color-0 :foreground ,color-8))))
-     `(cfw:face-select                                  ((,class ,highlight)))
+     `(cfw:face-select                                  ((t :inherit highlight)))
      `(cfw:face-toolbar                                 ((t (:background ,color-1))))
      `(cfw:face-toolbar-button-on                       ((,class ,button-on)))
      `(cfw:face-toolbar-button-off                      ((,class ,button-off)))
