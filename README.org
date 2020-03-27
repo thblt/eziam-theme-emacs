@@ -6,8 +6,9 @@ I will try to fix bugs as get reported, but nothing more.
 
 I still enjoy almost monochrome themes.  If you like the Eziam way of
 doing things, you may want to steal (by all means please do!) my
-Solarized variant, Solaris.  As both Eziam and Solarized use eight
-color palettes, it will probably be easy to port Eziam as a Solaris variant, but this is left as an exercise to the reader :)
+Solarized variant, [[https://github.com/thblt/.emacs.d/blob/master/lib/solaris.el][Solaris]].  As both Eziam and Solarized use eight
+color palettes, it will probably be easy to port Eziam as a Solaris
+variant, but this is left as an exercise to the reader :)
 
 -----------
 
