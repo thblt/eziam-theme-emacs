@@ -1,6 +1,6 @@
-;;; eziam!-dusk-theme.el --- Dusk version of the Eziam theme
+;;; eziam-dusk-theme.el --- Dusk version of the Eziam theme
 
-;; Copyright (c) 2016-2022 Thibault Polge <thibault@thb.lt>
+;; Copyright (c) 2016-2017 Thibault Polge <thibault@thb.lt>
 
 ;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
 ;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
@@ -33,7 +33,7 @@
 
 ;;; Code:
 
-(require 'eziam)
+(require 'eziam-common)
 
 (deftheme eziam-dusk "The dusk Eziam color theme")
 

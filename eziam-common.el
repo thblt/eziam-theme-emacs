@@ -1,6 +1,6 @@
-;;; eziam.el --- Common tools and face assignment table for Eziam
+;;; eziam-common.el --- Common tools and face assignment table for Eziam
 
-;; Copyright (c) 2016-2022 Thibault Polge <thibault@thb.lt>
+;; Copyright (c) 2016-2020 Thibault Polge <thibault@thb.lt>
 
 ;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
 ;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
@@ -29,12 +29,8 @@
 
 ;;; Commentary:
 
-;; Eziam is a theme for Emacs, which tries to combine the simplicity
-;; of Tao with the org-mode goodness of Leuven.  Unlike Tao, it keeps
-;; some very minimal color indications, while remaining mainly
-;; grayscale and try to avoid the “angry fruit salad” syndrome.
-;; Unlike Leuven, it remains mostly grayscale, with no color for
-;; syntax, and easily allows multiple variants.
+;; This package provides a dark and a light version of the Eziam theme
+;; for Emacs.
 
 ;;; Code:
 
@@ -1117,5 +1113,5 @@ block using `eziam-with-color-variables'."
      `(vc-annotate-background ,color-1))
     ))
 
-(provide 'eziam)
-;;; eziam.el ends here
+(provide 'eziam-common)
+;;; eziam-common.el ends here
