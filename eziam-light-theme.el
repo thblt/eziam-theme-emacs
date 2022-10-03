@@ -1,6 +1,6 @@
 ;;; eziam-light-theme.el --- Light version of the Eziam theme
 
-;; Copyright (c) 2016-2020 Thibault Polge <thibault@thb.lt>
+;; Copyright (c) 2016-2022 Thibault Polge <thibault@thb.lt>
 
 ;; Eziam is based on Tao theme, copyright (C) 2014 Peter <11111000000
 ;; at email.com> with contributions by Jasonm23 <jasonm23@gmail.com>.
@@ -33,7 +33,7 @@
 
 ;;; Code:
 
-(require 'eziam-common)
+(require 'eziam)
 
 (deftheme eziam-light "The light Eziam color theme")
 
