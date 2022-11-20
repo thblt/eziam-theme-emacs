@@ -33,7 +33,7 @@
 
 ;;; Code:
 
-(require 'eziam-common)
+(require 'eziam-themes)
 
 (deftheme eziam-dusk "The dusk Eziam color theme")
 
