@@ -1,5 +1,8 @@
 #+TITLE: Eziam Theme
 
+*This package has been renamed from ~eziam-theme~ to ~eziam-themes~ (plural).*
+*To get updates, you must uninstall the former and install the latter.*
+
 *I probably don't use Eziam anymore.*
 
 I will try to fix bugs as get reported, but nothing more.

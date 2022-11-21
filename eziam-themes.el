@@ -1,4 +1,4 @@
-;;; eziam-common.el --- Common tools and face assignment table for Eziam
+;;; eziam-themes.el --- The mostly monochrome Eziam theme family
 
 ;; Copyright (c) 2016-2020 Thibault Polge <thibault@thb.lt>
 
@@ -29,8 +29,8 @@
 
 ;;; Commentary:
 
-;; This package provides a dark and a light version of the Eziam theme
-;; for Emacs.
+;; This package provides several mostly monochrome theme family in the
+;; Eziam family, which were inspired by the Tao and Leuven themes.
 
 ;;; Code:
 
@@ -1113,5 +1113,5 @@ block using `eziam-with-color-variables'."
      `(vc-annotate-background ,color-1))
     ))
 
-(provide 'eziam-common)
-;;; eziam-common.el ends here
+(provide 'eziam-themes)
+;;; eziam-themes.el ends here
